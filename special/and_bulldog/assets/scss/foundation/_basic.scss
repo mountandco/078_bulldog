@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+// 01. Font
+//=====================================================
+@mixin sans {
+  font-family: 'Zen Kaku Gothic New', BlinkMacSystemFont, -apple-system, "Helvetica Neue", 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Sans",Arial, sans-serif;
+}
+@mixin serifcur {
+  font-family: 'Dancing Script', cursive;
+}
+
+// 02. Color
+//=====================================================
+$color: (
+  black: #411B00,
+);
+
+// Color Map
+@function colors($key) {
+  @return map-get($color, $key);
+}
+
+// 03. Z-index
+//=====================================================
+//z-index
+@mixin z-index-1 {
+  z-index: 1;
+}
+@mixin z-index-2 {
+  z-index: 2;
+}
+@mixin z-index-3 {
+  z-index: 3;
+}
+@mixin z-index-4 {
+  z-index: 4;
+}
+@mixin z-index-5 {
+  z-index: 5;
+}
+@mixin z-index-6 {
+  z-index: 6;
+}
+@mixin z-index-7 {
+  z-index: 7;
+}
+@mixin z-index-8 {
+  z-index: 8;
+}
+@mixin z-index-9 {
+  z-index: 9;
+}
+@mixin z-index-10 {
+  z-index: 10;
+}
+@mixin z-index-11 {
+  z-index: 11;
+}
+@mixin z-index-999 {
+  z-index: 999;
+}
+
+// 04. Media Query
+//=====================================================
+$device_width: (
+  sp-s: 320px,
+  sp: 375px,
+  sp-l: 480px,
+  sp-xl: 560px,
+  sp-2xl: 650px,
+  tb: 750px,
+  tb-l: 880px,
+  pc: 1024px,
+  pc-l: 1100px,
+  pc-xl: 1280px,
+  pc-2xl: 1440px,
+  pc-3xl: 1680px,
+  pc-4xl: 2000px,
+);
+// Device Width Map
+@function device($key) {
+  @return map-get($device_width, $key);
+}
+@mixin media($size: tablet) {
+  @media (min-width: device($size)) {
+    @content;
+  }
+}
+
+@mixin media-2x {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+   only screen and (min--moz-device-pixel-ratio: 2),
+   only screen and (-o-min-device-pixel-ratio: 2/1),
+   only screen and (min-device-pixel-ratio: 2),
+   only screen and (min-resolution: 192dpi),
+   only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+// other
+@mixin stripe {
+  background:repeating-linear-gradient(-45deg, colors(green-light), colors(green-light) 1px, colors(white) 0, colors(white) calc(1.8rem * 0.5));
+  @include media(tb) {
+    background:repeating-linear-gradient(-45deg, colors(green-light), colors(green-light) 1px, colors(white) 0, colors(white) 1.8rem);
+  }
+}

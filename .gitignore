@@ -1,0 +1,85 @@
+
+# 参考 https://yonehub.y10e.com/2019/12/24/20191223_git_gitignore/
+
+#拡張子 .a の全てのファイルを除外
+#*.a
+#*.map
+#*.mp4
+
+#上の設定の例外として lib.a は管理に含める。
+#!lib.a
+
+#カレントディレクトリの TODO のみ除外。サブディレクトリ配下の TODO は除外されない
+#/TODO
+
+#ディレクトリ build 配下の全てのファイルを除外
+#build/
+GitArchive/
+
+
+#以外 gitの除外ファイル
+
+#wordpress gitの除外ファイル
+#/wp/*
+#!/wp/favicon.ico
+#!/wp/google*.html
+#!/wp/wp-content
+#/wp/wp-content/*
+#!/wp/wp-content/wpmp-config.php
+#!/wp/wp-content/themes
+#/wp/wp-content/themes/*
+#!/wp/wp-content/themes/kihara
+#!/wp/wp-content/themes/kihara-en
+#!/wp/wp-content/ai1wm-backups/
+#/wp/wp-content/ai1wm-backups/index.html
+#/wp/wp-content/ai1wm-backups/index.php
+#/wp/wp-content/ai1wm-backups/.htaccess
+#/wp/wp-content/ai1wm-backups/web.config
+#/wp/wp-content/ai1wm-backups/robots.txt
+#!/wp/wp-content/ai1wm-backups/*.wpress
+#!/wp/wp-content/uploads
+
+
+#例えば、doc/notes.txt を除外するが, doc/server/arch.txt は除外しない
+#doc/*.txt
+
+#doc/配下の全ての .pdf ファイルを除外する doc/a.pdf, doc/a/a.pdf なども含む
+
+# 以下雛形
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+#*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
