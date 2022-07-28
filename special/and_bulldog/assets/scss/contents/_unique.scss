@@ -1,0 +1,570 @@
+// ※ユニークClass ※上書きなどで固有のcssを適用
+//=====================================================
+// .ringosu
+.ringosu {
+  background-image: url(../img/sec-dressing-01-bg.png);
+  background-repeat: no-repeat;
+  background-size: calc(481/750*100vw) calc(507/750*100vw);
+  background-position: top calc(125/750*100vw) left calc(332/750*100vw);
+  @include media-2x {
+    background-image: url(../img/sec-dressing-01-bg@2x.png);
+  }
+  @include media(pc) {
+    background-size: calc(556/1440*100vw) calc(586/1440*100vw);
+    background-position: calc(50% - (-516/1440*100vw)) calc(251/1440*100vw);
+  }
+  .layout {
+    .icon {
+      img {
+        width: calc(385/750*100vw);
+        @include media(pc) {
+          width: calc(264/1440*100vw);
+        }
+      }
+    }
+  }
+  .sec-recipe {
+    background-image: url(../img/bg-recipe-ringosu.png);
+    @include media-2x {
+      background-image: url(../img/bg-recipe-ringosu@2x.png);
+    }
+    &:before {
+      background-image: url(../img/bg-recipe-ringosu-triangle.png);
+      @include media-2x {
+        background-image: url(../img/bg-recipe-ringosu-triangle@2x.png);
+      }
+    }
+  }
+  .recipe-layout {
+    &.nth-1 {
+      @include media(pc) {
+        padding-top: calc(52/1440*100vw);
+      }
+      .ttl-recipe {
+        &:after {
+          @include media(pc) {
+            width: calc(571/1440*100vw);
+            height: calc(49/1440*100vw);
+            left: calc(-5/1440*100vw);
+            background-image: url(../img/ringosu-border-nth-1.svg);
+          }
+        }
+      }
+      .pic {
+        width: calc(545/750*100vw);
+        margin-top: calc(55/750*100vw);
+        margin-bottom: calc(57/750*100vw);
+        margin-left: calc(138/750*100vw);
+        @include media(pc) {
+          width: calc(545/1440*100vw);
+          position: absolute;
+          top: calc(49/1440*100vw);
+          left: calc((545 + 33)/1440*100vw);
+          right: 0;
+          margin: auto;
+        }
+      }
+      .layout {
+        @include media(pc) {
+          transform: translateX(calc(-264/1440*100vw));
+        }
+      }
+    }
+    &.nth-2 {
+      @include media(pc) {
+        margin-top: calc(91/1440*100vw);
+      }
+      .ttl-recipe {
+        &:after {
+          @include media(pc) {
+            width: calc(612/1440*100vw);
+            height: calc(84/1440*100vw);
+            left: calc(-115/1440*100vw);
+            background-image: url(../img/ringosu-border-nth-2.svg);
+          }
+        }
+      }
+      .pic {
+        width: calc(538/750*100vw);
+        margin-top: calc(-18/750*100vw);
+        margin-bottom: calc(42/750*100vw);
+        margin-left: calc(153/750*100vw);
+        @include media(pc) {
+          width: calc(538/1440*100vw);
+          margin: 0;
+          position: absolute;
+          top: calc(76/1440*100vw);
+          left: calc((-538 + -46)/1440*100vw);
+          right: 0;
+          margin: auto;
+        }
+      }
+      .layout {
+        @include media(pc) {
+          transform: translateX(calc(300/1440*100vw));
+          margin-bottom: calc(100/1440*100vw);
+          width: calc(545/1440*100vw);
+        }
+      }
+    }
+    .layout {
+      .list-recipe {
+        li {
+          .food {
+            &:before {
+              background-image: url(../img/bg-recipe-ringosu.png);
+              @include media-2x {
+                background-image: url(../img/bg-recipe-ringosu@2x.png);
+              }
+            }
+            .text-bg {
+              .text-bg-child {
+                background-image: url(../img/bg-recipe-ringosu.png);
+                @include media-2x {
+                  background-image: url(../img/bg-recipe-ringosu@2x.png);
+                }
+              }
+            }
+          }
+          .quantity {
+            .text-bg {
+              .text-bg-child {
+                background-image: url(../img/bg-recipe-ringosu.png);
+                @include media-2x {
+                  background-image: url(../img/bg-recipe-ringosu@2x.png);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// .goma
+.goma {
+  background-image: url(../img/sec-dressing-02-bg.png);
+  background-repeat: no-repeat;
+  background-size: calc(1015/750*100vw) calc(631/750*100vw);
+  background-position: top calc(165/750*100vw) left calc(-480/750*100vw);
+  @include media-2x {
+    background-image: url(../img/sec-dressing-02-bg@2x.png);
+  }
+  @include media(pc) {
+    background-size: calc(1015/1440*100vw) calc(631/1440*100vw);
+    background-position: calc(50% - (798/1440*100vw)) calc(354/1440*100vw);
+  }
+  .layout {
+    .icon {
+      img {
+        width: calc(488/750*100vw);
+        @include media(pc) {
+          width: calc(415/1440*100vw);
+        }
+      }
+    }
+  }
+  .sec-recipe {
+    background-image: url(../img/bg-recipe-goma.png);
+    @include media-2x {
+      background-image: url(../img/bg-recipe-goma@2x.png);
+    }
+    &:before {
+      background-image: url(../img/bg-recipe-goma-triangle.png);
+      @include media-2x {
+        background-image: url(../img/bg-recipe-goma-triangle@2x.png);
+      }
+    }
+  }
+  .recipe-layout {
+    &.nth-1 {
+      @include media(pc) {
+        padding-top: calc(66/1440*100vw);
+      }
+      .ttl-recipe {
+        &:after {
+          @include media(pc) {
+            width: calc(558/1440*100vw);
+            height: calc(41/1440*100vw);
+            left: calc(-63/1440*100vw);
+            background-image: url(../img/goma-border-nth-1.svg);
+          }
+        }
+      }
+      .pic {
+        width: calc(449/750*100vw);
+        margin-top: calc(55/750*100vw);
+        margin-bottom: calc(41/750*100vw);
+        margin-left: calc(104/750*100vw);
+        @include media(pc) {
+          width: calc(449/1440*100vw);
+          margin: 0;
+          position: absolute;
+          top: calc(79/1440*100vw);
+          left: calc((-449 + -77)/1440*100vw);
+          right: 0;
+          margin: auto;
+        }
+      }
+      .layout {
+        @include media(pc) {
+          transform: translateX(calc(258/1440*100vw));
+        }
+      }
+    }
+    &.nth-2 {
+      @include media(pc) {
+        margin-top: calc(152/1440*100vw);
+      }
+      .ttl-recipe {
+        &:after {
+          @include media(pc) {
+            width: calc(511/1440*100vw);
+            height: calc(47/1440*100vw);
+            left: calc(-5/1440*100vw);
+            background-image: url(../img/goma-border-nth-2.svg);
+          }
+        }
+      }
+      .pic {
+        width: calc(538/750*100vw);
+        margin-top: calc(-8/750*100vw);
+        margin-bottom: calc(42/750*100vw);
+        margin-left: calc(153/750*100vw);
+        @include media(pc) {
+          width: calc(538/1440*100vw);
+          margin: 0;
+          position: absolute;
+          top: calc(-46/1440*100vw);
+          left: calc((538 + 37)/1440*100vw);
+          right: 0;
+          margin: auto;
+        }
+      }
+      .layout {
+        @include media(pc) {
+          transform: translateX(calc(-246/1440*100vw));
+          margin-bottom: calc(154/1440*100vw);
+        }
+      }
+    }
+    .layout {
+      .list-recipe {
+        li {
+          .food {
+            &:before {
+              background-image: url(../img/bg-recipe-goma.png);
+              @include media-2x {
+                background-image: url(../img/bg-recipe-goma@2x.png);
+              }
+            }
+            .text-bg {
+              .text-bg-child {
+                background-image: url(../img/bg-recipe-goma.png);
+                @include media-2x {
+                  background-image: url(../img/bg-recipe-goma@2x.png);
+                }
+              }
+            }
+          }
+          .quantity {
+            .text-bg {
+              .text-bg-child {
+                background-image: url(../img/bg-recipe-goma.png);
+                @include media-2x {
+                  background-image: url(../img/bg-recipe-goma@2x.png);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// .tamanegi
+.tamanegi {
+  background-image: url(../img/sec-dressing-03-bg.png);
+  background-repeat: no-repeat;
+  background-size: calc(567/750*100vw) calc(439/750*100vw);
+  background-position: top calc(148/750*100vw) left calc(276/750*100vw);
+  @include media-2x {
+    background-image: url(../img/sec-dressing-03-bg@2x.png);
+  }
+  @include media(pc) {
+    background-size: calc(585/1440*100vw) calc(460/1440*100vw);
+    background-position: calc(50% - (-541/1440*100vw)) calc(308/1440*100vw);
+  }
+  .layout {
+    .icon {
+      img {
+        width: calc(385/750*100vw);
+        @include media(pc) {
+          width: calc(264/1440*100vw);
+        }
+      }
+    }
+  }
+  .sec-recipe {
+    background-image: url(../img/bg-recipe-tamanegi.png);
+    @include media-2x {
+      background-image: url(../img/bg-recipe-tamanegi@2x.png);
+    }
+    &:before {
+      background-image: url(../img/bg-recipe-tamanegi-triangle.png);
+      @include media-2x {
+        background-image: url(../img/bg-recipe-tamanegi-triangle@2x.png);
+      }
+    }
+  }
+  .recipe-layout {
+    &.nth-1 {
+      @include media(pc) {
+        padding-top: calc(49/1440*100vw);
+      }
+      .ttl-recipe {
+        &:after {
+          @include media(pc) {
+            width: calc(571/1440*100vw);
+            height: calc(49/1440*100vw);
+            left: calc(-5/1440*100vw);
+            background-image: url(../img/tamanegi-border-nth-1.svg);
+          }
+        }
+      }
+      .pic {
+        width: calc(547/750*100vw);
+        margin-top: calc(55/750*100vw);
+        margin-bottom: calc(57/750*100vw);
+        margin-left: calc(136/750*100vw);
+        @include media(pc) {
+          width: calc(547/1440*100vw);
+          margin: 0;
+          position: absolute;
+          top: calc(54/1440*100vw);
+          left: calc((547 + 64)/1440*100vw);
+          right: 0;
+          margin: auto;
+        }
+      }
+      .layout {
+        @include media(pc) {
+          transform: translateX(calc(-242/1440*100vw));
+        }
+      }
+    }
+    &.nth-2 {
+      @include media(pc) {
+        margin-top: calc(180/1440*100vw);
+      }
+      .ttl-recipe {
+        &:after {
+          @include media(pc) {
+            width: calc(572/1440*100vw);
+            height: calc(57/1440*100vw);
+            left: calc(-78/1440*100vw);
+            background-image: url(../img/tamanegi-border-nth-2.svg);
+          }
+        }
+      }
+      .pic {
+        width: calc(535/750*100vw);
+        margin-top: calc(-18/750*100vw);
+        margin-bottom: calc(45/750*100vw);
+        margin-left: calc(73/750*100vw);
+        @include media(pc) {
+          width: calc(535/1440*100vw);
+          margin: 0;
+          position: absolute;
+          top: calc(-12/1440*100vw);
+          left: calc((-535 + -40)/1440*100vw);
+          right: 0;
+          margin: auto;
+        }
+      }
+      .layout {
+        @include media(pc) {
+          transform: translateX(calc(294/1440*100vw));
+          margin-bottom: calc(96/1440*100vw);
+        }
+      }
+    }
+    .layout {
+      .list-recipe {
+        li {
+          .food {
+            &:before {
+              background-image: url(../img/bg-recipe-tamanegi.png);
+              @include media-2x {
+                background-image: url(../img/bg-recipe-tamanegi@2x.png);
+              }
+            }
+            .text-bg {
+              .text-bg-child {
+                background-image: url(../img/bg-recipe-tamanegi.png);
+                @include media-2x {
+                  background-image: url(../img/bg-recipe-tamanegi@2x.png);
+                }
+              }
+            }
+          }
+          .quantity {
+            .text-bg {
+              .text-bg-child {
+                background-image: url(../img/bg-recipe-tamanegi.png);
+                @include media-2x {
+                  background-image: url(../img/bg-recipe-tamanegi@2x.png);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// .wine
+.wine {
+  background-image: url(../img/sec-dressing-04-bg.png);
+  background-repeat: no-repeat;
+  background-size: calc(517/750*100vw) calc(495/750*100vw);
+  background-position: top calc(80/750*100vw) left calc(-32/750*100vw);
+  @include media-2x {
+    background-image: url(../img/sec-dressing-04-bg@2x.png);
+  }
+  @include media(pc) {
+    background-size: calc(517/1440*100vw) calc(495/1440*100vw);
+    background-position: calc(50% - (483/1440*100vw)) calc(347/1440*100vw);
+  }
+  .layout {
+    .icon {
+      img {
+        width: calc(488/750*100vw);
+        @include media(pc) {
+          width: calc(415/1440*100vw);
+        }
+      }
+    }
+  }
+  .sec-recipe {
+    background-image: url(../img/bg-recipe-wine.png);
+    @include media-2x {
+      background-image: url(../img/bg-recipe-wine@2x.png);
+    }
+    &:before {
+      background-image: url(../img/bg-recipe-wine-triangle.png);
+      @include media-2x {
+        background-image: url(../img/bg-recipe-wine-triangle@2x.png);
+      }
+    }
+  }
+  .recipe-layout {
+    &.nth-1 {
+      @include media(pc) {
+        padding-top: calc(120/1440*100vw);
+      }
+      .ttl-recipe {
+        &:after {
+          @include media(pc) {
+            width: calc(570/1440*100vw);
+            height: calc(54/1440*100vw);
+            left: calc(-72/1440*100vw);
+            background-image: url(../img/wine-border-nth-1.svg);
+          }
+        }
+      }
+      .pic {
+        width: calc(528/750*100vw);
+        margin-top: calc(55/750*100vw);
+        margin-bottom: calc(51/750*100vw);
+        margin-left: calc(73/750*100vw);
+        @include media(pc) {
+          width: calc(528/1440*100vw);
+          margin: 0;
+          position: absolute;
+          top: calc(54/1440*100vw);
+          left: calc((-528 + -145)/1440*100vw);
+          right: 0;
+          margin: auto;
+        }
+      }
+      .layout {
+        @include media(pc) {
+          transform: translateX(calc(248/1440*100vw));
+          margin-bottom: calc(96/1440*100vw);
+        }
+      }
+    }
+    &.nth-2 {
+      @include media(pc) {
+        margin-top: calc(89/1440*100vw);
+      }
+      .ttl-recipe {
+        &:after {
+          @include media(pc) {
+            width: calc(570/1440*100vw);
+            height: calc(55/1440*100vw);
+            left: calc(-5/1440*100vw);
+            background-image: url(../img/wine-border-nth-2.svg);
+          }
+        }
+      }
+      .pic {
+        width: calc(548/750*100vw);
+        margin-top: calc(-8/750*100vw);
+        margin-bottom: calc(40/750*100vw);
+        margin-left: calc(153/750*100vw);
+        @include media(pc) {
+          width: calc(548/1440*100vw);
+          margin: 0;
+          position: absolute;
+          top: calc(-15/1440*100vw);
+          left: calc((548 + 14)/1440*100vw);
+          right: 0;
+          margin: auto;
+        }
+      }
+      .layout {
+        @include media(pc) {
+          transform: translateX(calc(-235/1440*100vw));
+          margin-bottom: calc(96/1440*100vw);
+        }
+      }
+    }
+    .layout {
+      .list-recipe {
+        li {
+          .food {
+            &:before {
+              background-image: url(../img/bg-recipe-wine.png);
+              @include media-2x {
+                background-image: url(../img/bg-recipe-wine@2x.png);
+              }
+            }
+            .text-bg {
+              .text-bg-child {
+                background-image: url(../img/bg-recipe-wine.png);
+                @include media-2x {
+                  background-image: url(../img/bg-recipe-wine@2x.png);
+                }
+              }
+            }
+          }
+          .quantity {
+            .text-bg {
+              .text-bg-child {
+                background-image: url(../img/bg-recipe-wine.png);
+                @include media-2x {
+                  background-image: url(../img/bg-recipe-wine@2x.png);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

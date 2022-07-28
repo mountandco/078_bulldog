@@ -8,11 +8,22 @@
 @mixin serifcur {
   font-family: 'Dancing Script', cursive;
 }
+@mixin tsukuard {
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
 
 // 02. Color
 //=====================================================
 $color: (
   black: #411B00,
+  white: #FFF,
+  green: #00593F,
+  green-light: #02805B,
+  red: #E4321E,
+  orange: #BC6229,
+  yellow-green: #B3B400,
 );
 
 // Color Map
@@ -98,10 +109,8 @@ $device_width: (
   }
 }
 
-// other
-@mixin stripe {
-  background:repeating-linear-gradient(-45deg, colors(green-light), colors(green-light) 1px, colors(white) 0, colors(white) calc(1.8rem * 0.5));
-  @include media(tb) {
-    background:repeating-linear-gradient(-45deg, colors(green-light), colors(green-light) 1px, colors(white) 0, colors(white) 1.8rem);
-  }
+// 05. Other
+//=====================================================
+@mixin img-shadow {
+  filter: drop-shadow(0 calc(3/750*100vw) calc(6/750*100vw) rgba(0, 0, 0, 0.16));
 }

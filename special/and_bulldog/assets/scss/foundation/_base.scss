@@ -5,12 +5,12 @@ html {
 
 body {
   font-size: 1rem;
-  @include serif;
+  @include sans;
   color: colors(black);
   background: colors(tertiary-light-ex);
   @include media(pc) {
   //width: calc(100vw - 15px);
-  overflow-y: scroll;
+  //overflow-y: scroll;
  }
 }
 
