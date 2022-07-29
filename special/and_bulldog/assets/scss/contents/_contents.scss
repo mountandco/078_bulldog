@@ -2,7 +2,7 @@
 //=====================================================
 .sec-contents {
   width: 100%;
-  margin-top: calc(var(--vh2, 1vh) * 100);
+  //margin-top: calc(var(--vh2, 1vh) * 100);
   background-color: colors(white);
   background-image: url(../img/bg.png);
   background-size: 100% calc(150/750*100vw);
@@ -13,7 +13,7 @@
     background-image: url(../img/bg@2x.png);
   }
   @include media(pc) {
-    margin-top: calc(828/1440*100vw);
+    //margin-top: 0;
     background-size: 100% calc(150/1440*100vw);
   }
 }
@@ -62,21 +62,29 @@
       line-height: 2.421;
     }
   }
-  .bg {
+  .bg--sp {
     order: 3;
     width: 100%;
     height: calc(420/750*100vw);
     background-image: url(../img/read_bg.jpg);
-    background-size: 150% auto;
+    background-size: cover;
     @include media-2x {
       background-image: url(../img/read_bg@2x.jpg);
     }
     @include media(pc) {
-      background-position: center top;
-      //background-attachment: fixed;
+      display: none;
+    }
+  }
+  .bg--pc {
+    display: none;
+    @include media(pc) {
+      display: block;
+      order: 3;
+      width: 100%;
+      background-image: url(../img/read_bg--pc.jpg);
       background-size: 100% auto;
       height: calc(400/1440*100vw);
-      background-image: url(../img/read_bg--pc.jpg);
+      background-position: center top;
       @include media-2x {
         background-image: url(../img/read_bg--pc@2x.jpg);
       }
@@ -981,15 +989,54 @@
     }
   }
   .company {
+    display: block;
     text-align: center;
     line-height: 1.4;
     font-weight: bold;
     color: #666;
     font-size: calc(24/750*100vw);
-    margin-bottom: calc(56/750*100vw);
+    margin-bottom: calc(34/750*100vw);
     @include media(pc) {
       font-size: calc(17/1440*100vw);
       margin-bottom: calc(31/1440*100vw);
+    }
+  }
+  .footer-sns-ttl {
+    text-align: center;
+    font-size: calc(27/750*100vw);
+    color: colors(green);
+    text-align: center;
+    margin-bottom: calc(13/750*100vw);
+    letter-spacing: 0.2em;
+    @include media(pc) {
+      display: none;
+    }
+  }
+  .footer-sns-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc(56/750*100vw);
+    li {
+      list-style-type: none;
+      margin: 0 calc(21/750*100vw);
+      &.twitter {
+        width: calc(63/750*100vw);
+      }
+      &.insta {
+        width: calc(60/750*100vw);
+      }
+      a {
+        display: block;
+        width: 100%;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+    @include media(pc) {
+      display: none;
     }
   }
   small {
