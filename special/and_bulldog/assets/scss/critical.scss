@@ -20,14 +20,15 @@
 // .fv-fixed-wrap
 //=====================================================
 .fv-fixed-wrap {
-  position: fixed;
+  //position: fixed;
   width: 100%;
-  height: 100vh;
-  height: calc(var(--vh2, 1vh) * 100);
+  //height: 100vh;
+  //height: calc(var(--vh2, 1vh) * 100);
   display: flex;
   align-items: center;
   @include media(pc) {
     height: auto;
+    //position: static;
     //position: relative;
   }
 }
@@ -36,6 +37,13 @@
 //=====================================================
 .fv {
   width: 100%;
+  padding-top: calc(33/750*100vw);
+  padding-bottom: calc(48/750*100vw);
+  @include media(pc) {
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+  }
   .fv__product {
     display: flex;
     align-items: flex-end;
@@ -114,8 +122,8 @@
     background-image: url(assets/img/fv-bg--sp.jpg);
     background-size: cover;
     background-position: center;
-    opacity: 0;
-    transition: 2s;
+    //opacity: 0;
+    //transition: 2s;
     @include media-2x {
       background-image: url(assets/img/fv-bg--sp@2x.jpg);
     }
@@ -130,9 +138,9 @@
         background-image: url(assets/img/fv-bg--pc@2x.jpg);
       }
     }
-    &.load {
-      opacity: 1;
-    }
+    // &.load {
+    //   opacity: 1;
+    // }
   }
   // END .fv__bg
   .fv_read {
@@ -177,9 +185,10 @@
     display: none;
     @include media(pc) {
       display: block;
-      position: absolute;
+      position: fixed;
       bottom: calc(21/1440*100vw);
       left: calc(26/1440*100vw);
+      @include z-index-2;
     }
     ul {
       width: calc(26/1440*100vw);
@@ -201,13 +210,13 @@
         }
         // テキスト
         &.ttl {
-          width: 4.2em;
+          width: 2.6em;
           // /background: red;
           letter-spacing: 0.2em;
           white-space: nowrap;
           font-size: calc(14/1440*100vw);
           color: colors(green);
-          transform: rotate(90deg) translateY(calc(-26/1440*100vw)) translateX(calc(-30/1440*100vw));
+          transform: rotate(90deg) translateY(calc(-26/1440*100vw)) translateX(calc(-8/1440*100vw));
           transform-origin: top left;
           line-height: calc(26/1440*100vw);
         }

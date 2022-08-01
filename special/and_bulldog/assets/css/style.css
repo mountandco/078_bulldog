@@ -1,180 +1,6 @@
 @charset "UTF-8";
-/*-------------------------------------
-リセットCSS
---------------------------------------*/
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var, a,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  box-sizing: border-box;
-}
-
-body {
-  line-height: 1;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-nav ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-ins {
-  color: #411B00;
-  text-decoration: none;
-}
-
-/* change colours to suit your needs */
-mark {
-  color: #411B00;
-  font-style: normal;
-  font-weight: bold;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid;
-  margin: 1em 0;
-  padding: 0;
-}
-
-input, select {
-  vertical-align: middle;
-}
-
-input[type=submit],
-input[type=button],
-input[type=radio] select {
-  border-radius: 0;
-  -webkit-box-sizing: content-box;
-  -webkit-appearance: button;
-  appearance: button;
-  border: none;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-input[type=submit]::-webkit-search-decoration,
-input[type=button]::-webkit-search-decoration,
-input[type=radio]::-webkit-search-decoration select::-webkit-search-decoration {
-  display: none;
-}
-
-input[type=submit]::focus,
-input[type=button]::focus,
-input[type=radio]::focus select::focus {
-  outline-offset: -2px;
-}
-
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1rem;
-  font-family: "Zen Kaku Gothic New", BlinkMacSystemFont, -apple-system, "Helvetica Neue", 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Arial, sans-serif;
-  color: #411B00;
-}
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  word-wrap: break-word;
-  -webkit-overflow-scrolling: touch;
-}
-
-img,
-video,
-object {
-  max-width: 100%;
-  height: auto;
-  border: none;
-  vertical-align: bottom;
-}
-
-a {
-  transition: 0.5s ease;
-  color: #411B00;
-  text-decoration: none;
-}
-
-input,
-button,
-select,
-textarea {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-}
-
 .sec-contents {
   width: 100%;
-  margin-top: calc(var(--vh2, 1vh) * 100);
   background-color: #FFF;
   background-image: url(../img/bg.png);
   background-size: 100% calc(150/750*100vw);
@@ -189,7 +15,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 1024px) {
   .sec-contents {
-    margin-top: calc(828/1440*100vw);
     background-size: 100% calc(150/1440*100vw);
   }
 }
@@ -245,28 +70,39 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 2.421;
   }
 }
-.sec-read .bg {
+.sec-read .bg--sp {
   order: 3;
   width: 100%;
   height: calc(420/750*100vw);
   background-image: url(../img/read_bg.jpg);
-  background-size: 150% auto;
+  background-size: cover;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .sec-read .bg {
+  .sec-read .bg--sp {
     background-image: url(../img/read_bg@2x.jpg);
   }
 }
 @media (min-width: 1024px) {
-  .sec-read .bg {
-    background-position: center top;
+  .sec-read .bg--sp {
+    display: none;
+  }
+}
+.sec-read .bg--pc {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .sec-read .bg--pc {
+    display: block;
+    order: 3;
+    width: 100%;
+    background-image: url(../img/read_bg--pc.jpg);
     background-size: 100% auto;
     height: calc(400/1440*100vw);
-    background-image: url(../img/read_bg--pc.jpg);
+    background-position: center top;
   }
 }
 @media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (min-resolution: 192dpi), only screen and (min-width: 1024px) and (min-resolution: 2dppx) {
-  .sec-read .bg {
+  .sec-read .bg--pc {
     background-image: url(../img/read_bg--pc@2x.jpg);
   }
 }
@@ -1269,17 +1105,60 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 .footer .company {
+  display: block;
   text-align: center;
   line-height: 1.4;
   font-weight: bold;
   color: #666;
   font-size: calc(24/750*100vw);
-  margin-bottom: calc(56/750*100vw);
+  margin-bottom: calc(34/750*100vw);
 }
 @media (min-width: 1024px) {
   .footer .company {
     font-size: calc(17/1440*100vw);
     margin-bottom: calc(31/1440*100vw);
+  }
+}
+.footer .footer-sns-ttl {
+  text-align: center;
+  font-size: calc(27/750*100vw);
+  color: #00593F;
+  text-align: center;
+  margin-bottom: calc(13/750*100vw);
+  letter-spacing: 0.2em;
+}
+@media (min-width: 1024px) {
+  .footer .footer-sns-ttl {
+    display: none;
+  }
+}
+.footer .footer-sns-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: calc(56/750*100vw);
+}
+.footer .footer-sns-list li {
+  list-style-type: none;
+  margin: 0 calc(21/750*100vw);
+}
+.footer .footer-sns-list li.twitter {
+  width: calc(63/750*100vw);
+}
+.footer .footer-sns-list li.insta {
+  width: calc(60/750*100vw);
+}
+.footer .footer-sns-list li a {
+  display: block;
+  width: 100%;
+}
+.footer .footer-sns-list li a img {
+  display: block;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .footer .footer-sns-list {
+    display: none;
   }
 }
 .footer small {
@@ -1387,7 +1266,7 @@ h1, h2, h3, h4, h5, h6 {
   width: calc(538/750*100vw);
   margin-top: calc(-18/750*100vw);
   margin-bottom: calc(42/750*100vw);
-  margin-left: calc(153/750*100vw);
+  margin-left: calc(87/750*100vw);
 }
 @media (min-width: 1024px) {
   .ringosu .recipe-layout.nth-2 .pic {
@@ -1525,7 +1404,7 @@ h1, h2, h3, h4, h5, h6 {
   width: calc(538/750*100vw);
   margin-top: calc(-8/750*100vw);
   margin-bottom: calc(42/750*100vw);
-  margin-left: calc(153/750*100vw);
+  margin-left: calc(138/750*100vw);
 }
 @media (min-width: 1024px) {
   .goma .recipe-layout.nth-2 .pic {
