@@ -15,35 +15,9 @@
 #ディレクトリ build 配下の全てのファイルを除外
 #build/
 GitArchive/
+.vscode/
 
 
-#以外 gitの除外ファイル
-
-#wordpress gitの除外ファイル
-#/wp/*
-#!/wp/favicon.ico
-#!/wp/google*.html
-#!/wp/wp-content
-#/wp/wp-content/*
-#!/wp/wp-content/wpmp-config.php
-#!/wp/wp-content/themes
-#/wp/wp-content/themes/*
-#!/wp/wp-content/themes/kihara
-#!/wp/wp-content/themes/kihara-en
-#!/wp/wp-content/ai1wm-backups/
-#/wp/wp-content/ai1wm-backups/index.html
-#/wp/wp-content/ai1wm-backups/index.php
-#/wp/wp-content/ai1wm-backups/.htaccess
-#/wp/wp-content/ai1wm-backups/web.config
-#/wp/wp-content/ai1wm-backups/robots.txt
-#!/wp/wp-content/ai1wm-backups/*.wpress
-#!/wp/wp-content/uploads
-
-
-#例えば、doc/notes.txt を除外するが, doc/server/arch.txt は除外しない
-#doc/*.txt
-
-#doc/配下の全ての .pdf ファイルを除外する doc/a.pdf, doc/a/a.pdf なども含む
 
 # 以下雛形
 # Compiled source #
