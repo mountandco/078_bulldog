@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+// foundation scss
+//=====================================================
+@import "foundations/_basic";
+
+// common
+//=====================================================
+@import "common/_common";
+
+// parts
+//=====================================================
+@import "parts/_ttl-page";
+@import "parts/_empty";
+
+// pages
+//=====================================================
+@import "pages/_company";

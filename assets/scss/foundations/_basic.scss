@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+// 01. Font
+//=====================================================
+// @mixin sans {
+//   font-family: 'Zen Kaku Gothic New', BlinkMacSystemFont, -apple-system, "Helvetica Neue", 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Sans",Arial, sans-serif;
+// }
+// @mixin serifcur {
+//   font-family: 'Dancing Script', cursive;
+// }
+// @mixin tsukuard {
+//   font-family: fot-tsukuardgothic-std, sans-serif;
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+// 02. Color
+//=====================================================
+$color: (
+  black: #323232,
+  white: #FFF,
+  color-base: var(--color-base),
+  color-recipe: var(--color-recipe),
+  color-products: var(--color-products),
+  color-special: var(--color-special),
+  color-promotion: var(--color-promotion),
+  color-about: var(--color-about),
+  color-company: var(--color-company),
+  color-news: var(--color-news),
+  color-ir: var(--color-ir),
+  color-brand: var(--color-brand),
+  color-lightgray: var(--color-lightgray),
+  color-gray: var(--color-gray),
+  color-darkgray: var(--color-darkgray),
+  bg-gray: var(--bg-gray),
+);
+
+// Color Map
+@function colors($key) {
+  @return map-get($color, $key);
+}
+
+// 03. Z-index
+//=====================================================
+//z-index
+@mixin z-index-1 {
+  z-index: 1;
+}
+@mixin z-index-2 {
+  z-index: 2;
+}
+@mixin z-index-3 {
+  z-index: 3;
+}
+@mixin z-index-4 {
+  z-index: 4;
+}
+@mixin z-index-5 {
+  z-index: 5;
+}
+@mixin z-index-6 {
+  z-index: 6;
+}
+@mixin z-index-7 {
+  z-index: 7;
+}
+@mixin z-index-8 {
+  z-index: 8;
+}
+@mixin z-index-9 {
+  z-index: 9;
+}
+@mixin z-index-10 {
+  z-index: 10;
+}
+@mixin z-index-11 {
+  z-index: 11;
+}
+@mixin z-index-999 {
+  z-index: 999;
+}
+
+// 04. Media Query
+//=====================================================
+$device_width: (
+  sp-s: 414px,
+  sp: 767px,
+  tb: 1099px,
+);
+// Device Width Map
+@function device($key) {
+  @return map-get($device_width, $key);
+}
+@mixin media($size: tablet) {
+  @media (max-width: device($size)) {
+    @content;
+  }
+}
+
+@mixin media-2x {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+   only screen and (min--moz-device-pixel-ratio: 2),
+   only screen and (-o-min-device-pixel-ratio: 2/1),
+   only screen and (min-device-pixel-ratio: 2),
+   only screen and (min-resolution: 192dpi),
+   only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+// 05. Other
+//=====================================================
