@@ -1,0 +1,57 @@
+.underlayer.company-message {}
+
+.inner-wrap {
+  display: flex;
+  justify-content: space-between;
+  @include media(sp) {
+    flex-direction: column;
+  }
+}
+.photo-wrap {
+  width: 36.363%;
+  @include media(sp) {
+    width: 100%;
+  }
+}
+.photo__picture {
+  display: block;
+  width: 100%;
+}
+.text-wrap {
+  width: 59%;
+  @include media(sp) {
+    width: 100%;
+  }
+}
+.company-message__smallttl {
+  font-size: 2.4rem;
+  line-height: 1;
+  margin-bottom: 1.15em;
+  @include media(sp) {
+    margin-bottom: 1.45em;
+    margin-top: 1.45em;
+    text-align: center;
+  }
+  @include media(sp-s) {
+    font-size: 2.1rem;
+  }
+}
+.company-message__text {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  margin-bottom: calc(1em + 0.7em);
+  @include media(sp-s) {
+    font-size: 1.4rem;
+  }
+}
+.company-message__text--large {
+  display: block;
+  margin: calc(1em + 0.7em) 0;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+.company-message__last-of-type {
+  margin-top: 2.4em;
+  margin-bottom: 0;
+}

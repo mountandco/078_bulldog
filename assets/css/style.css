@@ -1877,6 +1877,7 @@
 .location a {
 	display: inline-block;
 	font-size: 1.2rem;
+	text-decoration: underline;
 }
 .location a.icon--arrow::after {
 	background: var(--color-gray);
@@ -1885,9 +1886,10 @@
 .location a:last-of-type.icon--arrow::after {
 	display: none;
 }
-.location--current {
+a.location--current {
 	font-weight: bold;
 	pointer-events: none;
+	text-decoration: none;
 }
 .location--current:hover {
 	color: inherit;
@@ -1899,13 +1901,6 @@
 		margin-top: 55px;
 		padding: 3px 20px 6px;
 		background: var(--bg-gray);
-	}
-	.location a {
-		line-height: 1;
-		text-decoration: underline;
-	}
-	.location a.location--current {
-		text-decoration: none;
 	}
 }
 
