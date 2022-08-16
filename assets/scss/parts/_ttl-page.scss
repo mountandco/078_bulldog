@@ -1,3 +1,4 @@
+// .ttl-page
 .ttl-page {
   font-size: 4rem;
   display: flex;
@@ -8,17 +9,17 @@
   @include media(tb) {
     font-size: 2.6rem;
   }
-  .ttl-page__large {
-    order: 2;
-    letter-spacing: 0.05em;
-  }
-  .ttl-page__small {
-    order: 1;
-    font-size: 1.4rem;
-    color: colors(color-company);
-    margin-bottom: 0.85em;
-    @include media(tb) {
-      font-size: 1rem;
-    }
+}
+.ttl-page__large {
+  order: 2;
+  letter-spacing: 0.05em;
+}
+.ttl-page__small {
+  order: 1;
+  font-size: 1.4rem;
+  color: colors(color-company);
+  margin-bottom: 0.85em;
+  @include media(tb) {
+    font-size: 1rem;
   }
 }

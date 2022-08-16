@@ -6,7 +6,7 @@
     padding-top: 0;
     padding-bottom: 0;
   }
-  // 固有のサイズを指定
+  // /company/ページ
   &.company-empty {
     .empty {
       width: 22.272%;
@@ -15,6 +15,17 @@
       }
       @include media(sp) {
         width: 47%;
+      }
+    }
+  }
+  // /company/ページで共通で使うパーツ
+  &.company-empty.nav-company-ul {
+    .empty {
+      width: 27.5%;
+      @include media(sp) {
+        width: calc(50% - (20px + 10px));
+        margin-left: 10px;
+        margin-right: 10px;
       }
     }
   }
