@@ -802,30 +802,10 @@
 
         <div class="sitelink">
             <ul class="sitelink__lists">
-                <li class="sitelink__item">
-                    <a href="">
-                        <img src="assets/images/image_sitelink_01.jpg" srcset="assets/images/image_sitelink_01.jpg 1x, assets/images/image_sitelink_01@2x.jpg 2x" alt="ブルドックソースグループSDGs宣言" width="53" height="19">
-                        <p class="textlink__icon--arrow">ブルドックソースグループSDGs宣言</p>
-                    </a>
-                </li>
-                <li class="sitelink__item">
-                    <a href="">
-                        <img src="assets/images/image_sitelink_02.jpg" srcset="assets/images/image_sitelink_02.jpg 1x, assets/images/image_sitelink_02@2x.jpg 2x" alt="新卒採用2023" width="53" height="19">
-                        <p class="textlink__icon--arrow">新卒採用2023</p>
-                    </a>
-                </li>
-                <li class="sitelink__item">
-                    <a href="">
-                        <img src="assets/images/image_sitelink_03.jpg" srcset="assets/images/image_sitelink_03.jpg 1x, assets/images/image_sitelink_03@2x.jpg 2x" alt="オンラインショップ" width="53" height="19">
-                        <p class="textlink__icon--arrow">オンラインショップ</p>
-                    </a>
-                </li>
-                <li class="sitelink__item">
-                    <a href="">
-                        <img src="assets/images/image_sitelink_04.jpg" srcset="assets/images/image_sitelink_04.jpg 1x, assets/images/image_sitelink_04@2x.jpg 2x" alt="株主・投資家のみなさまへ" width="53" height="19">
-                        <p class="textlink__icon--arrow">株主・投資家のみなさまへ</p>
-                    </a>
-                </li>
+                <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/inc/image_sitelink/image_sitelink_01.html'); ?>
+                <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/inc/image_sitelink/image_sitelink_02.html'); ?>
+                <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/inc/image_sitelink/image_sitelink_03.html'); ?>
+                <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/inc/image_sitelink/image_sitelink_04.html'); ?>
             </ul>
         </div><!-- /sitelink -->
 
@@ -877,22 +857,7 @@
         </div><!-- /instagram -->
 
 
-        <aside class="aside">
-            <div class="aside__inner">
-                <p class="aside__text">SHARE</p>
-                <ul class="aside__sns-button__lists">
-                    <li class="aside__sns-button__twitter">
-                        <a href="//twitter.com/intent/tweet?url=https://www.bulldog.co.jp&text=" target="_blank" rel="nofollow noopener noreferrer">
-                            <img src="assets/images/logo_twitter.svg" alt="Twitter" width="1" height="1">
-                        </a>
-                    </li>
-                    <li class="aside__sns-button__instagram">
-                        <a href="https://www.instagram.com/bulldog_sauce/?igshid=YmMyMTA2M2Y%3D" target="_blank"><img src="assets/images/logo_instagram.svg" alt="Instagram" width="1" height="1"></a>
-                    </li>
-                </ul>
-            </div>
-        </aside><!-- /aside -->
-
+        <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/inc/share.html'); ?>
         <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/inc/footer.html'); ?>
         <script src="assets/js/lib/rellax.min.js"></script>
         <script src="assets/js/lib/bodyScrollLock.min.js"></script>

@@ -1892,6 +1892,22 @@
 .location--current:hover {
 	color: inherit;
 }
+@media screen and (max-width: 1099px) {
+	.location {
+		width: 100%;
+		margin-bottom: 30px;
+		margin-top: 55px;
+		padding: 3px 20px 6px;
+		background: var(--bg-gray);
+	}
+	.location a {
+		line-height: 1;
+		text-decoration: underline;
+	}
+	.location a.location--current {
+		text-decoration: none;
+	}
+}
 
 
 .heading__outer {
