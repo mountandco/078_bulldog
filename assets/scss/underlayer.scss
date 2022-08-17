@@ -10,11 +10,13 @@
 
 // parts
 //=====================================================
-@import "parts/_ttl-page";
+@import "parts/_ttl";
+@import "parts/_list";
 @import "parts/_empty";
 
 // pages
 //=====================================================
 @import "pages/_company";
 @import "pages/_company-message";
+@import "pages/_company-about";
 

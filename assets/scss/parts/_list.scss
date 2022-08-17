@@ -1,0 +1,32 @@
+// .list-dl
+.list-dl {
+  display: flex;
+  border-bottom: solid 1px colors(color-lightgray);
+  font-size: 1.6rem;
+  line-height: 1.7;
+  @include media(sp) {
+    flex-direction: column;
+    font-size: 1.4rem;
+  }
+  &:first-of-type {
+    border-top: solid 2px colors(color-lightgray);
+  }
+}
+.list-dl__dt {
+  width: 19.272%;
+  background: colors(bg-gray);
+  padding: 0.9em 0 1em 1.35em;
+  font-weight: bold;
+  @include media(sp) {
+    width: 100%;
+    padding: 0.8em 1.125em;
+  }
+}
+.list-dl__dd {
+  width: calc(100% - 19.272%);
+  padding: 0.9em 0 1em 1.35em;
+  @include media(sp) {
+    width: 100%;
+    padding: 0.8em 1.125em 1.5em;
+  }
+}
