@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.map-body {
+  padding: 0;
+  margin: 0;
+}
+
+.map-wrap {
+  width: 100%;
+  padding: 6.5vw 4.363vw;
+}
+
+.map-wrap-title {
+  font-size: 4.6vw;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.map-wrap-title .map-wrap-title__text {
+  display: block;
+}
+.map-wrap-title .map-wrap-title__print {
+  display: none;
+  margin-left: 0.4em;
+  cursor: pointer;
+}
+
+.dl-group {
+  display: flex;
+  font-size: 2.7vw;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.dl-group + .dl-group {
+  margin-bottom: 1.8em;
+}
+
+.dl-group__dt {
+  width: 4em;
+  display: flex;
+  justify-content: space-between;
+}
+.dl-group__dt:after {
+  content: ":";
+  display: block;
+  width: 1.4em;
+}
+
+.dl-group__dd {
+  width: calc(100% - 4em);
+}
+
+.map_image {
+  width: 100%;
+}
+
+.map-close-btn {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  width: 30px;
+  height: 30px;
+}
+.mac .map-wrap-title .map-wrap-title__text br,
+.win .map-wrap-title .map-wrap-title__text br {
+  display: none;
+}
+.mac .map-wrap-title .map-wrap-title__text br.block,
+.win .map-wrap-title .map-wrap-title__text br.block {
+  display: block;
+}
+.mac .map-wrap-title .map-wrap-title__print,
+.win .map-wrap-title .map-wrap-title__print {
+  display: block;
+}
+
+.ipad .map-wrap-title,
+.iphone .map-wrap-title,
+.android .map-wrap-title {
+  font-size: 5.6vw;
+}
+.ipad .map-wrap-title .map-wrap-title__text br,
+.iphone .map-wrap-title .map-wrap-title__text br,
+.android .map-wrap-title .map-wrap-title__text br {
+  display: block;
+}
+.ipad .map-wrap-title .map-wrap-title__print,
+.iphone .map-wrap-title .map-wrap-title__print,
+.android .map-wrap-title .map-wrap-title__print {
+  display: none;
+}
+.ipad .dl-group,
+.iphone .dl-group,
+.android .dl-group {
+  font-size: 3.2vw;
+}
+
+/*# sourceMappingURL=map.css.map */
