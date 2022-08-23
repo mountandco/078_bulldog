@@ -10,6 +10,7 @@
 
 // parts
 //=====================================================
+@import "parts/_layout";
 @import "parts/_ttl";
 @import "parts/_list";
 @import "parts/_empty";
@@ -23,4 +24,7 @@
 @import "pages/_company-history";
 @import "pages/_company-name";
 @import "pages/_company-group";
+@import "pages/_company-faq";
+@import "pages/_company-safety";
+@import "pages/_company-environment";
 
