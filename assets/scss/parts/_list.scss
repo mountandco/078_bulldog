@@ -306,3 +306,39 @@
 .list-ol-child-child__li--text {
   display: block;
 }
+
+// list-box-gray
+.list-box-gray {
+  display: flex;
+  background: colors(bg-gray);
+  padding: 2rem 4rem;
+  border-radius: 5px;
+  margin: 1.25em 0 1.1875em;
+  font-weight: bold;
+  @include media(sp) {
+    flex-direction: column;
+    padding: 1.428em;
+  }
+}
+.list-box-gray__dt {
+  display: flex;
+  align-items: center;
+  padding-right: 4rem;
+  border-right: solid 1px colors(color-lightgray);
+  @include media(sp) {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: solid 1px colors(color-lightgray);
+    padding-bottom: 1.3em;
+  }
+}
+.list-box-gray__dd {
+  padding-left: 4rem;
+  @include media(sp) {
+    padding-left: 0;
+    padding-top: 1.3em;
+  }
+}
+
+
+
