@@ -13,10 +13,12 @@
 @import "parts/_layout";
 @import "parts/_ttl";
 @import "parts/_list";
+@import "parts/_link";
 @import "parts/_empty";
 
 // pages
 //=====================================================
+// company
 @import "pages/_company";
 @import "pages/_company-message";
 @import "pages/_company-about";
@@ -27,4 +29,7 @@
 @import "pages/_company-faq";
 @import "pages/_company-safety";
 @import "pages/_company-environment";
+@import "pages/_company-antisocial";
 
+// socialmediapolicy
+@import "pages/_socialmediapolicy";

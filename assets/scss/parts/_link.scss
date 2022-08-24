@@ -1,0 +1,30 @@
+// .link-external
+.link-external {
+  //display: flex;
+  //align-items: flex-end;
+  //width: fit-content;
+  //background-color: red;
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url(../images/underlayer/icon-external-link.svg);
+    //background-color: yellow;
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    margin-left: 0em;
+    background-position: center;
+    position: relative;
+    top: 0.18em;
+  }
+  .spblock {
+    display: none;
+    @include media(sp) {
+      display: block;
+    }
+  }
+}
+.link-external__text {
+  text-decoration: underline;
+}
