@@ -127,3 +127,13 @@ for (let i = 0; i < smoothScrollTrigger.length; i++) {
 		});
 	});
 }
+
+// トップページFV直下の赤背景ナビが下層ページに存在していた場合
+
+
+$(function(){
+	if($('main').hasClass('underlayer')){
+		$('.page__nav').addClass('layout__page__nav--underlayer');
+	}
+});
+

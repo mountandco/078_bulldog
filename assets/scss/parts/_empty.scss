@@ -6,7 +6,7 @@
     padding-top: 0;
     padding-bottom: 0;
   }
-  // /company/ページ
+  // /company/
   &.company-empty {
     .empty {
       width: 22.272%;
@@ -27,6 +27,12 @@
         margin-left: 10px;
         margin-right: 10px;
       }
+    }
+  }
+  // /sitemap/
+  &.sitemap__pc-col-3.sitemap-empty {
+    .empty {
+      width: 29.532%;
     }
   }
 }

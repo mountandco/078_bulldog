@@ -11,7 +11,7 @@
 // parts
 //=====================================================
 @import "parts/_layout";
-@import "parts/_ttl";
+@import "parts/_title";
 @import "parts/_list";
 @import "parts/_link";
 @import "parts/_empty";
@@ -36,3 +36,15 @@
 
 // securitycontrol
 @import "pages/_securitycontrol";
+
+// privacy
+@import "pages/_privacy";
+
+// sitemap
+@import "pages/_sitemap";
+
+// about
+@import "pages/_about-page";
+
+
+

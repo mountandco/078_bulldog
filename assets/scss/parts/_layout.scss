@@ -9,4 +9,18 @@
 // .layout-main-normal-margin-bottom
 .layout-main-normal-margin-bottom {
   margin-bottom: 8rem;
+  @include media(sp) {
+    margin-bottom: 6rem;
+  }
+  @include media(sp-s) {
+    margin-bottom: 2rem;
+  }
+}
+
+// .layout__page__nav--underlayer
+.layout__page__nav--underlayer {
+  margin-bottom: 10rem;
+  @include media(sp) {
+    margin-bottom: 2rem;
+  }
 }

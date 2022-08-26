@@ -340,5 +340,12 @@
   }
 }
 
+// .ul-bold-list
+.ul-bold-list {}
+.ul-bold-list__li {}
+
+.ul-bold-list + .link-btn-gray-small {
+  margin-top: 1em;
+}
 
 
