@@ -47,65 +47,7 @@ $(".header__button--close a[href]").on("click", function(event) {
 /* ----------------------------------------------------------------------------------------------------
 *  SWIPER
 * --------------------------------------------------------------------------------------------------*/
-// TOPメインビジュアル
-var slider1 = new Swiper ('.hero__swiper .swiper', {
-	effect: 'fade',
-	fadeEffect: {
-	  crossFade: true,
-	},
-	loop: true,
-	loopAdditionalSlides: 1,
-	speed: 2000,
-	autoplay: {
-	  delay: 7000,
-	  disableOnInteraction: false,
-	  waitForTransition: false,
-	},
-	followFinger: false,
-	pagination: {
-	  el: '.hero__swiper .swiper-pagination',
-	  clickable: true,
-	},
-	navigation: {
-		nextEl: '.hero__swiper .swiper-button-next',
-		prevEl: '.hero__swiper .swiper-button-prev',
-	},
-});
-
-// TOPお知らせ
-var slider2 = new Swiper ('.important-information__swiper .swiper', {
-    direction: 'vertical',
-    effect: 'slide',
-    slidesPerView: 1,
-    loop: true,
-    autoplay: {
-        delay: 2000,
-    },
-});
-
-// カード型
-var slider3 = new Swiper ('.card__swiper .swiper', {
-	slidesPerView: 2,
-	spaceBetween: 10,
-	pagination: {
-		el: '.card__swiper .swiper-pagination',
-		clickable: true,
-	},
-	navigation: {
-		nextEl: '.card__swiper .swiper-button-next',
-		prevEl: '.card__swiper .swiper-button-prev',
-	},
-	breakpoints: {
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 15
-    },
-    1100: {
-      slidesPerView: 4,
-      spaceBetween: 20
-    }//
-  }
-});
+// swiperが存在しないページでエラーが出るので別のjsファイルに移植
 
 /* ----------------------------------------------------------------------------------------------------
 *  RELLAX
@@ -161,10 +103,37 @@ $(window).on("load resize", function () {
 	}
 });
 
-
 $(function () {
 	$('.popup__button--open').on("click", function () {
 	  $(this).next('div').slideToggle();
 	  $(this).find(".icon").toggleClass('open');
 	});
 });
+
+// 汎用 スムーズスクロール
+const smoothScrollTrigger = document.querySelectorAll('a[href^="#"]');
+for (let i = 0; i < smoothScrollTrigger.length; i++) {
+	smoothScrollTrigger[i].addEventListener('click', (e) => {
+		e.preventDefault();
+		let href = smoothScrollTrigger[i].getAttribute('href');
+		let targetElement = document.getElementById(href.replace('#', ''));
+		const rect = targetElement.getBoundingClientRect().top;
+		const offset = window.pageYOffset;
+		const gap = 0;
+		const target = rect + offset - gap;
+		window.scrollTo({
+			top: target,
+				behavior: 'smooth',
+		});
+	});
+}
+
+// トップページFV直下の赤背景ナビが下層ページに存在していた場合
+
+
+$(function(){
+	if($('main').hasClass('underlayer')){
+		$('.page__nav').addClass('layout__page__nav--underlayer');
+	}
+});
+

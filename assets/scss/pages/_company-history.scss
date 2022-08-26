@@ -1,0 +1,57 @@
+.underlayer.company-history {}
+
+.company-history {
+  .tab-layout {}
+  .tab-layout__btns {
+    display: flex;
+    @include media(sp-s) {
+      justify-content: space-between;
+    }
+  }
+  .tab-layout__btns--btn {
+    width: 21.2rem;
+    height: 4.6rem;
+    line-height: 4.6rem;
+    text-align: center;
+    border-top: solid 2px colors(color-company);
+    border-left: solid 2px colors(color-company);
+    border-right: solid 2px colors(color-company);
+    cursor:pointer;
+    transition: all 0.2s;
+    font-weight: bold;
+    margin-right: 1rem;
+    border-radius: 5px 5px 0 0;
+    @include media(sp-s) {
+      width: 30%;
+      height: auto;
+      line-height: 1.5;
+      font-size: 1.6rem;
+      padding: 0.6em 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+    br {
+      display: none;
+      @include media(sp-s) {
+        display: block;
+      }
+    }
+  }
+  .tab-layout__contents {
+  }
+  .tab-layout__contents--area {
+    display:none;
+  }
+  .tab-active {
+    background: colors(color-company);
+    color: colors(white);
+  }
+  .tab-show {
+    display:block;
+  }
+}

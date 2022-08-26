@@ -1,0 +1,8 @@
+.underlayer.privacy {}
+
+.privacy-read {
+  margin-bottom: 5rem;
+  @include media(sp) {
+    margin-bottom: 4rem;
+  }
+}

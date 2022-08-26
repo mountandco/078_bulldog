@@ -1,0 +1,20 @@
+.underlayer.company-faq {}
+
+.company-safety-read {
+  margin-bottom: 5rem;
+  @include media(sp) {
+    margin-bottom: 4rem;
+  }
+  br {
+    @include media(tb) {
+      display: none;
+    }
+  }
+}
+.company-safety__position-right {
+  margin-top: 5rem;
+  text-align: right;
+  @include media(sp) {
+    margin-top: 4rem;
+  }
+}

@@ -10,11 +10,41 @@
 
 // parts
 //=====================================================
-@import "parts/_ttl-page";
+@import "parts/_layout";
+@import "parts/_title";
+@import "parts/_list";
+@import "parts/_link";
 @import "parts/_empty";
 
 // pages
 //=====================================================
+// company
 @import "pages/_company";
 @import "pages/_company-message";
+@import "pages/_company-about";
+@import "pages/_company-boardmember";
+@import "pages/_company-history";
+@import "pages/_company-name";
+@import "pages/_company-group";
+@import "pages/_company-faq";
+@import "pages/_company-safety";
+@import "pages/_company-environment";
+@import "pages/_company-antisocial";
+
+// socialmediapolicy
+@import "pages/_socialmediapolicy";
+
+// securitycontrol
+@import "pages/_securitycontrol";
+
+// privacy
+@import "pages/_privacy";
+
+// sitemap
+@import "pages/_sitemap";
+
+// about
+@import "pages/_about-page";
+
+
 

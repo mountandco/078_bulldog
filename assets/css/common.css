@@ -339,6 +339,7 @@ header {
 	border-radius: var(--corner-circle);
 	box-shadow: var(--box-shadow);
 	position: relative;
+	border: solid 1px #E1E1E1;
 }
 .header__lists {
 	display: flex;

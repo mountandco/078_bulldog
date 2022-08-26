@@ -1,0 +1,9 @@
+.underlayer.company-environment {}
+
+.socialmediapolicy__position-right {
+  margin-top: 5rem;
+  text-align: right;
+  @include media(sp) {
+    margin-top: 4rem;
+  }
+}

@@ -7,5 +7,5 @@ $(function() {
   for (var i = -1; ++i < 3;) {
       elem += '<span class="empty"></span>';
   }
-  $(".empty-box.company-empty").append(elem);
+  $(".empty-box").append(elem);
 });
