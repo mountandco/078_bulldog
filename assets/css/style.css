@@ -322,10 +322,12 @@
 .important-information {
 	width: 100%;
 	background: var(--bg-gray);
+	position: relative;
+	z-index: 3;
 }
 .important-information__inner {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	width: 1100px;
 	margin: 0 auto;
 	padding: 15px 0;
@@ -338,9 +340,10 @@
 	height: 54px;
 	border-radius: var(--corner-smallround);
 	background: #FFF;
-	margin: 0 20px 0 0;
+	margin: 0;
 	color: var(--color-base);
 	font-size: 1.4rem;
+	margin-top: 3px;
 }
 .important-information__list {
 	width: calc(100% - 116px);
@@ -348,8 +351,9 @@
 .important-information__announce {
 	width: 100%;
 	font-weight: bold;
-	height: 30px;
+	min-height: 30px;
 	line-height: 30px;
+	padding-left: 20px;
 }
 .important-information__announce .news__text,
 .important-information__item .news__text {
@@ -359,7 +363,7 @@
 	white-space: nowrap;
 	padding: 0 10px 0 0;
 }
-.important-information__announce a.icon--blank::after {
+a.icon--blank::after {
 	background: var(--color-base);
 }
 .important-information__other {
@@ -371,12 +375,26 @@
 	line-height: 30px;
 }
 .important-information__swiper {
-	width: calc(100% - 100px);
-}
-.important-information__swiper .swiper {
 	width: 100%;
-	height: 30px;
+}
+.swiper.js-news-swiper {
+	width: 100%;
+	max-height: 30px;
 	/* overflow: visible; */
+	display: flex;
+	justify-content: space-between;
+}
+.swiper-wrapper.js-news-swiper__wrapper {
+	width: calc(100% - 90px);
+}
+.swiper-slide.js-news-swiper__wrapper--slide {
+	padding-left: 20px;
+	padding-right: 20px;
+	background: var(--bg-gray);
+	transition: all 0.2s;
+}
+.js-news-swiper .swiper-notification {
+	display: none;
 }
 .important-information__item {
 	width: 100%;
@@ -384,10 +402,101 @@
 .important-information__item a.icon--blank::after {
 	background: var(--color-base);
 }
+
+/* On Click .stopbtn => swiperの停止時、swiperがインラインで書き込んでるClassを上書き*/
+.acmenu-open .important-information__announce {
+	margin-bottom: 0.5em;
+}
+.acmenu-open .important-information__announce .news__text:after {
+	content: "";
+	display: inline-block;
+	width: 0.8em;
+  height: 0.8em;
+  -webkit-mask: url(../images/icon_blank.svg) no-repeat center center / contain;
+  mask: url(../images/icon_blank.svg) no-repeat center center / contain;
+	background-color: var(--color-base);
+	margin-left: 1em;
+}
+.acmenu-open .important-information__announce .news__text {
+	white-space: break-spaces;
+}
+.acmenu-open .important-information__announce .icon--blank:after {
+	opacity: 0;
+}
+.acmenu-open .important-information__other {
+	height: auto;
+}
+.acmenu-open .important-information__inner {
+	align-items: flex-start;
+}
+.acmenu-open .js-news-swiper {
+	/* display: block !important; */
+	/* overflow: visible !important; */
+	max-height: 500px;
+	transition: 1.2s ease;
+}
+.acmenu-open .js-news-swiper__wrapper {
+	/* display: flex !important; */
+	transform: inherit !important;
+	flex-direction: column;
+}
+.acmenu-open .js-news-swiper__wrapper--slide {
+	/* display: block !important; */
+	height: auto !important;
+}
+.acmenu-open .icon--blank {
+
+}
+.acmenu-open .js-news-swiper__wrapper--slide.nth-1 {
+	order: 1;
+}
+.acmenu-open .js-news-swiper__wrapper--slide.nth-2 {
+	order: 2;
+}
+.acmenu-open .js-news-swiper__wrapper--slide.nth-3 {
+	order: 3;
+}
+.acmenu-open .js-news-swiper__wrapper--slide.nth-4 {
+	order: 4;
+}
+.acmenu-open .js-news-swiper__wrapper--slide.nth-5 {
+	order: 5;
+}
+
+.acmenu-open .important-information__item .news__text {
+	white-space: break-spaces;
+	line-height: 1.65;
+	margin-bottom: 0.5em;
+}
+.acmenu-open .important-information__item .news__text:after {
+	content: "";
+	display: inline-block;
+	width: 0.8em;
+  height: 0.8em;
+  -webkit-mask: url(../images/icon_blank.svg) no-repeat center center / contain;
+  mask: url(../images/icon_blank.svg) no-repeat center center / contain;
+	background-color: var(--color-base);
+}
+.acmenu-open .important-information__item a.icon--blank::after {
+  opacity: 0;
+}
+.acmenu-open .swiper-slide-duplicate {
+	display: none !important;
+}
+.acmenu-open  {}
+/* END On Click .stopbtn */
+
 .button--open {
+	width: 76px;
+	/* background: green; */
 	display: flex;
 	align-items: center;
+	justify-content: flex-end;
 	color: var(--color-base);
+	position: absolute;
+  top: 0;
+  right: 0;
+	cursor: pointer;
 }
 .button--open .icon--open {
 	display: flex;
@@ -405,7 +514,8 @@
 	fill: #FFF;
 	transition: all 0.2s;
 }
-.button--open:hover .icon--open svg {
+.button--open:hover .icon--open svg,
+.button--open.start .icon--open svg {
 	transform: rotate(90deg);
 }
 @media screen and (max-width: 1099px) {
@@ -1637,7 +1747,7 @@
 .news__date {
 	font-family: 'webfont-english';
 	font-weight: bold;
-	color: #323232;
+	/* color: #323232; */
 	margin: 0 20px 0 0;
 }
 .news__category {
