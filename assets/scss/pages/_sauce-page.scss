@@ -24,9 +24,15 @@
 .sauce-fv__inner {
   background: rgba(255,255,255,0.8);
   border-radius: 8px;
-  padding: 26px 20px 24px;
+  width: 52.4rem;
+  height: 27rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   @include media(sp) {
     width: 89.333%;
+    height: auto;
     padding: calc(20/750*100vw) 0 calc(30/750*100vw);
   }
 }
@@ -35,15 +41,34 @@
   text-align: center;
   margin-bottom: 0.3em;
   line-height: 1.4;
-  color: colors(color-sauce);
+  color: colors(color-special);
   @include media(sp) {
     font-size: calc(50/750*100vw);
   }
 }
+// .sauce-fv__inner--titleの。別パターン
+.sauce-fv__inner--title-small {
+  display: block;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: colors(black);
+}
+.sauce-fv__inner--title-small-number {
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: colors(color-special);
+  margin-left: 0.15em;
+  position: relative;
+  top: 0.025em;
+}
+.sauce-fv__inner--title-large {}
+
 .sauce-fv__inner--text {
   text-align: center;
   letter-spacing: -0.04em;
   font-weight: bold;
+  line-height: 1.75;
   @include media(sp) {
     font-size: calc(28/750*100vw);
     line-height: 1.642;
@@ -56,7 +81,7 @@
   }
 }
 .sauce-fv__inner--text-sauce {
-  color: colors(color-sauce);
+  color: colors(color-special);
   font-size: 2rem;
   @include media(sp) {
     font-size: calc(32/750*100vw);
@@ -105,6 +130,117 @@
 }
 .underlayer.sauce-page .brand .swiper__controller .swiper-pagination-bullet-active {
   background: colors(color-base);
+}
+
+// bgのスタイル
+.sauce-common-bg {
+  max-width: 144rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 11.2rem 0 16.4rem;
+  background-image: url(../images/underlayer/bg_sauce.png),url(../images/underlayer/bg_sauce.png);
+  background-repeat: repeat-y,repeat-y;
+  background-size: min(calc(125/1440*100vw), 12.5rem) min(calc(1096/1440*100vw), 109.6rem);
+  background-position: top 1.9rem left, top 1.9rem right;
+  position: relative;
+  @include media(sp) {
+    background-size: calc(125/750*100vw) calc(1096/750*100vw);
+    background-position: top calc(22/750*100vw) left, top calc(22/750*100vw) right;
+  }
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1.9rem;
+    background: colors(white);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+// nav => footer付近 『ソースってなに？メニュー』
+.nav-sauce {
+  background: colors(color-special);
+  padding: 3rem 0;
+  @include media(sp) {
+    padding: 6.2rem 0 12rem;
+  }
+  @include media(sp-s) {
+    padding: 3.4rem 0 6rem;
+  }
+}
+.nav-sauce__title {
+  color: colors(white);
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 3rem;
+  @include media(sp) {
+    margin-bottom: 6.2rem;
+  }
+  @include media(sp-s) {
+    margin-bottom: 3.25rem;
+  }
+}
+.nav-sauce-list {
+  width: 90%;
+  max-width: 88rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include media(sp) {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  @include media(sp-s) {
+    width: 78%;
+    justify-content: space-between;
+  }
+}
+.nav-sauce-list__li {
+  width: 12.727%;
+  @include media(sp) {
+    width: 26.5%;
+    margin-bottom: 4vw;
+  }
+  @include media(sp-s) {
+    width: 41%;
+    margin-bottom: 8vw;
+  }
+  &:nth-last-of-type(-n + 2) {
+    @include media(sp) {
+      margin-bottom: 0;
+    }
+  }
+}
+.nav-sauce-list-a {
+  display: flex;
+  flex-direction: column;
+  color: colors(white);
+}
+.nav-sauce-list-a__title {
+  display: inline-block;
+  order: 2;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-align: center;
+  line-height: 1.2;
+  margin-top: 0.4em;
+  &.icon--arrow {
+    &::after {
+      background: colors(color-base);
+      display: inline-block;
+      margin-left: 0;
+      position: relative;
+      top: 0.05em;
+      left: 0.4em;
+    }
+  }
+}
+.nav-sauce-list-a__image {
+  order: 1;
 }
 
 // ページ固有
@@ -182,7 +318,7 @@
 .sauce-page-list-number__02 {
   font-size: 4.2rem;
   font-weight: bold;
-  color: colors(color-sauce);
+  color: colors(color-special);
   @include media(sp) {
     font-size: calc(42/750*100vw);
   }
