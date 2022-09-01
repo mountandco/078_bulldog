@@ -40,8 +40,8 @@ $(".js__nav-item").on("click", function () {
 	}
 });
 // アコーディオンメニュー内の閉じるボタン
-$(".header__button--close a[href]").on("click", function(event) {
-    $(".header__information__icon").trigger("click");
+$(".header__button--close a[href]").on("click", function (event) {
+	$(".header__information__icon").trigger("click");
 });
 
 /* ----------------------------------------------------------------------------------------------------
@@ -60,23 +60,23 @@ var rellax = new Rellax('.rellax');
 * --------------------------------------------------------------------------------------------------*/
 function PageTopAnime() {
 	var scroll = $(window).scrollTop();
-	if (scroll >= 200){
+	if (scroll >= 200) {
 		$('#page-top').removeClass('downmove');
 		$('#page-top').addClass('upmove');
-	}else{
-		if($('#page-top').hasClass('upmove')){
+	} else {
+		if ($('#page-top').hasClass('upmove')) {
 			$('#page-top').removeClass('upmove');
 			$('#page-top').addClass('downmove');
 		}
 	}
 	var wH = window.innerHeight;
-	var footerPos =  $('.footer__siteinformation').offset().top;
-	if(scroll+wH >= (footerPos+10)) {
-		var pos = (scroll+wH) - footerPos+10
-		$('#page-top').css('bottom',pos);
-	}else{
-		if($('#page-top').hasClass('upmove')){
-			$('#page-top').css('bottom','30px');
+	var footerPos = $('.footer__siteinformation').offset().top;
+	if (scroll + wH >= (footerPos + 10)) {
+		var pos = (scroll + wH) - footerPos + 10
+		$('#page-top').css('bottom', pos);
+	} else {
+		if ($('#page-top').hasClass('upmove')) {
+			$('#page-top').css('bottom', '30px');
 		}
 	}
 }
@@ -94,8 +94,88 @@ $('#page-top').click(function () {
 });
 
 /* ----------------------------------------------------------------------------------------------------
+*  header GLOBAL Btn
+* --------------------------------------------------------------------------------------------------*/
+// modal
+//=====================================================
+$(function () {
+	$('.js-modal-open').each(function () {
+		$(this).on('click', function () {
+			scrollPosition = $(window).scrollTop();
+			$('body').addClass('fixed').css({ 'top': -scrollPosition });
+			var target = $(this).data('target');
+			var modal = document.getElementById(target);
+			$(modal).fadeIn();
+			return false;
+		});
+	});
+	$('.js-modal-close').on('click', function () {
+		$('body').removeClass('fixed').css({ 'top': 0 });
+		window.scrollTo(0, scrollPosition);
+		$('.js-modal').fadeOut();
+		return false;
+	});
+});
+
+
+/* ----------------------------------------------------------------------------------------------------
+*  footprints
+* --------------------------------------------------------------------------------------------------*/
+$(function (global) {
+	var ClassCycler = function (opt) {
+		var timer,
+			execCycle = (function () {
+				var $item = opt.$targetElm,
+					index = 0,
+					max = $item.length;
+				return function () {
+					if (!opt.oneWay) {
+						$item.removeClass(opt.cycleClassName);
+					}
+					$item.eq(index).addClass(opt.cycleClassName);
+					index = (++index === max) ? 0 : index;
+					if (opt.oneWay && index === 0) {
+						global.clearInterval(timer);
+					}
+				};
+			}());
+		opt.startImmediate && execCycle();
+		timer = global.setInterval(execCycle, opt.duration);
+	};
+	global.ClassCycler = ClassCycler;
+}(this.self || global));
+
+$(window).scroll(function () {
+	$('.bg-fadein-footprints.nth-1').each(function () {
+		var hit = $(this).offset().top;
+		var scroll = $(window).scrollTop();
+		var wHeight = $(window).height();
+
+		if (matchMedia('only screen and (max-width: 767px)').matches) {
+			//  sp & tb
+		} else {
+			// pc
+		}
+
+		if (scroll > hit - wHeight + wHeight / 100 + 430) {
+			$(function () {
+				new ClassCycler({
+					$targetElm: $('.bg-fadein-footprints'),
+					cycleClassName: 'show',
+					duration: 200,
+					startImmediate: true,
+					oneWay: true
+				});
+			});
+		}
+
+	});
+});
+
+/* ----------------------------------------------------------------------------------------------------
 *  OTHER
 * --------------------------------------------------------------------------------------------------*/
+
 
 $(window).on("load resize", function () {
 	if (window.innerWidth < 767) {
@@ -105,8 +185,8 @@ $(window).on("load resize", function () {
 
 $(function () {
 	$('.popup__button--open').on("click", function () {
-	  $(this).next('div').slideToggle();
-	  $(this).find(".icon").toggleClass('open');
+		$(this).next('div').slideToggle();
+		$(this).find(".icon").toggleClass('open');
 	});
 });
 
@@ -123,16 +203,14 @@ for (let i = 0; i < smoothScrollTrigger.length; i++) {
 		const target = rect + offset - gap;
 		window.scrollTo({
 			top: target,
-				behavior: 'smooth',
+			behavior: 'smooth',
 		});
 	});
 }
 
 // トップページFV直下の赤背景ナビが下層ページに存在していた場合
-
-
-$(function(){
-	if($('main').hasClass('underlayer')){
+$(function () {
+	if ($('main').hasClass('underlayer')) {
 		$('.page__nav').addClass('layout__page__nav--underlayer');
 	}
 });
