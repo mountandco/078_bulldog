@@ -130,7 +130,7 @@
             </section>
 
 
-            <section class="important-information">
+            <section class="important-information js-important-information">
                 <div class="important-information__inner">
                     <h5 class="important-information__heading">お知らせ</h5>
                     <div class="important-information__list">
@@ -141,26 +141,24 @@
                         </div>
                         <div class="important-information__other">
                             <div class="important-information__swiper">
-                                <div class="swiper">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
+                                <div class="swiper js-news-swiper">
+                                    <!-- <div class="button--open stop-btn stop"><p>全5件</p><div class="icon--open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.6 25.5"><path d="M2.8,25.5L0,22.6l9.9-9.9L0,2.8L2.8,0l12.8,12.8L2.8,25.5z"/></svg></div></div> -->
+                                    <div class="swiper-wrapper js-news-swiper__wrapper">
+                                        <div class="swiper-slide js-news-swiper__wrapper--slide nth-1">
                                             <div class="important-information__item">
                                                 <a class="icon--blank" href="#">
-                                                    <span class="news__text">当社グループにおける新型コロナウイルス感染症の当社グループにおける新型コロナウイルス感染症の感染拡大や緊急事態宣言に伴う当面の取組について/<span class="news__date">2022.01.06</span></span>
+                                                    <span class="news__text">当社グループにおける新型コロナウイルス感染症の感染拡大や緊急事態宣言に伴う当面の取組について/<span class="news__date">2022.01.06</span></span>
                                                 </a>
                                             </div>
                                         </div>
+                                        <!--test Start-->
+                                        <div class="swiper-slide js-news-swiper__wrapper--slide nth-2"><div class="important-information__item"><a class="icon--blank" href="#"><span class="news__text">Instagramの「偽アカウント」にご注意ください/<span class="news__date">2022.01.06</span></span></a></div></div><div class="swiper-slide js-news-swiper__wrapper--slide nth-3"><div class="important-information__item"><a class="icon--blank" href="#"><span class="news__text">新型コロナウイルス防止対策に関するお知らせ/<span class="news__date">2022.01.06</span></span></a></div></div><div class="swiper-slide js-news-swiper__wrapper--slide nth-4"><div class="important-information__item"><a class="icon--blank" href="#"><span class="news__text">「新型コロナウイルス感染症」に対する支援について/<span class="news__date">2022.01.06</span></span></a></div></div><div class="swiper-slide js-news-swiper__wrapper--slide nth-5"><div class="important-information__item"><a class="icon--blank" href="#"><span class="news__text">「令和2年7月豪雨」に対する義援金の拠出について/<span class="news__date">2022.01.06</span></span></a></div></div>
+                                        <!--test End-->
                                     </div>
+                                    <div class="button--open stopbtn stop"><p>全5件</p><div class="icon--open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.6 25.5"><path d="M2.8,25.5L0,22.6l9.9-9.9L0,2.8L2.8,0l12.8,12.8L2.8,25.5z"/></svg></div></div>
+                                    <!--<p class="stopbtn stop">停止ボタン</p>-->  <!-- 停止ボタン -->
                                 </div>
-                            </div>
-                            <a class="button--open" href="#">
-                                <p>全5件</p>
-                                <div class="icon--open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.6 25.5">
-                                        <path d="M2.8,25.5L0,22.6l9.9-9.9L0,2.8L2.8,0l12.8,12.8L2.8,25.5z"/>
-                                    </svg>
-                                </div>
-                            </a>
+                            </div><!--/.important-information__swiper-->
                         </div>
                     </div>
 
@@ -172,76 +170,79 @@
 
 
             <section class="section promotion">
-                <h4 class="section__heading">
-                    <span class="section__heading--english promotion__heading--english">Special feature &amp; Campaign Site</span><br>
-                    <span class="section__heading--japanese">特集・キャンペーンサイト</span>
-                </h4>
-                <div class="card__swiper">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="swiper__inner">
-                                    <a class="icon--new" href="https://www.bulldog.co.jp/bullmap-staffrecipes/03.html" target="_blank">
-                                        <div class="swiper__image">
-                                            <img src="/assets/images/image_promotion_01.jpg" srcset="/assets/images/image_promotion_01.jpg 1x, /assets/images/image_promotion_01@2x.jpg 2x" alt="ご当地素材でオリジナルレシピ『ご当地食材でGOGO！めぐり』" width="250" height="167">
-                                        </div>
-                                        <p class="swiper__text textlink__icon--blank">ご当地素材でオリジナルレシピ『ご当地食材でGOGO！めぐり』</p>
-                                    </a>
+                <div class="promotion__inner">
+                    <h4 class="section__heading">
+                        <span class="section__heading--english promotion__heading--english">Special feature &amp; Campaign Site</span><br>
+                        <span class="section__heading--japanese">特集・キャンペーンサイト</span>
+                    </h4>
+                    <div class="card__swiper">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper__inner">
+                                        <a class="icon--new" href="https://www.bulldog.co.jp/bullmap-staffrecipes/03.html" target="_blank">
+                                            <div class="swiper__image">
+                                                <img src="/assets/images/image_promotion_01.jpg" srcset="/assets/images/image_promotion_01.jpg 1x, /assets/images/image_promotion_01@2x.jpg 2x" alt="ご当地素材でオリジナルレシピ『ご当地食材でGOGO！めぐり』" width="250" height="167">
+                                            </div>
+                                            <p class="swiper__text textlink__icon--blank">ご当地素材でオリジナルレシピ『ご当地食材でGOGO！めぐり』</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__inner">
+                                        <a href="https://www.bulldog.co.jp/fureai/" target="_blank">
+                                            <div class="swiper__image">
+                                                <img src="/assets/images/image_promotion_02.jpg" srcset="/assets/images/image_promotion_02.jpg 1x, /assets/images/image_promotion_02@2x.jpg 2x" alt="ブルドックソースグループ『ふれあい会』" width="250" height="167">
+                                            </div>
+                                            <p class="swiper__text textlink__icon--blank">ブルドックソースグループ『ふれあい会』</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__inner">
+                                        <a href="https://bull-kitchen.com/" target="_blank">
+                                            <div class="swiper__image">
+                                                <img src="/assets/images/image_promotion_03.jpg" srcset="/assets/images/image_promotion_03.jpg 1x, /assets/images/image_promotion_03@2x.jpg 2x" alt="毎日「つくる」が楽しくなる一汁二菜の暮らし『ぶるキッチン』" width="250" height="167">
+                                            </div>
+                                            <p class="swiper__text textlink__icon--blank">毎日「つくる」が楽しくなる一汁二菜の暮らし『ぶるキッチン』</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__inner">
+                                        <a href="https://ambassador.bulldog.co.jp/" target="_blank">
+                                            <div class="swiper__image">
+                                                <img src="/assets/images/image_promotion_04.jpg" srcset="/assets/images/image_promotion_04.jpg 1x, /assets/images/image_promotion_04@2x.jpg 2x" alt="ソースを愛する仲間たちにJソースアンバサダー第2期募集開始！" width="250" height="167">
+                                            </div>
+                                            <p class="swiper__text textlink__icon--blank">ソースを愛する仲間たちにJソースアンバサダー第2期募集開始！</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__inner">
+                                        <a href="https://www.bulldog.co.jp/gakusai/" target="_blank">
+                                            <div class="swiper__image">
+                                                <img src="/assets/images/image_promotion_05.jpg" srcset="/assets/images/image_promotion_05.jpg 1x, /assets/images/image_promotion_05@2x.jpg 2x" alt="ブルドックソースが学園祭を強力サポート！学園祭応援プロジェクト" width="250" height="167">
+                                            </div>
+                                            <p class="swiper__text textlink__icon--blank">ブルドックソースが学園祭を強力サポート！学園祭応援プロジェクト</p>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="swiper__inner">
-                                    <a href="https://www.bulldog.co.jp/fureai/" target="_blank">
-                                        <div class="swiper__image">
-                                            <img src="/assets/images/image_promotion_02.jpg" srcset="/assets/images/image_promotion_02.jpg 1x, /assets/images/image_promotion_02@2x.jpg 2x" alt="ブルドックソースグループ『ふれあい会』" width="250" height="167">
-                                        </div>
-                                        <p class="swiper__text textlink__icon--blank">ブルドックソースグループ『ふれあい会』</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper__inner">
-                                    <a href="https://bull-kitchen.com/" target="_blank">
-                                        <div class="swiper__image">
-                                            <img src="/assets/images/image_promotion_03.jpg" srcset="/assets/images/image_promotion_03.jpg 1x, /assets/images/image_promotion_03@2x.jpg 2x" alt="毎日「つくる」が楽しくなる一汁二菜の暮らし『ぶるキッチン』" width="250" height="167">
-                                        </div>
-                                        <p class="swiper__text textlink__icon--blank">毎日「つくる」が楽しくなる一汁二菜の暮らし『ぶるキッチン』</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper__inner">
-                                    <a href="https://ambassador.bulldog.co.jp/" target="_blank">
-                                        <div class="swiper__image">
-                                            <img src="/assets/images/image_promotion_04.jpg" srcset="/assets/images/image_promotion_04.jpg 1x, /assets/images/image_promotion_04@2x.jpg 2x" alt="ソースを愛する仲間たちにJソースアンバサダー第2期募集開始！" width="250" height="167">
-                                        </div>
-                                        <p class="swiper__text textlink__icon--blank">ソースを愛する仲間たちにJソースアンバサダー第2期募集開始！</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper__inner">
-                                    <a href="https://www.bulldog.co.jp/gakusai/" target="_blank">
-                                        <div class="swiper__image">
-                                            <img src="/assets/images/image_promotion_05.jpg" srcset="/assets/images/image_promotion_05.jpg 1x, /assets/images/image_promotion_05@2x.jpg 2x" alt="ブルドックソースが学園祭を強力サポート！学園祭応援プロジェクト" width="250" height="167">
-                                        </div>
-                                        <p class="swiper__text textlink__icon--blank">ブルドックソースが学園祭を強力サポート！学園祭応援プロジェクト</p>
-                                    </a>
-                                </div>
+                            <div class="swiper__controller">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
-                        <div class="swiper__controller">
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-next"></div>
-                        </div>
+                    </div><!-- /swiper -->
+                    <div class="button--more">
+                        <a class="icon--arrow" href="promotion/">特設サイト一覧へ</a>
                     </div>
-                </div><!-- /swiper -->
-                <div class="button--more">
-                    <a class="icon--arrow" href="promotion/">特設サイト一覧へ</a>
-                </div>
+                </div><!--/.promotion__inner-->
             </section><!-- /section -->
 
+            <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/inc/fadein-footprints.html'); ?>
 
             <section class="section">
                 <div class="recipe__inner">

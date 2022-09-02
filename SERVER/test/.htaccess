@@ -1,0 +1,7 @@
+
+AuthUserFile "/home/mountand/mountandtest.com/htpasswd/bulldog/.htpasswd"
+AuthName "Member Site"
+AuthType BASIC
+require valid-user
+
+AddHandler fcgid-script .html
