@@ -24,3 +24,11 @@
     margin-bottom: 2rem;
   }
 }
+
+// .layout-hero-image
+.layout-hero-image {
+  margin-top: -3.2rem;
+  @include media(tb) {
+    margin-top: -2.8rem;
+  }
+}

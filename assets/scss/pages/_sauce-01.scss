@@ -1,0 +1,970 @@
+.underlayer.sauce-01 {
+  @include media(sp) {
+    overflow-x: initial;
+  }
+}
+
+.underlayer__sec--sauce-01 {}
+.sauce-fv__sauce-01 {
+  background-image: url(../images/special/sauce/01/bg_firstview_pc.jpg);
+  @include media-2x {
+    background-image: url(../images/special/sauce/01/bg_firstview_pc@2x.jpg);
+  }
+  @include media(sp) {
+    background-image: url(../images/special/sauce/01/bg_firstview_sp.jpg);
+    @include media-2x {
+      background-image: url(../images/special/sauce/01/bg_firstview_sp@2x.jpg);
+    }
+  }
+}
+
+// .sauce-01-layout-1
+.sauce-01-layout-1 {}
+.sauce-01-layout-1__inner {
+  width: 90%;
+  max-width: 113.1rem;
+  margin: 0 auto;
+  position: relative;
+  @include media(sp) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.sauce-01-layout-1-sauce {
+  width: min(calc(189/1440*100vw), 18.9rem);
+  height: min(calc(645/1440*100vw), 64.5rem);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  @include media(sp) {
+    position: sticky;
+    width: calc(232/750*100vw);
+    height: auto;
+    margin: 0;
+    top: 70px;
+    overflow: hidden;
+    //background: red;
+  }
+}
+.sauce-01-layout-1-sauce__image {
+  @include media(sp) {
+    display: block;
+    margin-left: calc(-53/750*100vw);
+  }
+}
+
+.sauce-01-layout-1-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include media(sp) {
+    width: calc(482/750*100vw);
+    flex-direction: column;
+    margin-left: calc(38/750*100vw);
+    //background: yellow;
+  }
+}
+.sauce-01-layout-1-content-box {
+  margin-bottom: min(calc(93/1440*100vw), 9.3rem);
+  @include media(sp) {
+    margin-bottom: calc(82/750*100vw);
+  }
+  &:nth-last-of-type(-n + 2) {
+    margin-bottom: 0;
+    @include media(sp) {
+      margin-bottom: calc(82/750*100vw);
+    }
+  }
+  &:last-of-type {
+    @include media(sp) {
+      margin-bottom: 0;
+    }
+  }
+}
+.sauce-01-layout-1-content-box__title {
+  font-size: 2.4rem;
+  line-height: 1.5;
+  @include media(sp) {
+    font-size: calc(38/750*100vw);
+    line-height: 1.3;
+  }
+}
+.sauce-01-layout-1-content-box__title--color-normal {
+  font-weight: normal;
+}
+.sauce-01-layout-1-content-box__title--color-special {
+  font-weight: bold;
+  color: colors(color-special);
+}
+.sauce-01-layout-1-content-box__title--small {
+  font-size: 1.8rem;
+  @include media(sp) {
+    font-size: calc(26/750*100vw);
+  }
+}
+.sauce-01-layout-1-content-box__column-1 {
+  display: flex;
+  margin-top: 0.8rem;
+  @include media(sp) {
+    margin-top: calc(14/750*100vw);
+  }
+}
+.sauce-01-layout-1-content-box__column-1--li {
+  @include media(sp) {
+    width: calc(112/750*100vw);
+    height: calc(112/750*100vw);
+  }
+  .multiply {
+    mix-blend-mode: multiply;
+  }
+}
+.sauce-01-layout-1-content-box__text {
+  margin-top: 0.4rem;
+  @include media(sp) {
+    font-size: calc(30/750*100vw);
+    margin-top: 1em;
+    letter-spacing: -0.03em;
+  }
+}
+.sauce-01-layout-1-content-box__column-2 {
+  display: flex;
+  justify-content: space-between;
+  @include media(sp) {
+    flex-direction: column-reverse;
+  }
+}
+.sauce-01-layout-1-content-box__column-2--image {
+  width: 34.168%;
+  @include media(sp) {
+    width: calc(334/750*100vw);
+  }
+}
+.sauce-01-layout-1-content-box__column-2--text {
+  @include media(sp) {
+    font-size: calc(30/750*100vw);
+    margin-top: 1em;
+    letter-spacing: -0.03em;
+  }
+}
+
+// box固有class
+.sauce-01-layout-1-content-box {
+  &.nth-1 {
+    width: 39.61%;
+    max-width: 44.8rem;
+    margin-left: 1.1rem;
+    @include media(sp) {
+      width: 100%;
+      margin-left: 0;
+      max-width: none;
+    }
+    .sauce-01-layout-1-content-box__title {
+      //margin-left: 1.1rem;
+    }
+    .sauce-01-layout-1-content-box__column-1 {
+      margin-left: -1.1rem;
+    }
+    .sauce-01-layout-1-content-box__text {
+      width: 91%;
+      @include media(sp) {
+        width: 81%;
+      }
+    }
+  }
+  &.nth-2 {
+    width: 39.61%;
+    max-width: 44.8rem;
+    @include media(sp) {
+      width: 100%;
+      max-width: none;
+    }
+    .sauce-01-layout-1-content-box__text {
+      width: 94%;
+      margin-left: 1.6%;
+      @include media(sp) {
+        margin-left: 0;
+        width: 83%;
+      }
+    }
+  }
+  &.nth-3 {
+    width: 38.815%;
+    max-width: 43.9rem;
+    margin-left: 1.1rem;
+    @include media(sp) {
+      width: 100%;
+      margin-left: 0;
+      max-width: none;
+    }
+    .sauce-01-layout-1-content-box__column-2--image {
+      margin-left: 2.5%;
+      @include media(sp) {
+        margin-left: 4%;
+      }
+    }
+    .sauce-01-layout-1-content-box__title {
+      margin-bottom: 0.4em;
+    }
+    .sauce-01-layout-1-content-box__column-2--text {
+      width: calc(100% - 34.168% - 1em - 2.5%);
+      margin-top: 0.3em;
+      @include media(sp) {
+        width: 80%;
+        margin-bottom: 1em;
+      }
+    }
+  }
+  &.nth-4 {
+    width: 37.842%;
+    max-width: 42.8rem;
+    @include media(sp) {
+      width: 100%;
+      max-width: none;
+    }
+    .sauce-01-layout-1-content-box__column-2 {
+      flex-direction: row-reverse;
+      @include media(sp) {
+        flex-direction: column-reverse;
+      }
+    }
+    .sauce-01-layout-1-content-box__column-2--image {
+      margin-left: 1.168%;
+      @include media(sp) {
+        margin-left: 4%;
+      }
+    }
+    .sauce-01-layout-1-content-box__title {
+      margin-bottom: 0.4em;
+    }
+    .sauce-01-layout-1-content-box__column-2--text {
+      width: calc(100% - 34.168% - 1em - 1.168%);
+      margin-top: 0.3em;
+      @include media(sp) {
+        width: 80%;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+
+
+// .sauce-01-layout-2
+.sauce-01-layout-2 {
+  background: #FFF3F2;
+  padding: 5.1rem 0 11.1rem;
+  @include media(sp) {
+    padding: calc(84/750*100vw) 0 calc(140/750*100vw);
+  }
+}
+.sauce-01-layout-2__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 4rem;
+  @include media(sp) {
+    margin-bottom: calc(62/750*100vw);
+  }
+}
+.sauce-01-layout-2__title--small {
+  font-size: 1.7rem;
+  color: colors(color-special);
+  margin-bottom: 0.35em;
+  @include media(sp) {
+    font-size: calc(30/750*100vw);
+  }
+}
+.sauce-01-layout-2__title--large {
+  font-size: 3.1rem;
+  @include media(sp) {
+    font-size: calc(40/750*100vw);
+  }
+}
+.sauce-01-layout-2__title--large-seven {
+  font-size: 4.1rem;
+  color: colors(color-special);
+  @include media(sp) {
+    font-size: calc(50/750*100vw);
+  }
+}
+.sauce-01-layout-2__list {
+  width: 90%;
+  max-width: calc(110rem + (2.2rem * 2)); // liのmarginを計算
+  margin: 0 auto;
+  counter-reset: number 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include media(sp) {
+    justify-content: space-between;
+  }
+}
+.sauce-01-layout-2__list--li {
+  width: 21.2%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0 1.9%;
+  margin-bottom: 6rem;
+  @include media(tb) {
+    margin-bottom: 4rem;
+  }
+  @include media(sp) {
+    width: 46%;
+    margin: 0;
+    margin-bottom: calc(62/750*100vw);
+  }
+  &:nth-last-of-type(-n + 4) {
+    margin-bottom: 0;
+    @include media(sp) {
+      margin-bottom: calc(62/750*100vw);
+    }
+  }
+  &:nth-last-of-type(-n + 2) {
+    @include media(sp) {
+      margin-bottom: 0;
+    }
+  }
+  &:before {
+    counter-increment: number 1;
+    content: counter(number) " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2.4rem;
+    line-height: calc(4.2rem * 0.95);
+    width: 4.2rem;
+    height: 4.2rem;
+    color: colors(white);
+    @include z-index-2;
+    @include media(sp) {
+      font-size: calc(32/750*100vw);
+      line-height: calc((54/750*100vw) * 0.95);
+      width: calc(54/750*100vw);
+      height: calc(54/750*100vw);
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 4.2rem;
+    height: 4.2rem;
+    background: colors(color-special);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include z-index-1;
+    @include media(sp) {
+      width: calc(54/750*100vw);
+      height: calc(54/750*100vw);
+    }
+  }
+}
+.sauce-01-layout-2__list--li-image {
+  width: 87%;
+  display: block;
+  margin-top: 2.1rem;
+}
+.sauce-01-layout-2__list--li-title {
+  width: 100%;
+  font-size: 2.2rem;
+  margin-top: 0.4em;
+  border-bottom: solid 1px colors(color-special);
+  @include media(tb) {
+    font-size: 2rem;
+  }
+  @include media(sp) {
+    font-size: calc(30/750*100vw);
+  }
+}
+.sauce-01-layout-2__list--li-text {
+  margin-top: 0.4em;
+  letter-spacing: -0.04em;
+  @include media(sp) {
+    font-size: calc(27/750*100vw);
+    white-space: nowrap;
+  }
+}
+
+
+// アニメーション
+//=====================================================
+.sauce-01-layout-1-sauce {
+  .sauce-01-layout-1-sauce__image {
+    transform: scale(0);
+    @include media(sp) {
+      transform: scale(1);
+    }
+    &.show {
+      animation-name: sauce-01-layout-1-sauce;
+      animation-duration: 2.8s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-fill-mode: forwards;
+      @include media(sp) {
+        animation-name: none;
+      }
+    }
+  }
+}
+@keyframes sauce-01-layout-1-sauce {
+  0% {
+    transform: scale(0);
+    filter: contrast(100%);
+  }
+  35% {
+    transform: scale(1.4);
+    filter: contrast(100%);
+  }
+  42% {
+    transform: scale(1.45);
+    filter: contrast(100%);
+  }
+  50% {
+    transform: scale(1);
+    filter: contrast(100%);
+  }
+  53% {
+    transform: scale(1.06);
+    filter: contrast(100%);
+  }
+  56% {
+    transform: scale(1);
+    filter: contrast(100%);
+  }
+  59% {
+    transform: scale(1.03);
+    filter: contrast(100%);
+  }
+  62% {
+    transform: scale(1);
+    filter: contrast(100%);
+  }
+  80% {
+    transform: scale(1);
+    filter: contrast(200%);
+  }
+  90% {
+    transform: scale(1);
+    filter: contrast(100%);
+  }
+  100% {
+    transform: scale(1);
+    filter: contrast(100%);
+  }
+}
+.sauce-01-layout-1.sauce-common-bg {
+  //background-position: top 1.9rem left -100vw, top 1.9rem right 100vw;
+  //overflow: hidden;
+}
+.sauce-01-layout-1-content-box.nth-1 {
+  .sauce-01-layout-1-content-box__title {
+    opacity: 0;
+    transition: 2.2s ease;
+    transition-delay: 2s;
+    @include media(sp) {
+      transition: 1s ease;
+      transition-delay: 0s;
+    }
+    &.done {
+      opacity: 1;
+    }
+  }
+  .sauce-01-layout-1-content-box__column-1 {
+    //opacity: 0;
+    .sauce-01-layout-1-content-box__column-1--li {
+      transition: 0.6s ease-out;
+      &.js-sauce-01-position-top {
+        transform: translateY(-100px);
+        opacity: 0;
+        &.done {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      &.js-sauce-01-position-bottom {
+        transform: translateY(100px);
+        opacity: 0;
+        &.done {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      &.js-sauce-01-delay-1 {
+        &.done {
+          transition-delay: 0.2s;
+        }
+      }
+      &.js-sauce-01-delay-2 {
+        &.done {
+          transition-delay: 0.4s;
+        }
+      }
+      &.js-sauce-01-delay-3 {
+        &.done {
+          transition-delay: 0.6s;
+        }
+      }
+      &.js-sauce-01-delay-4 {
+        &.done {
+          transition-delay: 0.8s;
+        }
+      }
+    }
+  }
+  .sauce-01-layout-1-content-box__text {
+    opacity: 0;
+    transition: 2.2s ease;
+    transition-delay: 2s;
+    @include media(sp) {
+      transition: 1s ease;
+      transition-delay: 0s;
+    }
+    &.done {
+      opacity: 1;
+    }
+  }
+}
+.sauce-01-layout-1-content-box.nth-2 {
+  .sauce-01-layout-1-content-box__title {
+    opacity: 0;
+    transition: 2.2s ease;
+    transition-delay: 2s;
+    @include media(sp) {
+      transition: 1s ease;
+      transition-delay: 0s;
+    }
+    &.done {
+      opacity: 1;
+    }
+  }
+  .sauce-01-layout-1-content-box__column-1 {
+    //opacity: 0;
+    .sauce-01-layout-1-content-box__column-1--li {
+      transition: 0.6s ease-out;
+      mix-blend-mode: multiply;
+      &.js-sauce-01-position-top {
+        transform: translateY(-100px);
+        opacity: 0;
+        &.done {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      &.js-sauce-01-position-bottom {
+        transform: translateY(100px);
+        opacity: 0;
+        &.done {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      &.js-sauce-01-delay-1 {
+        &.done {
+          transition-delay: 0.2s;
+        }
+      }
+      &.js-sauce-01-delay-2 {
+        &.done {
+          transition-delay: 0.4s;
+        }
+      }
+      &.js-sauce-01-delay-3 {
+        &.done {
+          transition-delay: 0.6s;
+        }
+      }
+      &.js-sauce-01-delay-4 {
+        &.done {
+          transition-delay: 0.8s;
+        }
+      }
+    }
+  }
+  .sauce-01-layout-1-content-box__text {
+    opacity: 0;
+    transition: 2.2s ease;
+    transition-delay: 2s;
+    &.done {
+      opacity: 1;
+    }
+  }
+}
+.sauce-01-layout-1-content-box.nth-3 {
+  .sauce-01-layout-1-content-box__title {
+    opacity: 0;
+    transition: 2.2s ease;
+    transition-delay: 2s;
+    @include media(sp) {
+      transition: 1s ease;
+      transition-delay: 0s;
+    }
+    &.done {
+      opacity: 1;
+    }
+  }
+  .sauce-01-layout-1-content-box__column-1 {
+    //opacity: 0;
+  }
+  .sauce-01-layout-1-content-box__column-2--image {
+    opacity: 0;
+    transition: 0.6s ease-out;
+    transition-delay: 1.5s;
+    &.js-sauce-01-column-2-image-fade {
+      &.done {
+        opacity: 1;
+      }
+    }
+  }
+  .sauce-01-layout-1-content-box__column-2--text {
+    opacity: 0;
+    transition: 2.2s ease;
+    transition-delay: 2s;
+    @include media(sp) {
+      transition: 1s ease;
+      transition-delay: 0s;
+    }
+    &.done {
+      opacity: 1;
+    }
+  }
+}
+.sauce-01-layout-1-content-box.nth-4 {
+  .sauce-01-layout-1-content-box__title {
+    opacity: 0;
+    transition: 2.2s ease;
+    transition-delay: 2s;
+    @include media(sp) {
+      transition: 1s ease;
+      transition-delay: 0s;
+    }
+    @include media(sp) {
+      transition-delay: 0s;
+    }
+    &.done {
+      opacity: 1;
+    }
+  }
+  .sauce-01-layout-1-content-box__column-1 {
+    //opacity: 0;
+  }
+  .sauce-01-layout-1-content-box__column-2--image {
+    opacity: 0;
+    transition: 0.6s ease-out;
+    transition-delay: 1.5s;
+    @include media(sp) {
+      transition-delay: 0s;
+    }
+    &.js-sauce-01-column-2-image-fade {
+      &.done {
+        opacity: 1;
+      }
+    }
+  }
+  .sauce-01-layout-1-content-box__column-2--text {
+    opacity: 0;
+    transition: 2.2s ease;
+    transition-delay: 2s;
+    &.done {
+      opacity: 1;
+    }
+  }
+}
+// アニメーションタイプ
+.sauce-01-anime-type-1 {
+  &.done {
+    animation-name: sauce-01-anime-type-1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite; // 無限再生
+    animation-direction: alternate; // または alternate normal
+    //animation-fill-mode: forwards;
+  }
+}
+@keyframes sauce-01-anime-type-1 {
+  0% {
+    transform: scale(1, 1);
+  }
+  34% {
+    transform: scale(1, 1);
+  }
+  38% {
+    transform: scale(-1, 1);
+  }
+  90% {
+    transform: scale(-1, 1);
+  }
+  94% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.sauce-01-anime-type-2 {
+  &.done {
+    animation-name: sauce-01-anime-type-2;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite; // 無限再生
+    animation-direction: normal; // または alternate normal
+    //animation-fill-mode: forwards;
+  }
+}
+@keyframes sauce-01-anime-type-2 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.sauce-01-anime-type-3 {
+  &.done {
+    animation-name: sauce-01-anime-type-3;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite; // 無限再生
+    animation-direction: normal; // または alternate normal
+    //animation-fill-mode: forwards;
+  }
+}
+@keyframes sauce-01-anime-type-3 {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  41.5% {
+    transform: translateY(-15px);
+  }
+  43% {
+    transform: translateY(2px);
+  }
+  44% {
+    transform: translateY(0);
+  }
+  55% {
+    transform: translateY(0);
+  }
+  57.5% {
+    transform: translateY(-26px);
+  }
+  58.5% {
+    transform: translateY(4px);
+  }
+  59.5% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  78.5% {
+    transform: translateY(-40px);
+  }
+  80% {
+    transform: translateY(4px);
+  }
+  82% {
+    transform: translateY(0);
+  }
+  83% {
+    transform: translateY(2px);
+  }
+  84% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.sauce-01-anime-type-4 {
+  &.done {
+    animation-name: sauce-01-anime-type-4;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite; // 無限再生
+    animation-direction: normal; // または normal
+    //animation-fill-mode: forwards;
+  }
+}
+@keyframes sauce-01-anime-type-4 {
+  0% {
+    transform: rotate(0deg) translateX(6px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg) translateX(6px) rotate(360deg);
+  }
+}
+.sauce-01-anime-type-5 {
+  &.done {
+    animation-name: sauce-01-anime-type-5;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite; // 無限再生
+    animation-direction: alternate; // または normal
+    //animation-fill-mode: forwards;
+  }
+}
+@keyframes sauce-01-anime-type-5 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+.sauce-01-anime-type-6 {
+  &.done {
+    animation-name: sauce-01-anime-type-6;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite; // 無限再生
+    animation-direction: alternate; // または normal
+    //animation-fill-mode: forwards;
+  }
+}
+@keyframes sauce-01-anime-type-6 {
+  0% {
+    transform: scale(1, 1);
+  }
+  14% {
+    transform: scale(1, 1);
+  }
+  18% {
+    transform: scale(-1, 1);
+  }
+  70% {
+    transform: scale(-1, 1);
+  }
+  74% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.sauce-01-anime-type-7 {
+  &.done {
+    animation-name: sauce-01-anime-type-7;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite; // 無限再生
+    animation-direction: normal; // または normal
+    //animation-fill-mode: forwards;
+  }
+}
+@keyframes sauce-01-anime-type-7 {
+  0% {
+    transform: rotate(0deg) translateX(-10px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(-10px) rotate(-360deg);
+  }
+}
+
+.sauce-01-anime-type-8 {
+  &.done {
+    animation-name: sauce-01-anime-type-8;
+    animation-duration: 80s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite; // 無限再生
+    animation-direction: normal; // または alternate normal
+    //animation-fill-mode: forwards;
+  }
+}
+@keyframes sauce-01-anime-type-8 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.sauce-01-anime-type-9 {
+  &.done {
+    animation-name: sauce-01-anime-type-9;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite; // 無限再生
+    animation-direction: normal; // または alternate normal
+    //animation-fill-mode: forwards;
+  }
+}
+@keyframes sauce-01-anime-type-9 {
+  0% {
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  50% {
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  58% {
+    filter: contrast(1.5) drop-shadow(2px 4px 6px rgba(0,0,0,0.16));
+  }
+  62% {
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  100% {
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+}
+
+.sauce-01-anime-type-10 {
+  &.done {
+    animation-name: sauce-01-anime-type-10;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite; // 無限再生
+    animation-direction: normal; // または alternate normal
+    //animation-fill-mode: forwards;
+  }
+}
+@keyframes sauce-01-anime-type-10 {
+  0% {
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  10% {
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  16% {
+    filter: contrast(1.5) drop-shadow(2px 4px 6px rgba(0,0,0,0.16));
+  }
+  19% {
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  86% {
+    filter: contrast(1.5) drop-shadow(2px 4px 6px rgba(0,0,0,0.16));
+  }
+  89% {
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  100% {
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+}
