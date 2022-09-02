@@ -350,7 +350,7 @@ $(window).on('scroll load', function () {
 			$.when(
 				$(this).addClass("show")
 			).done(function () {
-				$(this).queue(function () {
+				$(this).delay(2000).queue(function () {
 					$(this).addClass("done")
 				})
 			});
@@ -406,6 +406,20 @@ for (let i = 0; i < smoothScrollTrigger.length; i++) {
 		});
 	});
 }
+
+// urlに#が含まれている場合 sp固定header対策
+window.addEventListener('load', function () {
+	if (window.innerWidth < 767) {
+		const url = $(location).attr('href'),
+		headerHeight = $('header').outerHeight() + 30;
+		if(url.indexOf("#") != -1){
+			const anchor = url.split("#"),
+			target = $('#' + anchor[anchor.length - 1]),
+			position = Math.floor(target.offset().top) - headerHeight;
+			$("html, body").animate({scrollTop:position}, 500);
+		}
+	}
+});
 
 // トップページFV直下の赤背景ナビが下層ページに存在していた場合
 $(function () {

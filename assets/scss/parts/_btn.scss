@@ -1,0 +1,57 @@
+// .btn-gray
+.btn-gray {
+  background: #EBEBEB;
+  border-radius: 100px;
+  height: 60px;
+  font-size: 1.6rem;
+  display: flex;
+  position: relative;
+  padding-left: 1.8em;
+  @include media(sp) {
+    font-size: 1.4rem;
+  }
+  &.icon--arrow {
+    &:after {
+      background: colors(color-base);
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      transition: all 0.2s;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+    }
+  }
+}
+.btn-gray__text {
+  line-height: 1.5;
+  display: block;
+  padding-right: 2em;
+  letter-spacing: -0.03em;
+  .pconly {
+    display: block;
+    @include media(tb) {
+      display: none;
+    }
+  }
+  .tbblock {
+    display: none;
+    @include media(tb) {
+      display: block;
+    }
+  }
+}
+// .btn-grayのマイナーチェンジ
+.btn-faq {
+  &:before {
+    content: "Q.";
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'webfont-english';
+    color: colors(color-news);
+    margin-right: 0.3em;
+  }
+}
+
+

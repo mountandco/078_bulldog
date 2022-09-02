@@ -15,6 +15,7 @@
 @import "parts/_list";
 @import "parts/_link";
 @import "parts/_empty";
+@import "parts/_btn";
 
 // pages
 //=====================================================
@@ -46,13 +47,20 @@
 // about
 @import "pages/_about-page";
 
-// special
+// sauce
 @import "pages/_sauce-page";
 @import "pages/_sauce-01";
 @import "pages/_sauce-02";
 @import "pages/_sauce-03";
 @import "pages/_sauce-04";
 
+// contact
+@import "pages/_contact";
+
 // parts(2)
 //=====================================================
 @import "parts/_addclass";
+
+
+
+
