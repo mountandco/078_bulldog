@@ -175,119 +175,200 @@ $(window).scroll(function () {
 /* ----------------------------------------------------------------------------------------------------
 *  scroll add class
 * --------------------------------------------------------------------------------------------------*/
-window.addEventListener('load', function() {
-	$('.js-fadein-fv').addClass('show');
+// ページ読み込み時
+window.addEventListener('load', function () {
+	$('.js-fadein-fv').delay(500).addClass('show');
 });
 
 var EffectH = 100;
-$(window).on('scroll load', function() {
-  var scTop = $(this).scrollTop();
-  var scBottom = scTop + $(this).height();
-  var effectPos = scBottom - EffectH;
+$(window).on('scroll load', function () {
+	var scTop = $(this).scrollTop();
+	var scBottom = scTop + $(this).height();
+	var effectPos = scBottom - EffectH;
 
-  $('.fadein').each( function() {
-    var thisPos = $(this).offset().top;
-    if ( thisPos < effectPos ) {
-      $.when(
-        $(this).addClass("show")
-      ).done(function() {
-        $(this).delay(160).queue(function(){
-          $(this).addClass("done")
-        })
-      });
-    }
-  });
+	$('.js-image-grayscale').each(function () {
+		var thisPos = $(this).offset().top;
+		if (thisPos < effectPos) {
+			$.when(
+				$(this).addClass("show")
+			).done(function () {
+				$(this).delay(500).queue(function () {
+					$(this).addClass("done")
+				})
+			});
+		}
+	});
 
-  $('.fadein-2').each( function() {
-    var thisPos = $(this).offset().top;
-    if ( thisPos < effectPos ) {
-      $.when(
-        $(this).addClass("show")
-      ).done(function() {
-        $(this).delay(10).queue(function(){
-          $(this).addClass("done")
-        })
-      });
-    }
-  });
+	$('.fadein').each(function () {
+		var thisPos = $(this).offset().top;
+		if (thisPos < effectPos) {
+			$.when(
+				$(this).addClass("show")
+			).done(function () {
+				$(this).delay(160).queue(function () {
+					$(this).addClass("done")
+				})
+			});
+		}
+	});
 
-  $('.fadeinbottom').each( function() {
-    var thisPos = $(this).offset().top;
-    if ( thisPos < effectPos ) {
-      $.when(
-        $(this).addClass("show")
-      ).done(function() {
-        $(this).delay(100).queue(function(){
-          $(this).addClass("done")
-        })
-      });
-    }
-  });
+	$('.fadein-2').each(function () {
+		var thisPos = $(this).offset().top;
+		if (thisPos < effectPos) {
+			$.when(
+				$(this).addClass("show")
+			).done(function () {
+				$(this).delay(10).queue(function () {
+					$(this).addClass("done")
+				})
+			});
+		}
+	});
 
-  $('.fadeinbottom-2').each( function() {
-    var thisPos = $(this).offset().top;
-    if ( thisPos < effectPos ) {
-      $.when(
-        $(this).addClass("show")
-      ).done(function() {
-        $(this).delay(800).queue(function(){
-          $(this).addClass("done")
-        })
-      });
-    }
-  });
+	$('.fadeinbottom').each(function () {
+		var thisPos = $(this).offset().top;
+		if (thisPos < effectPos) {
+			$.when(
+				$(this).addClass("show")
+			).done(function () {
+				$(this).delay(1000).queue(function () {
+					$(this).addClass("done")
+				})
+			});
+		}
+	});
 
-  $('.fadein_fv').each( function() {
-    var thisPos = $(this).offset().top;
-    if ( thisPos < effectPos ) {
-      $.when(
-        $(this).addClass("show")
-      ).done(function() {
-        $(this).delay(700).queue(function(){
-          $(this).addClass("done")
-        })
-      });
-    }
-  });
+	$('.fadeinbottom-2').each(function () {
+		var thisPos = $(this).offset().top;
+		if (thisPos < effectPos) {
+			$.when(
+				$(this).addClass("show")
+			).done(function () {
+				$(this).delay(160).queue(function () {
+					$(this).addClass("done")
+				})
+			});
+		}
+	});
 
-  $('.fadeintop').each( function() {
-    var thisPos = $(this).offset().top;
-    if ( thisPos < effectPos ) {
-      $.when(
-        $(this).addClass("show")
-      ).done(function() {
-        $(this).delay(100).queue(function(){
-          $(this).addClass("done")
-        })
-      });
-    }
-  });
+	$('.fadein_fv').each(function () {
+		var thisPos = $(this).offset().top;
+		if (thisPos < effectPos) {
+			$.when(
+				$(this).addClass("show")
+			).done(function () {
+				$(this).delay(700).queue(function () {
+					$(this).addClass("done")
+				})
+			});
+		}
+	});
 
-  $('.fadeinleft').each( function() {
-    var thisPos = $(this).offset().top;
-    if ( thisPos < effectPos ) {
-      $.when(
-        $(this).addClass("show")
-      ).done(function() {
-        $(this).delay(100).queue(function(){
-          $(this).addClass("done")
-        })
-      });
-    }
-  });
+	$('.fadeintop').each(function () {
+		var thisPos = $(this).offset().top;
+		if (thisPos < effectPos) {
+			$.when(
+				$(this).addClass("show")
+			).done(function () {
+				$(this).delay(100).queue(function () {
+					$(this).addClass("done")
+				})
+			});
+		}
+	});
 
-  $('.fadeinright').each( function() {
-    var thisPos = $(this).offset().top;
-    if ( thisPos < effectPos ) {
-      $.when(
-        $(this).addClass("show")
-      ).done(function() {
-        $(this).delay(100).queue(function(){
-          $(this).addClass("done")
-        })
-      });
-    }
-  });
+	$('.fadeinleft').each(function () {
+		var thisPos = $(this).offset().top;
+		if (thisPos < effectPos) {
+			$.when(
+				$(this).addClass("show")
+			).done(function () {
+				$(this).delay(100).queue(function () {
+					$(this).addClass("done")
+				})
+			});
+		}
+	});
+
+	$('.fadeinright').each(function () {
+		var thisPos = $(this).offset().top;
+		if (thisPos < effectPos) {
+			$.when(
+				$(this).addClass("show")
+			).done(function () {
+				$(this).delay(100).queue(function () {
+					$(this).addClass("done")
+				})
+			});
+		}
+	});
+
+	// ページ固有
+	// /special/sauce/01.html
+	$('.sauce-01-layout-1-sauce__image').each(function () {
+		var thisPos = $(this).offset().top;
+		if (thisPos < effectPos) {
+			$.when(
+				$(this).addClass("show")
+			).done(function () {
+				$(this).delay(200).queue(function () {
+					$(this).addClass("done")
+				})
+			});
+		}
+	});
+
+	$('.sauce-01-layout-1-content-box__column-1--li').each(function () {
+		var thisPos = $(this).offset().top;
+		if (thisPos < effectPos) {
+			$.when(
+				$(this).addClass("show")
+			).done(function () {
+				$(this).delay(800).queue(function () {
+					$(this).addClass("done")
+				})
+			});
+		}
+	});
+
+	$('.js-sauce-01-column-2-image-fade').each(function () {
+		var thisPos = $(this).offset().top;
+		if (thisPos < effectPos) {
+			$.when(
+				$(this).addClass("show")
+			).done(function () {
+				$(this).queue(function () {
+					$(this).addClass("done")
+				})
+			});
+		}
+	});
+
+	$('.sauce-01-layout-1-content-box__title, .sauce-01-layout-1-content-box__text, .sauce-01-layout-1-content-box__column-2--text').each(function () {
+		var thisPos = $(this).offset().top;
+		if (thisPos < effectPos) {
+			$.when(
+				$(this).addClass("show")
+			).done(function () {
+				$(this).queue(function () {
+					$(this).addClass("done")
+				})
+			});
+		}
+	});
+
+	$('.sauce-01-anime').each(function () {
+		var thisPos = $(this).offset().top;
+		if (thisPos < effectPos) {
+			$.when(
+				$(this).addClass("show")
+			).done(function () {
+				$(this).delay(1500).queue(function () {
+					$(this).addClass("done")
+				})
+			});
+		}
+	});
 
 });
 /* ----------------------------------------------------------------------------------------------------

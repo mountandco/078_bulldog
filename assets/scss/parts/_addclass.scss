@@ -1,4 +1,5 @@
 // /special/sauce/ のFVで使用
+//====================================================
 .js-fadein-fv {
   opacity: 0;
   transition: 0.7s ease-in;
@@ -7,4 +8,34 @@
   }
 }
 
-
+// 汎用
+//=====================================================
+.js-image-grayscale {
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: 1.8s ease-in;
+  &.show {
+    opacity: 1;
+  }
+  &.done {
+    filter: grayscale(0%);
+  }
+}
+.fadeinbottom {
+  transform: translateY(-15px);
+  opacity: 0;
+  transition: 1s ease-out;
+  &.done {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.fadeinbottom-2 {
+  transform: translateY(-15px);
+  opacity: 0;
+  transition: 0.6s ease;
+  &.done {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
