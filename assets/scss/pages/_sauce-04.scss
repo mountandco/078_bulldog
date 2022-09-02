@@ -48,7 +48,7 @@
   }
 }
 .sauce-04-layout-common__box {
-  width: 35.272%;
+  width: 39.272%;
   //background: rgba(255,200,150,0.5);
   @include media(sp) {
     width: 100%;
@@ -99,7 +99,7 @@
 // 個別の設定
 .sauce-04-layout-common {
   &.nth-1 {
-    margin-bottom: 4.727%;
+    margin-bottom: 9.818%;
     @include media(sp) {
       margin-bottom: min(calc(111/750*100vw), 11.1rem);
     }
@@ -121,9 +121,15 @@
         width: 100%;
       }
     }
+    .sauce-04-layout-common__images--pictuer {
+      transform: scale(1.25) translateX(7%) translateY(-6%);
+      @include media(sp) {
+        transform: scale(1.13) translateX(6%) translateY(-6%);
+      }
+    }
   }
   &.nth-2 {
-    margin-bottom: 4.454%;
+    margin-bottom: 8.181%;
     @include media(sp) {
       margin-bottom: min(calc(144/750*100vw), 14.4rem);
     }
@@ -136,9 +142,37 @@
         margin-bottom: min(calc(44/750*100vw), 4.4rem);
       }
     }
+    .sauce-04-layout-common__box--title {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      @include media(tb) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      @include media(sp) {
+        flex-direction: row;
+        align-items: flex-end;
+      }
+      .sauce-04-layout-common__box--title-image-sauce {
+        width: 15.7rem;
+        // position: absolute;
+        // bottom: -9%;
+        // right: 0;
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          padding-top: 95.541%;
+          background-image: url(../images/special/sauce/04/image_02-1.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
     .sauce-04-layout-common__images {
-      width: calc(431/1100*100%);
-      margin-right: calc(35/1100*100%);
+      width: calc(444/1100*100%);
+      margin-right: calc(47/1100*100%);
       @include media(sp) {
         margin-right: 0;
         width: 100%;
@@ -152,76 +186,16 @@
     }
     .sauce-04-layout-common__box {
       margin-left: calc(134/1100*100%);
+      margin-top: -1.25em;
       @include media(sp) {
+        margin-top: 0;
         margin-left: 0;
         margin-bottom: min(calc(56/750*100vw), 5.6rem);
       }
     }
     .sauce-04-layout-common__images {
       width: calc(424/1100*100%);
-      margin-left: calc(48/1100*100%);
-      @include media(sp) {
-        margin-left: 0;
-        width: 100%;
-      }
-    }
-  }
-  &.nth-4 {
-    margin-bottom: 6.454%;
-    @include media(sp) {
-      margin-bottom: min(calc(320/750*100vw), 32rem);
-    }
-    .sauce-04-layout-common__box {
-      margin-right: calc(143/1100*100%);
-      margin-top: -1em;
-      @include media(sp) {
-        margin-right: 0;
-        margin-top: 0;
-        margin-bottom: min(calc(44/750*100vw), 4.4rem);
-      }
-    }
-    .sauce-04-layout-common__images {
-      width: calc(417/1100*100%);
-      margin-right: calc(35/1100*100%);
-      @include media(sp) {
-        margin-right: 0;
-        width: 100%;
-      }
-    }
-    .button--more {
-      margin-top: 1.8rem;
-      @include media(sp) {
-        margin-top: min(calc(56/750*100vw), 5.6rem);
-        position: absolute;
-        bottom: min(calc(-60px + (-56/750*100vw)), calc(-60px + -5.7rem));
-        left: 0;
-        right: 0;
-      }
-      .icon--arrow {
-        margin-left: 0;
-        @include media(sp) {
-          margin-left: auto;
-        }
-      }
-    }
-  }
-  &.nth-5 {
-    margin-bottom: 10.636%;
-    @include media(sp) {
-      margin-bottom: min(calc(198/750*100vw), 19.8rem);
-    }
-    .sauce-04-layout-common__box {
-      margin-left: calc(134/1100*100%);
-      margin-top: -1em;
-      @include media(sp) {
-        margin-left: 0;
-        margin-top: 0;
-        margin-bottom: min(calc(57/750*100vw), 5.7rem);
-      }
-    }
-    .sauce-04-layout-common__images {
-      width: calc(431/1100*100%);
-      margin-left: calc(48/1100*100%);
+      margin-left: calc(36/1100*100%);
       @include media(sp) {
         margin-left: 0;
         width: 100%;

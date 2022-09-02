@@ -173,6 +173,124 @@ $(window).scroll(function () {
 });
 
 /* ----------------------------------------------------------------------------------------------------
+*  scroll add class
+* --------------------------------------------------------------------------------------------------*/
+window.addEventListener('load', function() {
+	$('.js-fadein-fv').addClass('show');
+});
+
+var EffectH = 100;
+$(window).on('scroll load', function() {
+  var scTop = $(this).scrollTop();
+  var scBottom = scTop + $(this).height();
+  var effectPos = scBottom - EffectH;
+
+  $('.fadein').each( function() {
+    var thisPos = $(this).offset().top;
+    if ( thisPos < effectPos ) {
+      $.when(
+        $(this).addClass("show")
+      ).done(function() {
+        $(this).delay(160).queue(function(){
+          $(this).addClass("done")
+        })
+      });
+    }
+  });
+
+  $('.fadein-2').each( function() {
+    var thisPos = $(this).offset().top;
+    if ( thisPos < effectPos ) {
+      $.when(
+        $(this).addClass("show")
+      ).done(function() {
+        $(this).delay(10).queue(function(){
+          $(this).addClass("done")
+        })
+      });
+    }
+  });
+
+  $('.fadeinbottom').each( function() {
+    var thisPos = $(this).offset().top;
+    if ( thisPos < effectPos ) {
+      $.when(
+        $(this).addClass("show")
+      ).done(function() {
+        $(this).delay(100).queue(function(){
+          $(this).addClass("done")
+        })
+      });
+    }
+  });
+
+  $('.fadeinbottom-2').each( function() {
+    var thisPos = $(this).offset().top;
+    if ( thisPos < effectPos ) {
+      $.when(
+        $(this).addClass("show")
+      ).done(function() {
+        $(this).delay(800).queue(function(){
+          $(this).addClass("done")
+        })
+      });
+    }
+  });
+
+  $('.fadein_fv').each( function() {
+    var thisPos = $(this).offset().top;
+    if ( thisPos < effectPos ) {
+      $.when(
+        $(this).addClass("show")
+      ).done(function() {
+        $(this).delay(700).queue(function(){
+          $(this).addClass("done")
+        })
+      });
+    }
+  });
+
+  $('.fadeintop').each( function() {
+    var thisPos = $(this).offset().top;
+    if ( thisPos < effectPos ) {
+      $.when(
+        $(this).addClass("show")
+      ).done(function() {
+        $(this).delay(100).queue(function(){
+          $(this).addClass("done")
+        })
+      });
+    }
+  });
+
+  $('.fadeinleft').each( function() {
+    var thisPos = $(this).offset().top;
+    if ( thisPos < effectPos ) {
+      $.when(
+        $(this).addClass("show")
+      ).done(function() {
+        $(this).delay(100).queue(function(){
+          $(this).addClass("done")
+        })
+      });
+    }
+  });
+
+  $('.fadeinright').each( function() {
+    var thisPos = $(this).offset().top;
+    if ( thisPos < effectPos ) {
+      $.when(
+        $(this).addClass("show")
+      ).done(function() {
+        $(this).delay(100).queue(function(){
+          $(this).addClass("done")
+        })
+      });
+    }
+  });
+
+});
+/* ----------------------------------------------------------------------------------------------------
 *  OTHER
 * --------------------------------------------------------------------------------------------------*/
 

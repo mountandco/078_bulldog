@@ -43,7 +43,7 @@
   line-height: 1.4;
   color: colors(color-special);
   @include media(sp) {
-    font-size: calc(50/750*100vw);
+    font-size: calc(42/750*100vw);
   }
 }
 // .sauce-fv__inner--titleの。別パターン
