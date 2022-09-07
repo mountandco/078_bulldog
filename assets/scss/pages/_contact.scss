@@ -1,0 +1,117 @@
+.underlayer.contact-page {}
+
+// contact-pageのcommon
+.contact-pege-gray-box {
+  background: colors(bg-gray);
+  border-radius: 5px;
+  max-width: 84rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.5rem 4rem;
+  margin-bottom: 4rem;
+}
+.contact-pege-gray-box__title {
+  font-size: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  line-height: 1;
+  &:before {
+    content: "";
+    display: block;
+    width: 1.35em;
+    height: 1.35em;
+    background-image: url(../images/underlayer/icon-warn.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.4em;
+  }
+}
+.contact-pege-gray-box__list {
+}
+.contact-pege-gray-box__list--li {
+  display: flex;
+  @include media(sp) {
+    margin-bottom: 1em;
+  }
+  &:last-of-type {
+    @include media(sp) {
+      margin-bottom: 0;
+    }
+  }
+  &:before {
+    content: "●";
+    display: block;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.3em;
+  }
+  &.color-base {
+    color: colors(color-base);
+    font-weight: bold;
+  }
+}
+
+// 以下ページ固有
+// section.contact-pege-faq
+.contact-pege-faq {
+  margin-bottom: 9rem;
+  .button--more {
+    a {
+      @include media(sp-s) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// section.contact-pege-telephone
+.contact-pege-telephone {
+  margin-bottom: 9rem;
+}
+.contact-pege-tel-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-pege-tel-box__title {
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-bottom: 1.2em;
+  @include media(sp) {
+    font-size: 1.9rem;
+  }
+}
+.contact-pege-tel-box__tel {
+  max-width: 33.8rem;
+  @include media(sp) {
+    width: 78%;
+  }
+}
+.contact-pege-tel-box__tel--a {
+  display: block;
+  width: 100%;
+}
+.contact-pege-tel-box__text {
+  margin-top: 1.5em;
+  text-align: center;
+  .sponly {
+    display: none;
+    @include media(sp) {
+      display: block;
+    }
+  }
+}
+
+// .contact-pege-internet
+.contact-pege-internet {
+  .button--more {
+    a {
+      @include media(sp-s) {
+        width: 100%;
+      }
+    }
+  }
+}
