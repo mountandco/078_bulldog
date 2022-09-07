@@ -28,9 +28,13 @@
   justify-content: center;
   padding: 3rem 0 3.2rem;
   margin-bottom: 10rem;
+  @include media(sp) {
+    padding: 2rem 0;
+  }
 }
 .btn__project-zero {
   width: 22rem;
+  max-width: 42%;
 }
 
 // .nav-company
