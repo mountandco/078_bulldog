@@ -157,12 +157,12 @@ $(window).scroll(function () {
 			// pc
 		}
 
-		if (scroll > hit - wHeight + wHeight / 100 + 100) {
+		if (scroll > hit - wHeight + wHeight / 100 + 80) {
 			$(function () {
 				new ClassCycler({
 					$targetElm: $('.bg-fadein-footprints'),
 					cycleClassName: 'show',
-					duration: 150,
+					duration: 120,
 					startImmediate: true,
 					oneWay: true
 				});

@@ -33,7 +33,7 @@ var slider2 = new Swiper ('.js-news-swiper', {
   slidesPerView: 1,
   loop: true,
   autoplay: {
-    delay: 2000,
+    delay: 4000,
   },
 });
 

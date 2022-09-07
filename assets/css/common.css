@@ -406,6 +406,7 @@ body.fixed {
 	border-radius: 100px;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16);
 	position: relative;
+	font-size: 1.8rem;
 }
 .modal-global-list__li--a.icon--blank:after {
 	width: 0.75em;
@@ -431,8 +432,9 @@ body.fixed {
 	background: var(--color-darkgray);
 }
 .modal-global__close-btn--static:hover {
-	background-color: transparent;
-	color: var(--color-darkgray);
+	/* background-color: transparent; */
+	/* color: var(--color-darkgray); */
+	opacity: 0.5;
 }
 .modal-global__close-btn--static:before {
 	content: "";
@@ -444,9 +446,9 @@ body.fixed {
   mask: url(../images/icon_multiplication.svg) no-repeat center center / contain;
 	margin-right: 0.4em;
 }
-.modal-global__close-btn--static:hover:before {
+/* .modal-global__close-btn--static:hover:before {
 	background-color: var(--color-darkgray);
-}
+} */
 .modal-global__close-btn--position {
   position: absolute;
   width: 45px;
@@ -457,6 +459,12 @@ body.fixed {
 	background-size: contain;
 	background-repeat: no-repeat;
 	cursor: pointer;
+	transition: all 0.2s;
+}
+.modal-global__close-btn--position:hover {
+  opacity: 0.5;
+	filter: invert(100%);
+  opacity: 0.5;
 }
 @media (max-width: 767px) {
 	.modal-global__content {
@@ -489,6 +497,9 @@ body.fixed {
 		margin: 0;
 		margin-bottom: calc(40/750*100vw);
 		font-size: calc(32/750*100vw);
+	}
+	.modal-global-list__li--a {
+		font-size: 1.6rem;
 	}
 	.modal-global-list__li:last-of-type {
 		margin-bottom: 0;
@@ -524,10 +535,10 @@ body.fixed {
 	.modal-global-list {
 		width: 90%;
 		flex-direction: row;
+		justify-content: space-between;
 	}
 	.modal-global-list__li {
-		width: 30%;
-		width: 100%;
+		width: 31.5%;
 		height: 6rem;
 		margin-bottom: 0;
 		font-size: 1.8rem;
