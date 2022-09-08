@@ -3,8 +3,8 @@
 * --------------------------------------------------------------------------------------------------*/
 
 $(function(){
-  $('.list-ac__dt--btn').click(function(){
-    $(this).parent().next('.list-ac__dd').slideToggle();
+  $('.list-ac__dt').click(function(){
+    $(this).next('.list-ac__dd').slideToggle();
     $(this).toggleClass('open');
   });
 });

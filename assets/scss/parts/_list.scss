@@ -70,6 +70,8 @@
   padding: 1.9rem 2.2rem 2rem 3rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
   @include media(sp) {
     padding: 1.8rem 1.7rem 2rem 2rem;
   }
@@ -95,7 +97,6 @@
   position: relative;
   top: 0.185rem;
   //background: yellow;
-  cursor: pointer;
   @include media(sp) {
     top: 0;
   }

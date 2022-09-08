@@ -3,4 +3,13 @@
 .company-faq-read {
   text-align: center;
   margin-bottom: 5rem;
+  @include media(sp) {
+    margin-bottom: 3rem;
+  }
+  .sponly {
+    display: none;
+    @include media(sp) {
+      display: block;
+    }
+  }
 }
