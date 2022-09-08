@@ -727,6 +727,7 @@ body > footer {
 	width: 100%;
 	position: sticky;
 	top: 100vh;
+	z-index: 2;
 }
 footer {
 	width: 100%;

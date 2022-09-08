@@ -57,7 +57,7 @@
 .sauce-03-layout-common__box--title {
   line-height: 1.5;
   margin-bottom: 0.55em;
-  white-space: nowrap;
+  //white-space: nowrap;
   @include media(sp) {
     font-size: min(calc(38/750*100vw), 3.8rem);
     line-height: 1.315;
@@ -191,9 +191,9 @@
     .button--more {
       margin-top: 1.8rem;
       @include media(sp) {
-        margin-top: min(calc(56/750*100vw), 5.6rem);
+        margin-top: 0;
         position: absolute;
-        bottom: min(calc(-60px + (-56/750*100vw)), calc(-60px + -5.7rem));
+        bottom: calc(-60px + (-56/750*100vw) + min(calc(-44/750*100vw), -4.4rem) + (-588/750*100vw));
         left: 0;
         right: 0;
       }

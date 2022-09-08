@@ -101,7 +101,7 @@
   &.nth-1 {
     margin-bottom: 9.818%;
     @include media(sp) {
-      margin-bottom: min(calc(111/750*100vw), 11.1rem);
+      margin-bottom: calc(50/750*100vw);
     }
     .sauce-04-layout-common__box {
       margin-left: calc(134/1100*100%);
@@ -124,7 +124,7 @@
     .sauce-04-layout-common__images--pictuer {
       transform: scale(1.25) translateX(7%) translateY(-6%);
       @include media(sp) {
-        transform: scale(1.13) translateX(6%) translateY(-6%);
+        transform: scale(1.06) translateX(3%) translateY(-10%);
       }
     }
   }
@@ -180,9 +180,9 @@
     }
   }
   &.nth-3 {
-    margin-bottom: 8.9%;
+    //margin-bottom: 8.9%;
     @include media(sp) {
-      margin-bottom: min(calc(122/750*100vw), 12.2rem);
+      //margin-bottom: min(calc(122/750*100vw), 12.2rem);
     }
     .sauce-04-layout-common__box {
       margin-left: calc(134/1100*100%);

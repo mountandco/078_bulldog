@@ -1,4 +1,8 @@
-.underlayer.securitycontrol {}
+.underlayer.securitycontrol {
+  .link-inline.link-underline  {
+    color: colors(color-base);
+  }
+}
 
 .securitycontrol-read {
   margin-bottom: 5rem;

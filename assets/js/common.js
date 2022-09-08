@@ -10,6 +10,16 @@ isPC = ($windowWidth > $breakPointB);
 isSPTB = ($windowWidth < $breakPointB);
 
 /* ----------------------------------------------------------------------------------------------------
+*  sp 100vh
+* --------------------------------------------------------------------------------------------------*/
+// 1回のみ取得
+function setHeight() {
+  let vh2 = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+/* 
+----------------------------------------------------------------------------------------------------
 *  HAMBURGER
 * --------------------------------------------------------------------------------------------------*/
 // ハンバーガをクリックしたらメニューを表示
@@ -308,73 +318,6 @@ $(window).on('scroll load', function () {
 				$(this).addClass("show")
 			).done(function () {
 				$(this).delay(100).queue(function () {
-					$(this).addClass("done")
-				})
-			});
-		}
-	});
-
-	// ページ固有
-	// /special/sauce/01.html
-	$('.sauce-01-layout-1-sauce__image').each(function () {
-		var thisPos = $(this).offset().top;
-		if (thisPos < effectPos) {
-			$.when(
-				$(this).addClass("show")
-			).done(function () {
-				$(this).delay(200).queue(function () {
-					$(this).addClass("done")
-				})
-			});
-		}
-	});
-
-	$('.sauce-01-layout-1-content-box__column-1--li').each(function () {
-		var thisPos = $(this).offset().top;
-		if (thisPos < effectPos) {
-			$.when(
-				$(this).addClass("show")
-			).done(function () {
-				$(this).delay(800).queue(function () {
-					$(this).addClass("done")
-				})
-			});
-		}
-	});
-
-	$('.js-sauce-01-column-2-image-fade').each(function () {
-		var thisPos = $(this).offset().top;
-		if (thisPos < effectPos) {
-			$.when(
-				$(this).addClass("show")
-			).done(function () {
-				$(this).queue(function () {
-					$(this).addClass("done")
-				})
-			});
-		}
-	});
-
-	$('.sauce-01-layout-1-content-box__title, .sauce-01-layout-1-content-box__text, .sauce-01-layout-1-content-box__column-2--text').each(function () {
-		var thisPos = $(this).offset().top;
-		if (thisPos < effectPos) {
-			$.when(
-				$(this).addClass("show")
-			).done(function () {
-				$(this).delay(2000).queue(function () {
-					$(this).addClass("done")
-				})
-			});
-		}
-	});
-
-	$('.sauce-01-anime').each(function () {
-		var thisPos = $(this).offset().top;
-		if (thisPos < effectPos) {
-			$.when(
-				$(this).addClass("show")
-			).done(function () {
-				$(this).delay(1500).queue(function () {
 					$(this).addClass("done")
 				})
 			});

@@ -45,9 +45,9 @@
   @include media(sp) {
     position: sticky;
     width: calc(232/750*100vw);
-    height: auto;
+    height: calc(974/750*100vw);
     margin: 0;
-    top: 70px;
+    top: calc((var(--vh, 1vh) * 100) - (974/750*100vw) - (55px / 2));
     overflow: hidden;
     //background: red;
   }
@@ -474,10 +474,10 @@
   .sauce-01-layout-1-content-box__title {
     opacity: 0;
     transition: 2.2s ease;
-    transition-delay: 2s;
+    //transition-delay: 2s;
     @include media(sp) {
-      transition: 1s ease;
-      transition-delay: 0s;
+      //transition: 1s ease;
+      //transition-delay: 0s;
     }
     &.done {
       opacity: 1;
@@ -528,10 +528,10 @@
   .sauce-01-layout-1-content-box__text {
     opacity: 0;
     transition: 2.2s ease;
-    transition-delay: 2s;
+    //transition-delay: 2s;
     @include media(sp) {
-      transition: 1s ease;
-      transition-delay: 0s;
+      //transition: 1s ease;
+      //transition-delay: 0s;
     }
     &.done {
       opacity: 1;
@@ -542,10 +542,10 @@
   .sauce-01-layout-1-content-box__title {
     opacity: 0;
     transition: 2.2s ease;
-    transition-delay: 2s;
+    //transition-delay: 2s;
     @include media(sp) {
-      transition: 1s ease;
-      transition-delay: 0s;
+      //transition: 1s ease;
+      //transition-delay: 0s;
     }
     &.done {
       opacity: 1;
@@ -597,7 +597,7 @@
   .sauce-01-layout-1-content-box__text {
     opacity: 0;
     transition: 2.2s ease;
-    transition-delay: 2s;
+    //transition-delay: 2s;
     &.done {
       opacity: 1;
     }
@@ -607,10 +607,10 @@
   .sauce-01-layout-1-content-box__title {
     opacity: 0;
     transition: 2.2s ease;
-    transition-delay: 2s;
+    //transition-delay: 2s;
     @include media(sp) {
-      transition: 1s ease;
-      transition-delay: 0s;
+      //transition: 1s ease;
+      //transition-delay: 0s;
     }
     &.done {
       opacity: 1;
@@ -622,7 +622,7 @@
   .sauce-01-layout-1-content-box__column-2--image {
     opacity: 0;
     transition: 0.6s ease-out;
-    transition-delay: 1.5s;
+    //transition-delay: 1.5s;
     &.js-sauce-01-column-2-image-fade {
       &.done {
         opacity: 1;
@@ -632,10 +632,10 @@
   .sauce-01-layout-1-content-box__column-2--text {
     opacity: 0;
     transition: 2.2s ease;
-    transition-delay: 2s;
+    //transition-delay: 2s;
     @include media(sp) {
-      transition: 1s ease;
-      transition-delay: 0s;
+      //transition: 1s ease;
+      //transition-delay: 0s;
     }
     &.done {
       opacity: 1;
@@ -646,13 +646,10 @@
   .sauce-01-layout-1-content-box__title {
     opacity: 0;
     transition: 2.2s ease;
-    transition-delay: 2s;
+    //transition-delay: 2s;
     @include media(sp) {
-      transition: 1s ease;
-      transition-delay: 0s;
-    }
-    @include media(sp) {
-      transition-delay: 0s;
+      //transition: 1s ease;
+      //transition-delay: 0s;
     }
     &.done {
       opacity: 1;
@@ -664,9 +661,9 @@
   .sauce-01-layout-1-content-box__column-2--image {
     opacity: 0;
     transition: 0.6s ease-out;
-    transition-delay: 1.5s;
+    //transition-delay: 1.5s;
     @include media(sp) {
-      transition-delay: 0s;
+      //transition-delay: 0s;
     }
     &.js-sauce-01-column-2-image-fade {
       &.done {
@@ -677,7 +674,7 @@
   .sauce-01-layout-1-content-box__column-2--text {
     opacity: 0;
     transition: 2.2s ease;
-    transition-delay: 2s;
+    //transition-delay: 2s;
     &.done {
       opacity: 1;
     }
@@ -918,18 +915,67 @@
 }
 @keyframes sauce-01-anime-type-9 {
   0% {
+    transform: scale(1);
     filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
   }
-  50% {
+  15% {
+    transform: scale(1);
     filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
   }
-  58% {
+  18% {
+    transform: scale(1.15);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  20% {
+    transform: scale(1.15);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  20.5% {
+    transform: scale(1);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  21.0% {
+    transform: scale(1.05);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  21.8% {
+    transform: scale(1.05);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  22.4% {
+    transform: scale(1);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  22.9% {
+    transform: scale(1.03);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  23.3% {
+    transform: scale(1);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  23.7% {
+    transform: scale(1.03);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  24.1% {
+    transform: scale(1);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  30% {
+    transform: scale(1);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  38% {
+    transform: scale(1);
     filter: contrast(1.5) drop-shadow(2px 4px 6px rgba(0,0,0,0.16));
   }
-  62% {
+  42% {
+    transform: scale(1);
     filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
   }
   100% {
+    transform: scale(1);
     filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
   }
 }
@@ -947,24 +993,63 @@
 }
 @keyframes sauce-01-anime-type-10 {
   0% {
+    transform: scale(1);
     filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
   }
-  10% {
+  56.5% {
+    transform: scale(1);
     filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
   }
-  16% {
-    filter: contrast(1.5) drop-shadow(2px 4px 6px rgba(0,0,0,0.16));
-  }
-  19% {
+  58% {
+    transform: scale(0.85);
     filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
   }
-  86% {
-    filter: contrast(1.5) drop-shadow(2px 4px 6px rgba(0,0,0,0.16));
+  60.5% {
+    transform: scale(0.85);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
   }
-  89% {
+  61.0% {
+    transform: scale(1.05);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  61.8% {
+    transform: scale(1.05);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  62.4% {
+    transform: scale(1);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  62.9% {
+    transform: scale(1.03);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  63.3% {
+    transform: scale(1);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  63.7% {
+    transform: scale(1.03);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  64.1% {
+    transform: scale(1);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  68% {
+    transform: scale(1);
+    filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
+  }
+  76% {
+    transform: scale(1);
+    filter: contrast(1.85) drop-shadow(2px 4px 6px rgba(0,0,0,0.16));
+  }
+  80% {
+    transform: scale(1);
     filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
   }
   100% {
+    transform: scale(1);
     filter: contrast(1) drop-shadow(0 0 0 rgba(0,0,0,0.16));
   }
 }

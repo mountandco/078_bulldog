@@ -5,7 +5,7 @@
 $(function(){
   $('.list-ac__dt').click(function(){
     $(this).next('.list-ac__dd').slideToggle();
-    $(this).toggleClass('open');
+    $(this).children('.list-ac__dt--btn').toggleClass('open');
   });
 });
 
