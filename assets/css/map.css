@@ -66,7 +66,12 @@
   right: 2rem;
   width: 30px;
   height: 30px;
+  transition: all 0.2s;
 }
+.map-close-btn:hover {
+  opacity: 0.5;
+}
+
 .mac .map-wrap-title .map-wrap-title__text br,
 .win .map-wrap-title .map-wrap-title__text br {
   display: none;

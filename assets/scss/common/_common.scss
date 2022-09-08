@@ -104,9 +104,12 @@
     width: 5.1rem;
     height: 5.1rem;
     display: block;
-    background-image: url(../images/underlayer/icon_nav-company.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: colors(white);
+    -webkit-mask: url(../images/underlayer/icon_nav-company.svg) no-repeat center center / contain;
+    mask: url(../images/underlayer/icon_nav-company.svg) no-repeat center center / contain;
+    // background-image: url(../images/underlayer/icon_nav-company.svg);
+    // background-size: contain;
+    // background-repeat: no-repeat;
     margin-bottom: 0.85em;
     transition: all 0.2s;
     @include media(sp) {
@@ -117,7 +120,7 @@
   }
   &:hover {
     &:before {
-      background-image: url(../images/underlayer/icon_nav-company_hover.svg);
+      background: colors(color-base);
     }
   }
 }
@@ -143,6 +146,10 @@
   background-size: 7px 11px;
   background-repeat: no-repeat;
   background-position: center right;
+  @include media(sp-s) {
+    font-size: calc(28/750*100vw);
+    letter-spacing: -0.03em;
+  }
   &:hover {
     background-image: url(../images/underlayer/icon_arrow_color-base.svg);
   }

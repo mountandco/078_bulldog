@@ -94,6 +94,18 @@
       display: none;
     }
   }
+  .pconly {
+    display: block;
+    @include media(sp) {
+      display: none;
+    }
+  }
+  .sponly {
+    display: none;
+    @include media(sp) {
+      display: block;
+    }
+  }
 }
 .company-message-dl__dd--name {
   font-size: 1.8rem;

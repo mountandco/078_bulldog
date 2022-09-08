@@ -18,11 +18,16 @@
 .list-dl__dt {
   width: 19.272%;
   background: colors(bg-gray);
-  padding: 0.9em 0 1em 1.35em;
+  padding: 0.9em 1.35em 1em;
   font-weight: bold;
   @include media(sp) {
     width: 100%;
     padding: 0.8em 1.125em;
+  }
+  .spnone {
+    @include media(sp) {
+      display: none;
+    }
   }
 }
 .list-dl__dd {

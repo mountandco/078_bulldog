@@ -1,4 +1,15 @@
 /* ----------------------------------------------------------------------------------------------------
+*  breakPoint
+* --------------------------------------------------------------------------------------------------*/
+$windowWidth = window.innerWidth;
+$breakPointA = 768;
+$breakPointB = 1100;
+isSP = ($windowWidth < $breakPointA);
+isTB = ($windowWidth <= $breakPointB) && ($windowWidth > $breakPointA);
+isPC = ($windowWidth > $breakPointB);
+isSPTB = ($windowWidth < $breakPointB);
+
+/* ----------------------------------------------------------------------------------------------------
 *  HAMBURGER
 * --------------------------------------------------------------------------------------------------*/
 // ハンバーガをクリックしたらメニューを表示
@@ -375,7 +386,6 @@ $(window).on('scroll load', function () {
 *  OTHER
 * --------------------------------------------------------------------------------------------------*/
 
-
 $(window).on("load resize", function () {
 	if (window.innerWidth < 767) {
 		$(".bull-kitchen__right .button--more").insertAfter(".bull-kitchen__inner");
@@ -398,12 +408,22 @@ for (let i = 0; i < smoothScrollTrigger.length; i++) {
 		let targetElement = document.getElementById(href.replace('#', ''));
 		const rect = targetElement.getBoundingClientRect().top;
 		const offset = window.pageYOffset;
-		const gap = 0;
-		const target = rect + offset - gap;
-		window.scrollTo({
-			top: target,
-			behavior: 'smooth',
-		});
+		const gapSPTB = 65;
+		const gapPC = 0;
+		const targetSPTB = rect + offset - gapSPTB;
+		const targetPC = rect + offset - gapPC;
+		if(isSPTB) {
+			window.scrollTo({
+				top: targetSPTB,
+				behavior: 'smooth',
+			});
+		}
+		if(isPC) {
+			window.scrollTo({
+				top: targetPC,
+				behavior: 'smooth',
+			});
+		}
 	});
 }
 

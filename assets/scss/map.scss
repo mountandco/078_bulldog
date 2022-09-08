@@ -60,7 +60,10 @@
   right: 2rem;
   width: 30px;
   height: 30px;
-  a {}
+  transition: all 0.2s;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 // ユーザーエージェントによるif文
