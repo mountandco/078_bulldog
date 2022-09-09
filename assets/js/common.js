@@ -184,17 +184,17 @@ $(function(global) {
 }(this.self || global));
 
 $(window).scroll(function () {
-	$('.js-bg-fadein-footprints-show-1, .js-bg-fadein-footprints-show-2, .js-bg-fadein-footprints-show-3').each(function () {
+	$('.js-bg-fadein-footprints-show').each(function () {
 		let hit = $(this).offset().top;
 		let scroll = $(window).scrollTop();
 		let wHeight = $(window).height();
-		if (scroll > hit - wHeight + wHeight / 100 + 80 && $(this)) {
+		if (scroll > hit - wHeight + wHeight / 100 + 80 && $(this)) { // 高さ調整
 			new ClassCycler({
-				$targetElm: $(this).children().children().children().children(),
-				cycleClassName: 'show',
-				duration: 120,
-				startImmediate: true,
-				oneWay: true
+				$targetElm: $(this).children().children().children().children(), //連続Class付与させたいセレクタの指定
+				cycleClassName: 'show',// 付与するClassName
+				duration: 120, // 連続する間隔
+				startImmediate: true,// 初期状態から1つ目に付与するのか
+				oneWay: true // 付け替え or 付けて終わり
 			});
 		}
 	});
