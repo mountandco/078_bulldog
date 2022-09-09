@@ -389,7 +389,8 @@
     font-size: 1.6rem;
   }
   @include media(sp) {
-    margin-bottom: 0.85em;
+    //margin-bottom: 0.85em;
+    padding-top: 0.85em;
   }
   &.list-nav-column-3-arrow {
     &:after {

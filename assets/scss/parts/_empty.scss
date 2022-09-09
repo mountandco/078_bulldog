@@ -35,4 +35,22 @@
       width: 29.532%;
     }
   }
+  // company/boardmember.html で使うパーツ
+  &.company-boardmember-empty.empty-box {
+    .empty {
+      width: 18.8rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+  // /special/sauce/01.htmlで使うパーツ
+  &.sauce-01-layout-2__list-empty {
+    .empty {
+      width: 0;
+      @include media(sp) {
+        width: min(13rem, 30%);
+        margin: 0 min(7.6%, 20px);
+      }
+    }
+  }
 }

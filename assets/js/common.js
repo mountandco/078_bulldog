@@ -13,10 +13,27 @@ isSPTB = ($windowWidth < $breakPointB);
 *  sp 100vh
 * --------------------------------------------------------------------------------------------------*/
 // 1回のみ取得
+// function setHeight() {
+//   let vh = window.innerHeight * 0.01;
+//   document.documentElement.style.setProperty('--vh', `${vh}px`);
+// }
+
 function setHeight() {
-  let vh2 = window.innerHeight * 0.01;
+  let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
+// 初期化
+setHeight();
+// ブラウザのサイズが変更された時・画面の向きを変えた時に再計算する
+window.addEventListener('resize', setHeight);
+
+// 1回のみ取得
+// 関数定義
+function setHeight2() {
+  let vh2 = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh2', `${vh2}px`);
+}
+setHeight2();
 
 /* 
 ----------------------------------------------------------------------------------------------------
@@ -142,24 +159,24 @@ $(function () {
 /* ----------------------------------------------------------------------------------------------------
 *  footprints
 * --------------------------------------------------------------------------------------------------*/
-$(function (global) {
-	var ClassCycler = function (opt) {
-		var timer,
-			execCycle = (function () {
-				var $item = opt.$targetElm,
-					index = 0,
-					max = $item.length;
-				return function () {
-					if (!opt.oneWay) {
-						$item.removeClass(opt.cycleClassName);
-					}
-					$item.eq(index).addClass(opt.cycleClassName);
-					index = (++index === max) ? 0 : index;
-					if (opt.oneWay && index === 0) {
-						global.clearInterval(timer);
-					}
-				};
-			}());
+$(function(global) {
+	let ClassCycler = function(opt) {
+		let timer,
+		execCycle = (function() {
+			let $item = opt.$targetElm,
+			index = 0,
+			max = $item.length;
+			return function() {
+				if (!opt.oneWay) {
+					$item.removeClass(opt.cycleClassName);
+				}
+				$item.eq(index).addClass(opt.cycleClassName);
+				index = (++index === max) ? 0 : index;
+				if (opt.oneWay &&  index === 0) {
+					global.clearInterval(timer);
+				}
+			};
+		}());
 		opt.startImmediate && execCycle();
 		timer = global.setInterval(execCycle, opt.duration);
 	};
@@ -167,29 +184,19 @@ $(function (global) {
 }(this.self || global));
 
 $(window).scroll(function () {
-	$('.bg-fadein-footprints.nth-1').each(function () {
-		var hit = $(this).offset().top;
-		var scroll = $(window).scrollTop();
-		var wHeight = $(window).height();
-
-		if (matchMedia('only screen and (max-width: 767px)').matches) {
-			//  sp & tb
-		} else {
-			// pc
-		}
-
-		if (scroll > hit - wHeight + wHeight / 100 + 80) {
-			$(function () {
-				new ClassCycler({
-					$targetElm: $('.bg-fadein-footprints'),
-					cycleClassName: 'show',
-					duration: 120,
-					startImmediate: true,
-					oneWay: true
-				});
+	$('.js-bg-fadein-footprints-show-1, .js-bg-fadein-footprints-show-2, .js-bg-fadein-footprints-show-3').each(function () {
+		let hit = $(this).offset().top;
+		let scroll = $(window).scrollTop();
+		let wHeight = $(window).height();
+		if (scroll > hit - wHeight + wHeight / 100 + 80 && $(this)) {
+			new ClassCycler({
+				$targetElm: $(this).children().children().children().children(),
+				cycleClassName: 'show',
+				duration: 120,
+				startImmediate: true,
+				oneWay: true
 			});
 		}
-
 	});
 });
 
@@ -349,7 +356,7 @@ for (let i = 0; i < smoothScrollTrigger.length; i++) {
 		e.preventDefault();
 		let href = smoothScrollTrigger[i].getAttribute('href');
 		let targetElement = document.getElementById(href.replace('#', ''));
-		const rect = targetElement.getBoundingClientRect().top;
+		const rect = targetElement.getBoundingClientRect().topToScroll;
 		const offset = window.pageYOffset;
 		const gapSPTB = 65;
 		const gapPC = 0;
@@ -357,13 +364,13 @@ for (let i = 0; i < smoothScrollTrigger.length; i++) {
 		const targetPC = rect + offset - gapPC;
 		if(isSPTB) {
 			window.scrollTo({
-				top: targetSPTB,
+				topToScroll: targetSPTB,
 				behavior: 'smooth',
 			});
 		}
 		if(isPC) {
 			window.scrollTo({
-				top: targetPC,
+				topToScroll: targetPC,
 				behavior: 'smooth',
 			});
 		}

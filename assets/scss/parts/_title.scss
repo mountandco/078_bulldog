@@ -6,7 +6,7 @@
   align-items: center;
   line-height: 1;
   margin-bottom: calc(1em * 1.25);
-  @include media(tb) {
+  @include media(sp) {
     font-size: 2.6rem;
   }
 }
@@ -17,14 +17,14 @@
   line-height: 1.5;
   .spblock {
     display: none;
-    @include media(tb) {
+    @include media(sp) {
       display: block;
     }
   }
 }
 .title-page__large--small {
   font-size: 3rem;
-  @include media(tb) {
+  @include media(sp) {
     font-size: 2rem;
   }
 }
@@ -32,7 +32,7 @@
   order: 1;
   font-size: 1.4rem;
   margin-bottom: 0.85em;
-  @include media(tb) {
+  @include media(sp) {
     font-size: 1rem;
   }
   // カラーパターン

@@ -21,9 +21,9 @@
   padding: 0;
   @include media(sp) {
     padding: 0;
-    margin-bottom: calc(101/750*100vw);
-    background-size: calc(518/750*100vw) calc(1245/750*100vw), calc(496/750*100vw) calc(1245/750*100vw);
-    background-position: calc(50% - 60vw) center, calc(50% - -60vw) center;
+    margin-bottom: 5rem;
+    background-size: calc(50.9rem/2) calc(122.5rem/2), calc(48rem/2) calc(120.3rem/2);
+    background-position: calc(0% - 15.8rem) 20.7rem, right calc(0% - 17.2rem) top 21.2rem;
     background-color: rgba(255,255,255,0.35);
     background-blend-mode: lighten;
   }
@@ -76,8 +76,8 @@
     top: -30px;
     left: auto;
     right: 0;
-    width: calc(283/750*100vw);
-    height: calc(283/750*100vw);
+    width: calc(28.3rem / 2);
+    height: calc(28.3rem / 2);
   }
 }
 .about-page__text {
@@ -90,7 +90,7 @@
   position: relative;
   @include z-index-2;
   @include media(sp) {
-    font-size: calc(28/750*100vw);
+    font-size: 1.4rem;
   }
   .sp-only {
     display: none;
