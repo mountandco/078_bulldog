@@ -349,14 +349,14 @@ $(function () {
 	});
 });
 
-// 汎用 スムーズスクロール
+//汎用 スムーズスクロール
 const smoothScrollTrigger = document.querySelectorAll('a[href^="#"]');
 for (let i = 0; i < smoothScrollTrigger.length; i++) {
 	smoothScrollTrigger[i].addEventListener('click', (e) => {
 		e.preventDefault();
 		let href = smoothScrollTrigger[i].getAttribute('href');
 		let targetElement = document.getElementById(href.replace('#', ''));
-		const rect = targetElement.getBoundingClientRect().topToScroll;
+		const rect = targetElement.getBoundingClientRect().top;
 		const offset = window.pageYOffset;
 		const gapSPTB = 65;
 		const gapPC = 0;
@@ -364,13 +364,13 @@ for (let i = 0; i < smoothScrollTrigger.length; i++) {
 		const targetPC = rect + offset - gapPC;
 		if(isSPTB) {
 			window.scrollTo({
-				topToScroll: targetSPTB,
+				top: targetSPTB,
 				behavior: 'smooth',
 			});
 		}
 		if(isPC) {
 			window.scrollTo({
-				topToScroll: targetPC,
+				top: targetPC,
 				behavior: 'smooth',
 			});
 		}
