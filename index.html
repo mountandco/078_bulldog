@@ -17,7 +17,7 @@
         <script src="/assets/js/lib/jquery-3.6.0.min.js" defer></script>
         <script src="/assets/js/lib/swiper-bundle.min.js" defer></script>
         <script src="/assets/js/common.js?20220920" defer></script>
-        <script src="/assets/js/top.js" defer></script>
+        <script src="/assets/js/top.js?20220920" defer></script>
 
         <!-- ogp -->
         <meta property="og:url" content="https://www.bulldog.co.jp" />
@@ -146,13 +146,13 @@
                                     <div class="swiper-wrapper js-news-swiper__wrapper">
                                         <div class="swiper-slide js-news-swiper__wrapper--slide nth-1">
                                             <div class="important-information__item">
-                                                <a class="icon--blank" href="#">
+                                                <a class="icon--blank" href="https://www.yahoo.co.jp/" target="_blank" rel="noopener">
                                                     <span class="news__text">当社グループにおける新型コロナウイルス感染症の感染拡大や緊急事態宣言に伴う当面の取組について/<span class="news__date">2022.01.06</span></span>
                                                 </a>
                                             </div>
                                         </div>
                                         <!--test Start-->
-                                        <div class="swiper-slide js-news-swiper__wrapper--slide nth-2"><div class="important-information__item"><a class="icon--blank" href="#"><span class="news__text">Instagramの「偽アカウント」にご注意ください/<span class="news__date">2022.01.06</span></span></a></div></div><div class="swiper-slide js-news-swiper__wrapper--slide nth-3"><div class="important-information__item"><a class="icon--blank" href="#"><span class="news__text">新型コロナウイルス防止対策に関するお知らせ/<span class="news__date">2022.01.06</span></span></a></div></div><div class="swiper-slide js-news-swiper__wrapper--slide nth-4"><div class="important-information__item"><a class="icon--blank" href="#"><span class="news__text">「新型コロナウイルス感染症」に対する支援について/<span class="news__date">2022.01.06</span></span></a></div></div><div class="swiper-slide js-news-swiper__wrapper--slide nth-5"><div class="important-information__item"><a class="icon--blank" href="#"><span class="news__text">「令和2年7月豪雨」に対する義援金の拠出について/<span class="news__date">2022.01.06</span></span></a></div></div>
+                                        <div class="swiper-slide js-news-swiper__wrapper--slide nth-2"><div class="important-information__item"><a class="icon--blank" href="https://www.google.com/?hl=ja" target="_blank" rel="noopener"><span class="news__text">Instagramの「偽アカウント」にご注意ください/<span class="news__date">2022.01.06</span></span></a></div></div><div class="swiper-slide js-news-swiper__wrapper--slide nth-3"><div class="important-information__item"><a class="icon--blank" href="https://twitter.com/?lang=ja" target="_blank" rel="noopener"><span class="news__text">新型コロナウイルス防止対策に関するお知らせ/<span class="news__date">2022.01.06</span></span></a></div></div><div class="swiper-slide js-news-swiper__wrapper--slide nth-4"><div class="important-information__item"><a class="icon--blank" href="https://ja-jp.facebook.com/" target="_blank" rel="noopener"><span class="news__text">「新型コロナウイルス感染症」に対する支援について/<span class="news__date">2022.01.06</span></span></a></div></div><div class="swiper-slide js-news-swiper__wrapper--slide nth-5"><div class="important-information__item"><a class="icon--blank" href="https://www.instagram.com/" target="_blank" rel="noopener"><span class="news__text">「令和2年7月豪雨」に対する義援金の拠出について/<span class="news__date">2022.01.06</span></span></a></div></div>
                                         <!--test End-->
                                     </div>
                                     <div class="button--open stopbtn stop"><p>全5件</p><div class="icon--open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.6 25.5"><path d="M2.8,25.5L0,22.6l9.9-9.9L0,2.8L2.8,0l12.8,12.8L2.8,25.5z"/></svg></div></div>
@@ -242,7 +242,9 @@
                 </div><!--/.promotion__inner-->
             </section><!-- /section -->
 
-            <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/inc/fadein-footprints.html'); ?>
+            <div class="js-bg-fadein-footprints-show">
+                <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/inc/fadein-footprints.html'); ?>
+            </div>
 
             <section class="section">
                 <div class="recipe__inner">
@@ -492,6 +494,9 @@
                 <span class="brand__bg rellax" data-rellax-speed="1" data-rellax-percentage="0.5"></span>
             </section><!-- /section -->
 
+            <div class="fadein-footprints-toppage-bottom js-bg-fadein-footprints-show">
+                <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/inc/fadein-footprints.html'); ?>
+            </div>
 
             <section class="section products">
                 <h4 class="section__heading">
@@ -797,7 +802,7 @@
                 </li>
             </ul>
         </div><!-- /instagram -->
-
+        <button type="button" class="button--submit icon--arrow" onclick="form_submit('confirm');">ご注文を確認する</button>
 
         <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/inc/share.html'); ?>
         <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/inc/footer.html'); ?>

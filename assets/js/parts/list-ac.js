@@ -3,9 +3,9 @@
 * --------------------------------------------------------------------------------------------------*/
 
 $(function(){
-  $('.list-ac__dt--btn').click(function(){
-    $(this).parent().next('.list-ac__dd').slideToggle();
-    $(this).toggleClass('open');
+  $('.list-ac__dt').click(function(){
+    $(this).next('.list-ac__dd').slideToggle();
+    $(this).children('.list-ac__dt--btn').toggleClass('open');
   });
 });
 

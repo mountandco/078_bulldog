@@ -1,4 +1,44 @@
+// test
+
 /* ----------------------------------------------------------------------------------------------------
+*  breakPoint
+* --------------------------------------------------------------------------------------------------*/
+$windowWidth = window.innerWidth;
+$breakPointA = 768;
+$breakPointB = 1100;
+isSP = ($windowWidth < $breakPointA);
+isTB = ($windowWidth <= $breakPointB) && ($windowWidth > $breakPointA);
+isPC = ($windowWidth > $breakPointB);
+isSPTB = ($windowWidth < $breakPointB);
+
+/* ----------------------------------------------------------------------------------------------------
+*  sp 100vh
+* --------------------------------------------------------------------------------------------------*/
+// 1回のみ取得
+// function setHeight() {
+//   let vh = window.innerHeight * 0.01;
+//   document.documentElement.style.setProperty('--vh', `${vh}px`);
+// }
+
+function setHeight() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+// 初期化
+setHeight();
+// ブラウザのサイズが変更された時・画面の向きを変えた時に再計算する
+window.addEventListener('resize', setHeight);
+
+// 1回のみ取得
+// 関数定義
+function setHeight2() {
+  let vh2 = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh2', `${vh2}px`);
+}
+setHeight2();
+
+/* 
+----------------------------------------------------------------------------------------------------
 *  HAMBURGER
 * --------------------------------------------------------------------------------------------------*/
 // ハンバーガをクリックしたらメニューを表示
@@ -121,24 +161,24 @@ $(function () {
 /* ----------------------------------------------------------------------------------------------------
 *  footprints
 * --------------------------------------------------------------------------------------------------*/
-$(function (global) {
-	var ClassCycler = function (opt) {
-		var timer,
-			execCycle = (function () {
-				var $item = opt.$targetElm,
-					index = 0,
-					max = $item.length;
-				return function () {
-					if (!opt.oneWay) {
-						$item.removeClass(opt.cycleClassName);
-					}
-					$item.eq(index).addClass(opt.cycleClassName);
-					index = (++index === max) ? 0 : index;
-					if (opt.oneWay && index === 0) {
-						global.clearInterval(timer);
-					}
-				};
-			}());
+$(function(global) {
+	let ClassCycler = function(opt) {
+		let timer,
+		execCycle = (function() {
+			let $item = opt.$targetElm,
+			index = 0,
+			max = $item.length;
+			return function() {
+				if (!opt.oneWay) {
+					$item.removeClass(opt.cycleClassName);
+				}
+				$item.eq(index).addClass(opt.cycleClassName);
+				index = (++index === max) ? 0 : index;
+				if (opt.oneWay &&  index === 0) {
+					global.clearInterval(timer);
+				}
+			};
+		}());
 		opt.startImmediate && execCycle();
 		timer = global.setInterval(execCycle, opt.duration);
 	};
@@ -146,29 +186,19 @@ $(function (global) {
 }(this.self || global));
 
 $(window).scroll(function () {
-	$('.bg-fadein-footprints.nth-1').each(function () {
-		var hit = $(this).offset().top;
-		var scroll = $(window).scrollTop();
-		var wHeight = $(window).height();
-
-		if (matchMedia('only screen and (max-width: 767px)').matches) {
-			//  sp & tb
-		} else {
-			// pc
-		}
-
-		if (scroll > hit - wHeight + wHeight / 100 + 430) {
-			$(function () {
-				new ClassCycler({
-					$targetElm: $('.bg-fadein-footprints'),
-					cycleClassName: 'show',
-					duration: 200,
-					startImmediate: true,
-					oneWay: true
-				});
+	$('.js-bg-fadein-footprints-show').each(function () {
+		let hit = $(this).offset().top;
+		let scroll = $(window).scrollTop();
+		let wHeight = $(window).height();
+		if (scroll > hit - wHeight + wHeight / 100 + 80 && $(this)) { // 高さ調整
+			new ClassCycler({
+				$targetElm: $(this).children().children().children().children(), //連続Class付与させたいセレクタの指定
+				cycleClassName: 'show',// 付与するClassName
+				duration: 120, // 連続する間隔
+				startImmediate: true,// 初期状態から1つ目に付与するのか
+				oneWay: true // 付け替え or 付けて終わり
 			});
 		}
-
 	});
 });
 
@@ -303,78 +333,10 @@ $(window).on('scroll load', function () {
 		}
 	});
 
-	// ページ固有
-	// /special/sauce/01.html
-	$('.sauce-01-layout-1-sauce__image').each(function () {
-		var thisPos = $(this).offset().top;
-		if (thisPos < effectPos) {
-			$.when(
-				$(this).addClass("show")
-			).done(function () {
-				$(this).delay(200).queue(function () {
-					$(this).addClass("done")
-				})
-			});
-		}
-	});
-
-	$('.sauce-01-layout-1-content-box__column-1--li').each(function () {
-		var thisPos = $(this).offset().top;
-		if (thisPos < effectPos) {
-			$.when(
-				$(this).addClass("show")
-			).done(function () {
-				$(this).delay(800).queue(function () {
-					$(this).addClass("done")
-				})
-			});
-		}
-	});
-
-	$('.js-sauce-01-column-2-image-fade').each(function () {
-		var thisPos = $(this).offset().top;
-		if (thisPos < effectPos) {
-			$.when(
-				$(this).addClass("show")
-			).done(function () {
-				$(this).queue(function () {
-					$(this).addClass("done")
-				})
-			});
-		}
-	});
-
-	$('.sauce-01-layout-1-content-box__title, .sauce-01-layout-1-content-box__text, .sauce-01-layout-1-content-box__column-2--text').each(function () {
-		var thisPos = $(this).offset().top;
-		if (thisPos < effectPos) {
-			$.when(
-				$(this).addClass("show")
-			).done(function () {
-				$(this).delay(2000).queue(function () {
-					$(this).addClass("done")
-				})
-			});
-		}
-	});
-
-	$('.sauce-01-anime').each(function () {
-		var thisPos = $(this).offset().top;
-		if (thisPos < effectPos) {
-			$.when(
-				$(this).addClass("show")
-			).done(function () {
-				$(this).delay(1500).queue(function () {
-					$(this).addClass("done")
-				})
-			});
-		}
-	});
-
 });
 /* ----------------------------------------------------------------------------------------------------
 *  OTHER
 * --------------------------------------------------------------------------------------------------*/
-
 
 $(window).on("load resize", function () {
 	if (window.innerWidth < 767) {
@@ -389,7 +351,7 @@ $(function () {
 	});
 });
 
-// 汎用 スムーズスクロール
+//汎用 スムーズスクロール
 const smoothScrollTrigger = document.querySelectorAll('a[href^="#"]');
 for (let i = 0; i < smoothScrollTrigger.length; i++) {
 	smoothScrollTrigger[i].addEventListener('click', (e) => {
@@ -398,12 +360,22 @@ for (let i = 0; i < smoothScrollTrigger.length; i++) {
 		let targetElement = document.getElementById(href.replace('#', ''));
 		const rect = targetElement.getBoundingClientRect().top;
 		const offset = window.pageYOffset;
-		const gap = 0;
-		const target = rect + offset - gap;
-		window.scrollTo({
-			top: target,
-			behavior: 'smooth',
-		});
+		const gapSPTB = 65;
+		const gapPC = 0;
+		const targetSPTB = rect + offset - gapSPTB;
+		const targetPC = rect + offset - gapPC;
+		if(isSPTB) {
+			window.scrollTo({
+				top: targetSPTB,
+				behavior: 'smooth',
+			});
+		}
+		if(isPC) {
+			window.scrollTo({
+				top: targetPC,
+				behavior: 'smooth',
+			});
+		}
 	});
 }
 

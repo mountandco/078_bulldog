@@ -361,8 +361,9 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	padding: 0 10px 0 0;
 	width: 100%;
+	display: inline-block;
+  width: auto;
 }
 a.icon--blank::after {
 	background: var(--color-base);
@@ -517,7 +518,9 @@ a.icon--blank::after {
 	fill: #FFF;
 	transition: all 0.2s;
 }
-.button--open:hover .icon--open svg,
+.button--open:hover .icon--open svg {
+	transform: rotate(90deg);
+} 
 .button--open.start .icon--open svg {
 	transform: rotate(90deg);
 }
@@ -528,6 +531,12 @@ a.icon--blank::after {
 	}
 }
 @media screen and (max-width: 767px) {
+	.button--open:hover .icon--open svg {
+		transform: rotate(0deg);
+	}
+	.button--open.start .icon--open svg {
+		transform: rotate(90deg);
+	}
 	.important-information__announce {
 		padding-left: 0;
 	}
@@ -1144,6 +1153,8 @@ a.icon--blank::after {
 /* BRAND */
 .section.brand {
 	padding: 50px 0 90px;
+	position: relative;
+	/* z-index: 2; */
 }
 .brand {
 	position: relative;
@@ -1172,6 +1183,31 @@ a.icon--blank::after {
 	bottom: -35%;
 	left: 0%;
 	z-index: -1;
+}
+.section.brand + .fadein-footprints-toppage-bottom .fadein-footprints {}
+.section.brand + .fadein-footprints-toppage-bottom .fadein-footprints .fadein-footprints__inner {
+	top: -204px;
+  left: auto;
+  transform: scale(-1, 1);
+  transform-origin: top left;
+  right: clamp(200px, 24%, 380px);
+  z-index: 1;
+}
+.section.brand + .fadein-footprints-toppage-bottom .fadein-footprints .bg-fadein-footprints:nth-of-type(n + 11) {
+	display: none;
+}
+@media screen and (max-width: 767px) {
+	.section.brand + .fadein-footprints-toppage-bottom .fadein-footprints .fadein-footprints__inner {
+		top: -31vw;
+		left: 0;
+		transform: scale(-0.8, 0.8) rotate(13deg) translateX(0vw) translateY(0);
+		transform-origin: center center;
+		right: 0;
+		z-index: 1;
+	}
+	.section.brand + .fadein-footprints-toppage-bottom .fadein-footprints .bg-fadein-footprints:nth-of-type(n + 9) {
+		display: none;
+	}
 }
 @media screen and (max-width: 414px) {
 	.section.brand {
@@ -1214,6 +1250,10 @@ a.icon--blank::after {
 		position: absolute;
 		top: 25%;
 		left: 0;
+	}
+	.section.brand + .fadein-footprints-toppage-bottom .fadein-footprints .fadein-footprints__inner {
+		transform: scale(-0.57, 0.57) rotate(8deg) translateX(-14vw) translateY(0vw);
+		top: -25vw;
 	}
 }
 

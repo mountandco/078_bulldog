@@ -1,4 +1,6 @@
-.underlayer.contact-page {}
+.underlayer.contact-page {
+  overflow-x: initial;
+}
 
 // contact-pageのcommon
 .contact-pege-gray-box {
@@ -9,6 +11,10 @@
   margin-right: auto;
   padding: 2.5rem 4rem;
   margin-bottom: 4rem;
+  @include media(sp) {
+    padding: 5.97%;
+    margin-bottom: 8.955%;
+  }
 }
 .contact-pege-gray-box__title {
   font-size: 2rem;

@@ -28,9 +28,13 @@
   justify-content: center;
   padding: 3rem 0 3.2rem;
   margin-bottom: 10rem;
+  @include media(sp) {
+    padding: 2rem 0;
+  }
 }
 .btn__project-zero {
   width: 22rem;
+  max-width: 42%;
 }
 
 // .nav-company
@@ -100,20 +104,24 @@
     width: 5.1rem;
     height: 5.1rem;
     display: block;
-    background-image: url(../images/underlayer/icon_nav-company.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: colors(white);
+    -webkit-mask: url(../images/underlayer/icon_nav-company.svg) no-repeat center center / contain;
+    mask: url(../images/underlayer/icon_nav-company.svg) no-repeat center center / contain;
+    // background-image: url(../images/underlayer/icon_nav-company.svg);
+    // background-size: contain;
+    // background-repeat: no-repeat;
     margin-bottom: 0.85em;
     transition: all 0.2s;
     @include media(sp) {
       margin-bottom: 0;
       width: 3.1rem;
       height: 3.1rem;
+      margin-right: 0.5em;
     }
   }
   &:hover {
     &:before {
-      background-image: url(../images/underlayer/icon_nav-company_hover.svg);
+      background: colors(color-base);
     }
   }
 }
@@ -139,6 +147,10 @@
   background-size: 7px 11px;
   background-repeat: no-repeat;
   background-position: center right;
+  @include media(sp-s) {
+    font-size: calc(28/750*100vw);
+    letter-spacing: -0.03em;
+  }
   &:hover {
     background-image: url(../images/underlayer/icon_arrow_color-base.svg);
   }

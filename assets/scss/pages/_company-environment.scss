@@ -2,4 +2,9 @@
 
 .company-environment-read {
   margin-bottom: 5rem;
+  .pconly {
+    @include media(sp) {
+      display: none;
+    }
+  }
 }
