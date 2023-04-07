@@ -1,0 +1,9 @@
+@use "../global/_setting" as *;
+
+// .common__main
+//=====================================================
+.common__main {
+  width: 100%;
+  position: relative;
+  @include z-index-1;
+}

@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+// read me!
+// 以下URLのSSCSSルールを採用しています。まずは目を通してください。
+// https://seisei.top/scss/sscss/
+
+// このscssファイル1枚で、読み込むscssを定義します。
+// 場合によっては100行になっても、分散させずに、この1枚で定義してください。
+// （分散させてどこに何があるのか探す手間の方がやっかいと判断）
+
+// global
+//=====================================================
+// global/_setting.scss で基本変数を定義
+// ※他のディレクトリでは変数定義NG、新規変数を定義する場合はglobalディレクトリで簡潔させてください
+
+
+// foundation/ 基本設定
+//=====================================================
+@use "foundation/_reset";
+@use "foundation/_base";
+
+// dev/ 検証用で制作途中段階の実験ファイル等。productionへのUP時はコメントアウトするように
+//=====================================================
+//@use "dev/_dev";
+
+
+// parts/ ボタンやリストなど、最小単位のパーツ
+//=====================================================
+// ※ .btn__hoge <= class名は {'scssファイル名' + '__' + 'hoge'} とする
+// @use "parts/_badge";
+// @use "parts/_ttl";
+// @use "parts/_font";
+// @use "parts/_bg";
+// @use "parts/_card";
+// @use "parts/_btn";
+// @use "parts/_layout";
+// @use "parts/_img";
+// @use "parts/_filter";
+// @use "parts/_text";
+// @use "parts/_icon";
+// @use "parts/_swiper";
+
+// common/ ヘッダーやフッターやサイドバーなど、web全体に関わるパーツ
+//=====================================================
+// ※ 命名規則は特になし。分かりやすい感じで 例）.headerや.sidebarなど
+@use "common/_common__wrap";
+@use "common/_common__header";
+@use "common/_common__main";
+@use "common/_common__footer";
+
+
+// page ページ単位の記述
+//=====================================================
+// ※ bodyにclassを付ける。 body.page--hoge <= class名は {'page' + '__' + 'ページディレクトリ名、またはarchiveやsingleなどの共通して使う雛形名。ディレクトリ単位で切り分ける時は（例えば、https://seisei.top/company/profile/） class="page__company--profile" のように '--'で繋げる'}
+@use "page/_page__home";
+
