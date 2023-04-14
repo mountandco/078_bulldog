@@ -7,7 +7,7 @@ html {
     font-size: 62.5%;
   }
   @include media(sp-l) {
-    font-size: 66%;
+    font-size: 62.5%;
   }
   @include media(tb-s) {
     font-size: 72%;
@@ -16,21 +16,18 @@ html {
     font-size: 52%;
   }
   @include media(pc) {
-    font-size: 48%;
-  }
-  @include media(pc-l) {
-    font-size: 51%;
-  }
-  @include media(pc-xl) {
-    font-size: 56%;
-  }
-  @include media(pc-2xl) {
     font-size: 62.5%;
   }
-  @include media(pc-3xl) {
-    font-size: 66.25%;
+  @include media(pc-l) {
+    font-size: 62.5%;
   }
-  @include media(pc-4xl) {
+  @include media(pc-xl) {
+    font-size: 65%;
+  }
+  @include media(pc-2xl) {
+    font-size: 67.5%;
+  }
+  @include media(pc-3xl) {
     font-size: 70%;
   }
 }

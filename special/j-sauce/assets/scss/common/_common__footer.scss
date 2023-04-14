@@ -2,3 +2,22 @@
 
 //.common__footer
 //=====================================================
+.common__footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  a {
+    width: min(85/750*100vw, 8.5rem);
+    @include media(pc) {
+      width: min(60/1440*100vw, 6rem);
+    }
+  }
+  small {
+    font-size: min(20/750*100vw, 2rem);
+    padding: 1.5em 0 2em;
+    @include media(pc) {
+      font-size: min(12/1440*100vw, 1.2rem);
+      padding: 1.5em 0 2.5em;
+    }
+  }
+}

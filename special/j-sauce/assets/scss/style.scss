@@ -43,8 +43,8 @@
 // common/ ヘッダーやフッターやサイドバーなど、web全体に関わるパーツ
 //=====================================================
 // ※ 命名規則は特になし。分かりやすい感じで 例）.headerや.sidebarなど
-@use "common/_common__wrap";
-@use "common/_common__header";
+//@use "common/_common__wrap";
+//@use "common/_common__header";
 @use "common/_common__main";
 @use "common/_common__footer";
 

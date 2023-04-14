@@ -11,6 +11,7 @@
   --white: #FFF;
   --primary: #992113;
   --secondary: #D1B64F;
+  --tertiary: #5A302C;
 }
 
 $color: (
@@ -18,6 +19,7 @@ $color: (
   white: var(--white),
   primary: var(--primary),
   secondary: var(--secondary),
+  tertiary: var(--tertiary),
 );
 
 // Color Map
@@ -69,13 +71,12 @@ $device_width: (
   sp: 375px,
   sp-l: 480px,
   tb-s: 560px,
-  tb: 750px,
-  pc: 920px,
-  pc-l: 1100px,
-  pc-xl: 1280px,
-  pc-2xl: 1440px,
-  pc-3xl: 1680px,
-  pc-4xl: 2000px,
+  tb: 767px,
+  pc: 1100px,
+  pc-l: 1280px,
+  pc-xl: 1440px,
+  pc-2xl: 1680px,
+  pc-3xl: 1980px,
 );
 // Device Width Map
 @function device($key) {

@@ -71,21 +71,23 @@ $(function(){
 window.addEventListener('load', () => {
   setTimeout(function(){
     $('.imglayout').addClass('active');
-  },600);
+  },100);
   setTimeout(function(){
     $('.common__header').addClass('active');
-  },1900);
+  },1400);
   setTimeout(function(){
     $('.fvarrow').addClass('active');
-  },2050);
+  },1550);
 })
 
 // パララックス
 //=====================================================
-var image = document.getElementsByClassName('js--simple-parallax');
-new simpleParallax(image);
+const image = document.getElementsByClassName('js--simple-parallax');
+new simpleParallax(image, {
+  scale: 1.3
+});
 
-// fadein
+// fadein （section別の指定）
 //=====================================================
 var EffectH = 140;
 $(window).on('scroll load', function() {
@@ -116,4 +118,48 @@ $(window).on('scroll load', function() {
     }
   });
 
+  // sec04のfadein
+  $('.sec04').each( function() {
+    var thisPos = $(this).offset().top;
+    if ( thisPos < effectPos ) {
+      setTimeout(function(){
+        $('.js-sec04_fadein01').addClass('active');
+      },600);
+      setTimeout(function(){
+        $('.js-sec04_fadein02').addClass('active');
+      },950);
+      setTimeout(function(){
+        $('.js-sec04_fadein03').addClass('active');
+      },1050);
+      setTimeout(function(){
+        $('.js-sec04_fadein04').addClass('active');
+      },1350);
+    }
+  });
+
+  // sec06のfadein
+  $('.sec06').each( function() {
+    var thisPos = $(this).offset().top;
+    if ( thisPos < effectPos ) {
+      setTimeout(function(){
+        $('.js-sec06_fadein01').addClass('active');
+      },600);
+      setTimeout(function(){
+        $('.js-sec06_fadein02').addClass('active');
+      },950);
+      setTimeout(function(){
+        $('.js-sec06_fadein03').addClass('active');
+      },1250);
+    }
+  });
+
+  // fadein （汎用）
+  $('.js-fadeinbottom').each( function() {
+    var thisPos = $(this).offset().top;
+    if ( thisPos < effectPos ) {
+      $(this).addClass('active')
+    }
+  });
+
 });
+

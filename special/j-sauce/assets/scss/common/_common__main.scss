@@ -6,4 +6,7 @@
   width: 100%;
   position: relative;
   @include z-index-1;
+  @include media(pc) {
+    overflow: hidden;
+  }
 }
