@@ -5,6 +5,12 @@
 @use "common/_common__wrap";
 @use "common/_common__header";
 
+// .svgsprout
+//=====================================================
+.svgsprout {
+  display: none;
+}
+
 // .fv
 //=====================================================
 .fv {
@@ -20,48 +26,29 @@
   align-items: center;
   position: relative;
   padding-top: 4.5rem;
-  @include media(tb) {
-    min-height: 100vh;
-    min-height: calc(var(--vh2, 1vh) * 100);
-    min-height: 100dvh;
-  }
   @include media(pc) {
-    // min-height: 100vh;
-    // min-height: calc(var(--vh2, 1vh) * 100);
-    // min-height: 100dvh;
-    min-height: 71.2rem;
-    padding-top: 6.8rem;
+    height: auto;
+    max-height: none;
+    min-height: auto;
+    padding-top: calc(6.8rem + min(30/1440*100vw, 3rem));
+    padding-bottom: min(86/1440*100vw, 8.6rem);
   }
   .imglayout {
     width: min(89.333%, 64.6rem);
     transition: 1.2s ease-in;
     opacity: 0;
-    @include media(tb) {
-      width: 89.333%;
-    }
     @include media(pc) {
       width: 100%;
     }
-    @include media(pc-2xl) {
-      width: 168rem;
-    }
     picture {
-      @include media(tb) {
-        max-height: 80vh;
-        max-height: calc(var(--vh2, 1vh) * 80);
-        max-height: 80dvh;
-        display: flex;
-        justify-content: center;
-      }
+      position: relative;
+      top: -1.5vh;
+      top: calc(var(--vh2, 1vh) * -1.5);
+      top: -1.5dvh;
       @include media(pc) {
-        max-height: 75vh;
-        max-height: calc(var(--vh2, 1vh) * 75);
-        max-height: 75dvh;
-        min-height: 54.5rem;
-        position: relative;
-        top: -2.5vh;
-        top: calc(var(--vh2, 1vh) * -2.5);
-        top: -2.5dvh;
+        max-height: none;
+        min-height: auto;
+        top: 0;
       }
       img {
         object-fit: contain;

@@ -2,6 +2,10 @@
  * jquery v3.6.0
  */
 
+$(function(){
+  $('.svgsprout').load('./assets/inc/svg.html'); // headerにinc/header.htmlを読み込む
+});
+
 // OS判定
 //=====================================================
 var ua = window.navigator.userAgent.toLowerCase();
@@ -68,17 +72,17 @@ $(function(){
 
 // FVのfadein
 //=====================================================
-window.addEventListener('load', () => {
+$(function(){
   setTimeout(function(){
     $('.imglayout').addClass('active');
-  },100);
+  },500);
   setTimeout(function(){
     $('.common__header').addClass('active');
-  },1400);
+  },1500);
   setTimeout(function(){
     $('.fvarrow').addClass('active');
-  },1550);
-})
+  },2000);
+});
 
 // パララックス
 //=====================================================
@@ -162,4 +166,3 @@ $(window).on('scroll load', function() {
   });
 
 });
-

@@ -66,7 +66,7 @@
         }
       }
       &:hover {
-        transform: scale(1.15);
+        transform: scale(1.08);
       }
     }
     // colors
@@ -79,12 +79,12 @@
   // fadein
   .js-fadeinbottom {
     transition: 1.2s ease;
-    transform: translateY(2em);
+    transform: translateY(2em) rotate(0.0001deg);
     opacity: 0;
     // anime
     &.active {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) rotate(0.0001deg);
     }
   }
   // none関係
@@ -109,6 +109,17 @@
       }
     }
   }
+  // .underline
+  .underline {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .hover-primary {
+    transition: 0.5s ease;
+    fill: colors(black);
+  }
 }
 
 // .sec01
@@ -129,7 +140,7 @@
     margin: 0 auto;
     margin-bottom: min(40/750*100vw, 4rem);
     transition: 1.2s ease;
-    transform: translateY(2em);
+    transform: translateY(2em) rotate(0.0001deg);
     opacity: 0;
     @include media(pc) {
       width: min(496/1440*100vw, 49.6rem);
@@ -139,10 +150,11 @@
       width: 100%;
       position: relative;
       left: -0.8%;
+      display: block;
       margin-bottom: min(60/750*100vw, 6rem);
       @include media(pc) {
         position: absolute;
-        top: 0;
+        top: min(30/1440*100vw, 3rem);
         left: 0;
         margin-bottom: 0;
       }
@@ -150,15 +162,16 @@
     .ttlpic {
       width: min(194/750*100vw, 19.4rem);
       margin-left: 6%;
+      display: block;
       @include media(pc) {
-        width: min(210/750*100vw, 21rem);
+        width: min(210/1440*100vw, 21rem);
         margin-left: min(13/1440*100vw, 1.3rem);
       }
     }
     // anime
     &.active {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) rotate(0.0001deg);
     }
   }
   p {
@@ -177,7 +190,7 @@
     // anime
     &.active {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) rotate(0.0001deg);
     }
   }
   .bg01 {
@@ -350,7 +363,7 @@
         text-align: right;
         position: absolute;
         bottom: 0;
-        right: 0;
+        right: max(-113/1440*100vw, -11.3rem);
       }
       &:before {
         content: "※";
@@ -496,7 +509,7 @@
   }
   .cardlist {
     width: 100%;
-    border: solid 3px colors(primary);
+    border: solid 2px colors(primary);
     background: colors(white);
     display: flex;
     flex-direction: column;
@@ -709,6 +722,14 @@
     .cardmainlink {
       display: flex;
       flex-direction: column;
+      &:hover {
+        .hover-primary {
+          fill: colors(primary);
+        }
+        .text {
+          text-decoration: none;
+        }
+      }
     }
     .img {
       margin-bottom: min(36/750*100vw, 3.6rem);
@@ -720,21 +741,76 @@
       width: auto;
       height: min(32/750*100vw, 3.2rem);
       margin-bottom: min(20/750*100vw, 2rem);
+      display: flex;
+      align-items: center;
       @include media(pc) {
         height: min(22/1440*100vw, 2.2rem);
         margin-bottom: min(15/1440*100vw, 1.5rem);
       }
-      img {
+      &:after {
+        content: "";
+        display: block;
+        width: min(32/750*100vw, 3.2rem);
+        height: min(32/750*100vw, 3.2rem);
+        background-image: url(../img/icon-arrow.svg);
+        background-size: min(32/750*100vw, 3.2rem) min(32/750*100vw, 3.2rem);
+        background-repeat: no-repeat;
+        margin-left: min(20/750*100vw, 2rem);
+        @include media(pc) {
+          width: min(22/1440*100vw, 2rem);
+          height: min(22/1440*100vw, 2rem);
+          background-size: min(22/1440*100vw, 2rem) min(22/1440*100vw, 2rem);
+          margin-left: min(10/1440*100vw, 1rem);
+        }
+      }
+      svg {
         width: auto;
-        height: 100%;
+        //height: 100%;
         object-fit: contain;
+        &.okonomiyaki {
+          width: min(133/750*100vw, 13.3rem);
+          @include media(pc) {
+            width: min(86/1440*100vw, 8.6rem);
+          }
+        }
+        &.takoyaki {
+          width: min(98/750*100vw, 9.8rem);
+          @include media(pc) {
+            width: min(64/1440*100vw, 6.4rem);
+          }
+        }
+        &.hotchikin {
+          width: min(368/750*100vw, 36.8rem);
+          @include media(pc) {
+            width: min(238/1440*100vw, 23.8rem);
+          }
+        }
+        &.negitama {
+          width: min(269/750*100vw, 26.9rem);
+          @include media(pc) {
+            width: min(173/1440*100vw, 17.3rem);
+          }
+        }
+        &.okonomibuta {
+          width: min(437/750*100vw, 43.7rem);
+          @include media(pc) {
+            width: min(282/1440*100vw, 28.2rem);
+          }
+        }
+        &.jporktyopu {
+          width: min(261/750*100vw, 26.1rem);
+          @include media(pc) {
+            width: min(169/1440*100vw, 16.9rem);
+          }
+        }
       }
     }
     .text {
       font-size: min(28/750*100vw, 2.8rem);
       line-height: 1.8;
+      text-decoration: underline;
       @include media(pc) {
-        font-size: min(16/750*100vw, 1.6rem);
+        font-size: min(16/1440*100vw, 1.6rem);
       }
     }
   }
@@ -750,7 +826,15 @@
       right: max(-30/1440*100vw, -3rem);
     }
     img {
+      transition: 0.5s ease;
       filter: drop-shadow(0 0 4px rgba(0,0,0,0.1));
+    }
+  }
+  a.cardsub {
+    &:hover {
+      img {
+        transform: scale(1.08);
+      }
     }
   }
 
@@ -771,7 +855,7 @@
       width: min(470/750*100vw, 47rem);
       margin: 0 auto;
       margin-bottom: min(42/750*100vw, 4.2rem);
-      transform: translateY(2em);
+      transform: translateY(2em) rotate(0.0001deg);
       opacity: 0;
       transition: 0.5s ease;
       @include media(pc) {
@@ -779,7 +863,7 @@
         margin-bottom: min(25/1440*100vw, 2.5rem);
       }
       &.active {
-        transform: translateY(0);
+        transform: translateY(0) rotate(0.0001deg);
         opacity: 1;
       }
     }
@@ -788,14 +872,14 @@
       line-height: 1.8;
       text-align: center;
       color: colors(white);
-      transform: translateY(2em);
+      transform: translateY(2em) rotate(0.0001deg);
       opacity: 0;
       transition: 0.5s ease;
       @include media(pc) {
         font-size: min(16/1440*100vw, 1.6rem);
       }
       &.active {
-        transform: translateY(0);
+        transform: translateY(0) rotate(0.0001deg);
         opacity: 1;
       }
     }
@@ -1022,6 +1106,11 @@
     @include media(pc) {
       width: min(310/1440*100vw, 31rem);
     }
+    &:hover {
+      .ttltext {
+        text-decoration: none;
+      }
+    }
   }
   .cardmainlink {
     display: block;
@@ -1114,10 +1203,10 @@
       top: 0;
       left: 0;
       transition: 1.2s ease;
-      transform: translateY(2em);
+      transform: translateY(2em) rotate(0.0001deg);
       opacity: 0;
       &.active {
-        transform: translateY(0);
+        transform: translateY(0) rotate(0.0001deg);
         opacity: 1;
       }
     }
@@ -1128,14 +1217,14 @@
     flex-direction: column;
     width: min(510/750*100vw, 51rem);
     transition: 1.2s ease;
-    transform: translateY(2em);
+    transform: translateY(2em) rotate(0.0001deg);
     opacity: 0;
     @include media(pc) {
       align-items: flex-start;
       width: min(470/1440*100vw, 47rem);
     }
     &.active {
-      transform: translateY(0);
+      transform: translateY(0) rotate(0.0001deg);
       opacity: 1;
     }
     .ttlsmall {
@@ -1160,6 +1249,9 @@
       }
       a {
         text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }
@@ -1167,14 +1259,14 @@
     margin-top: min(70/750*100vw, 7rem);
     margin-left: max(-60/750*100vw, -6rem);
     transition: 1.2s ease;
-    transform: translateY(2em);
+    transform: translateY(2em) rotate(0.0001deg);
     opacity: 0;
     @include media(pc) {
       margin-top: min(40/1440*100vw, 4rem);
       margin-left: 0;
     }
     &.active {
-      transform: translateY(0);
+      transform: translateY(0) rotate(0.0001deg);
       opacity: 1;
     }
     img {
