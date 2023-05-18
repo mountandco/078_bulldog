@@ -16,6 +16,7 @@
 #build/
 GitArchive/
 .vscode/
+node_modules/
 
 
 
