@@ -1,0 +1,107 @@
+@use "../global/_setting" as *;
+
+// .fv
+//=====================================================
+.fv {
+  width: 100%;
+  height: calc(100vh - (317/750*100vw));
+  height: calc(100dvh - (317/750*100vw));
+  height: calc((var(--vh2, 1vh) * 100) - (317/750*100vw));
+  position: relative;
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+    .slide-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+    }
+    img {
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &.nth-1 {
+      .slide-img {
+        background-image: url(../img/slide01--sp.jpg);
+        @include media(sp-l) {
+          background-image: url(../img/slide01--sp@2x.jpg);
+        }
+      }
+    }
+    &.nth-2 {
+      .slide-img {
+        background-image: url(../img/slide02--sp.jpg);
+        @include media(sp-l) {
+          background-image: url(../img/slide02--sp@2x.jpg);
+        }
+      }
+    }
+    &.nth-3 {
+      .slide-img {
+        background-image: url(../img/slide03--sp.jpg);
+        @include media(sp-l) {
+          background-image: url(../img/slide03--sp@2x.jpg);
+        }
+      }
+    }
+    &.nth-4 {
+      .slide-img {
+        background-image: url(../img/slide04--sp.jpg);
+        @include media(sp-l) {
+          background-image: url(../img/slide04--sp@2x.jpg);
+        }
+      }
+    }
+    &.swiper-slide-active .slide-img,
+    &.swiper-slide-duplicate-active .slide-img,
+    &.swiper-slide-prev .slide-img{
+      animation: zoomdown 6.5s linear 0s 1 normal both;  
+    }
+  }
+  .icon-scroll--sp {
+    display: block;
+    width: calc(84/750*100vw);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    @include z-index-1;
+    animation-name: icon-scroll--sp;
+    animation-duration: 1.65s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    @include media(pc) {
+      display: none;
+    }
+  }
+}
+@keyframes zoomdown {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.01);
+  }
+}
+@keyframes icon-scroll--sp {
+  0% {
+    transform: translateY(-18px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,124 @@
+// 01. Font
+//=====================================================
+@mixin sans {
+  font-family: ryo-gothic-plusn, YuGothic, "Yu Gothic Medium", "Yu Gothic", "Hiragino Kaku Gothic ProN", Verdana, Meiryo, sans-serif;
+}
+@mixin en {
+  font-family: garamond-premier-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// 02. Color
+//=====================================================
+:root {
+  --black-rich: #121212;
+  --black: #573830;
+  --white: #FFF;
+  --primary: #8D2020;
+  --bg-light: #FDF7ED;
+  --bg-dark: #573830;
+}
+$color: (
+  black-rich: var(--black-rich),
+  black: var(--black),
+  white: var(--white),
+  primary: var(--primary),
+  bg-light: var(--bg-light),
+  bg-dark: var(--bg-dark),
+);
+
+// Color Map
+@function colors($key) {
+  @return map-get($color, $key);
+}
+
+// 03. Z-index
+//=====================================================
+//z-index
+@mixin z-index-1 {
+  z-index: 1;
+}
+@mixin z-index-2 {
+  z-index: 2;
+}
+@mixin z-index-3 {
+  z-index: 3;
+}
+@mixin z-index-4 {
+  z-index: 4;
+}
+@mixin z-index-5 {
+  z-index: 5;
+}
+@mixin z-index-6 {
+  z-index: 6;
+}
+@mixin z-index-7 {
+  z-index: 7;
+}
+@mixin z-index-8 {
+  z-index: 8;
+}
+@mixin z-index-9 {
+  z-index: 9;
+}
+@mixin z-index-10 {
+  z-index: 10;
+}
+@mixin z-index-999 {
+  z-index: 999;
+}
+
+// 04. Media Query
+//=====================================================
+$device_width: (
+  sp-s: 320px,
+  sp: 375px,
+  sp-l: 560px,
+  tb: 768px,
+  pc: 1024px,
+  pc-l: 1280px,
+  pc-xl: 1440px,
+  pc-2xl: 1680px,
+  pc-3xl: 1980px,
+);
+// Device Width Map
+@function device($key) {
+  @return map-get($device_width, $key);
+}
+@mixin media($size: tablet) {
+  @media (min-width: device($size)) {
+    @content;
+  }
+}
+
+// 2x対応 mediaQuery
+@mixin media-2x {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+   only screen and (min--moz-device-pixel-ratio: 2),
+   only screen and (-o-min-device-pixel-ratio: 2/1),
+   only screen and (min-device-pixel-ratio: 2),
+   only screen and (min-resolution: 192dpi),
+   only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin background-clip {
+  @supports (-webkit-background-clip: text) {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+// 05. other mixin
+//=====================================================

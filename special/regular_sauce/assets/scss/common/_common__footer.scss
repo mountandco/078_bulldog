@@ -1,0 +1,31 @@
+@use "../global/_setting" as *;
+
+//.common__footer
+//=====================================================
+.common__footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: calc(212/750*100vw);
+  background: colors(bg-light);
+  position: relative;
+  .backtotop {
+    display: block;
+    width: calc(95/750*100vw);
+    position: absolute;
+    bottom: calc(126/750*100vw);
+    right: calc(30/750*100vw);
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .footerlogo {
+    display: block;
+    width: calc(143/750*100vw);
+  }
+  small {
+    font-size: min(26/750*100vw, 2rem);
+    padding: 1.23em 0 1.8em;
+  }
+}

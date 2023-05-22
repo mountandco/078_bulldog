@@ -1,0 +1,49 @@
+@use "../global/_setting" as *;
+
+// .common__header
+//=====================================================
+.common__header {
+  background: colors(bg-light);
+  padding-top: calc(19/750*100vw);
+  height: calc(317/750*100vw);
+  .inner-layout {
+    width: calc(678/750*100vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: calc(32/750*100vw);
+  }
+  .logo {
+    display: block;
+    width: calc(248/750*100vw);
+    margin: 0 auto;
+  }
+  .ttllayout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .small {
+        font-size: calc(37/750*100vw);
+        margin-bottom: 0.432em;
+      }
+      .large {
+        font-size: calc(60/750*100vw);
+        letter-spacing: -0.06em;
+        margin-bottom: 0.266em;
+      }
+    }
+    .subttl {
+      font-size: calc(33/750*100vw);
+      @include en;
+      color: #891A41;
+    }
+  }
+  .pic {
+    width: calc(196/750*100vw);
+  }
+}
+
