@@ -1,44 +1,20 @@
 // .swiper1
+//=====================================================
 const swiper1 = new Swiper('.js--swiper1', {
   loop: true,
   effect: 'fade',
   waitForTransition: false, // 1枚目の時間が短くなる場合はfalseにする
+  allowTouchMove: false,
   autoplay: {
     delay: 4000,
-    disableOnInteraction: false,
+    //disableOnInteraction: false,
   },
   speed: 2000,
 });
 
 // .swiper_recipe_1
-
-  // const swiper_recipe_1 = new Swiper('.js--recipe-1', {
-  //   loop: true,
-  //   effect: 'slide',
-  //   autoplay: {
-  //     delay: 3000,
-  //     //disableOnInteraction: false,
-  //   },
-  //   speed: 450,
-  //   grabCursor: true,
-  //   slidesPerView: 1.3,
-  //   spaceBetween: 24,
-  //   //roundLengths: true,
-  //   navigation: {
-  //     nextEl: ".js--recipe-next-1",
-  //     prevEl: ".js--recipe-prev-1",
-  //   },
-  //   pagination: {
-  //     el: ".js--recipe-pagination-1",
-  //     type: "fraction", // ページネーションのtypeを指定
-  //     formatFractionCurrent: function (number) {
-  //       return '0' + number; // 頭に『0』を付ける
-  //     }
-  //   },
-  // });
-  //swiper.autoplay.stop(); //画面に現れるまでswiperを停止
-
-let swiper_recipe_1 = new Swiper ('.js--recipe-1', {
+//=====================================================
+const swiper_recipe_1 = new Swiper('.js--recipe-1', {
   loop: true,
   effect: 'slide',
   autoplay: {
@@ -49,7 +25,7 @@ let swiper_recipe_1 = new Swiper ('.js--recipe-1', {
   grabCursor: true,
   slidesPerView: 1.3,
   spaceBetween: 24,
-  //roundLengths: true,
+  roundLengths: true,
   navigation: {
     nextEl: ".js--recipe-next-1",
     prevEl: ".js--recipe-prev-1",
@@ -59,6 +35,32 @@ let swiper_recipe_1 = new Swiper ('.js--recipe-1', {
     type: "fraction", // ページネーションのtypeを指定
     formatFractionCurrent: function (number) {
       return '0' + number; // 頭に『0』を付ける
+    }
+  },
+  breakpoints: {
+    560: {
+      slidesPerView: 1.6,
+      spaceBetween: 29,
+    },
+    1024: {
+      slidesPerView: 3.65,
+      spaceBetween: 34,
+    },
+    1280: {
+      slidesPerView: 3.65,
+      spaceBetween: 39,
+    },
+    1440: {
+      slidesPerView: 3.65,
+      spaceBetween: 48,
+    },
+    1680: {
+      slidesPerView: 3.65,
+      spaceBetween: 56,
+    },
+    1980: {
+      slidesPerView: 3.85,
+      spaceBetween: 66,
     }
   },
 });
@@ -89,9 +91,9 @@ const target = document.getElementById("swiper_recipe_1");
 //オブザーバーに監視対象の領域（スライダー）を指定
 observer.observe(target);
 
-
 // swiper_recipe_2
-let swiper_recipe_2 = new Swiper ('.js--recipe-2', {
+//=====================================================
+const swiper_recipe_2 = new Swiper('.js--recipe-2', {
   loop: true,
   effect: 'slide',
   autoplay: {
@@ -102,7 +104,7 @@ let swiper_recipe_2 = new Swiper ('.js--recipe-2', {
   grabCursor: true,
   slidesPerView: 1.3,
   spaceBetween: 24,
-  //roundLengths: true,
+  roundLengths: true,
   navigation: {
     nextEl: ".js--recipe-next-2",
     prevEl: ".js--recipe-prev-2",
@@ -114,8 +116,34 @@ let swiper_recipe_2 = new Swiper ('.js--recipe-2', {
       return '0' + number; // 頭に『0』を付ける
     }
   },
+  breakpoints: {
+    560: {
+      slidesPerView: 1.6,
+      spaceBetween: 29,
+    },
+    1024: {
+      slidesPerView: 3.65,
+      spaceBetween: 34,
+    },
+    1280: {
+      slidesPerView: 3.65,
+      spaceBetween: 39,
+    },
+    1440: {
+      slidesPerView: 3.65,
+      spaceBetween: 48,
+    },
+    1680: {
+      slidesPerView: 3.65,
+      spaceBetween: 56,
+    },
+    1980: {
+      slidesPerView: 3.85,
+      spaceBetween: 66,
+    }
+  },
 });
-//IntersectionObserver のコールバック関数
+// //IntersectionObserver のコールバック関数
 function callback2(entries) {
   entries.forEach(entry => {
     if (entry.intersectionRatio >= 1) {
@@ -143,8 +171,9 @@ const target2 = document.getElementById("swiper_recipe_2");
 observer2.observe(target2);
 
 
-// swiper_recipe_3
-let swiper_recipe_3 = new Swiper ('.js--recipe-3', {
+// // swiper_recipe_3
+//=====================================================
+const swiper_recipe_3 = new Swiper('.js--recipe-3', {
   loop: true,
   effect: 'slide',
   autoplay: {
@@ -155,7 +184,7 @@ let swiper_recipe_3 = new Swiper ('.js--recipe-3', {
   grabCursor: true,
   slidesPerView: 1.3,
   spaceBetween: 24,
-  //roundLengths: true,
+  roundLengths: true,
   navigation: {
     nextEl: ".js--recipe-next-3",
     prevEl: ".js--recipe-prev-3",
@@ -167,8 +196,40 @@ let swiper_recipe_3 = new Swiper ('.js--recipe-3', {
       return '0' + number; // 頭に『0』を付ける
     }
   },
+  breakpoints: {
+    560: {
+      slidesPerView: 1.6,
+      spaceBetween: 29,
+      loop: true,
+    },
+    1024: {
+      slidesPerView: 3.65,
+      spaceBetween: 34,
+      loop: false,
+    },
+    1280: {
+      slidesPerView: 3.65,
+      spaceBetween: 39,
+      loop: false,
+    },
+    1440: {
+      slidesPerView: 3.65,
+      spaceBetween: 48,
+      loop: false,
+    },
+    1680: {
+      slidesPerView: 3.65,
+      spaceBetween: 56,
+      loop: false,
+    },
+    1980: {
+      slidesPerView: 3.85,
+      spaceBetween: 66,
+      loop: false,
+    }
+  },
 });
-//IntersectionObserver のコールバック関数
+// //IntersectionObserver のコールバック関数
 function callback3(entries) {
   entries.forEach(entry => {
     if (entry.intersectionRatio >= 1) {
@@ -196,8 +257,9 @@ const target3 = document.getElementById("swiper_recipe_3");
 observer3.observe(target3);
 
 
-// swiper_recipe_4
-let swiper_recipe_4 = new Swiper ('.js--recipe-4', {
+// // swiper_recipe_4
+//=====================================================
+const swiper_recipe_4 = new Swiper('.js--recipe-4', {
   loop: true,
   effect: 'slide',
   autoplay: {
@@ -208,7 +270,7 @@ let swiper_recipe_4 = new Swiper ('.js--recipe-4', {
   grabCursor: true,
   slidesPerView: 1.3,
   spaceBetween: 24,
-  //roundLengths: true,
+  roundLengths: true,
   navigation: {
     nextEl: ".js--recipe-next-4",
     prevEl: ".js--recipe-prev-4",
@@ -220,8 +282,40 @@ let swiper_recipe_4 = new Swiper ('.js--recipe-4', {
       return '0' + number; // 頭に『0』を付ける
     }
   },
+  breakpoints: {
+    560: {
+      slidesPerView: 1.6,
+      spaceBetween: 29,
+      loop: true,
+    },
+    1024: {
+      slidesPerView: 3.65,
+      spaceBetween: 34,
+      loop: false,
+    },
+    1280: {
+      slidesPerView: 3.65,
+      spaceBetween: 39,
+      loop: false,
+    },
+    1440: {
+      slidesPerView: 3.65,
+      spaceBetween: 48,
+      loop: false,
+    },
+    1680: {
+      slidesPerView: 3.65,
+      spaceBetween: 56,
+      loop: false,
+    },
+    1980: {
+      slidesPerView: 3.85,
+      spaceBetween: 66,
+      loop: false,
+    }
+  },
 });
-//IntersectionObserver のコールバック関数
+// //IntersectionObserver のコールバック関数
 function callback4(entries) {
   entries.forEach(entry => {
     if (entry.intersectionRatio >= 1) {
@@ -249,8 +343,9 @@ const target4 = document.getElementById("swiper_recipe_4");
 observer4.observe(target4);
 
 
-// swiper_recipe_5
-let swiper_recipe_5 = new Swiper ('.js--recipe-5', {
+// // swiper_recipe_5
+//=====================================================
+const swiper_recipe_5 = new Swiper('.js--recipe-5', {
   loop: true,
   effect: 'slide',
   autoplay: {
@@ -261,7 +356,7 @@ let swiper_recipe_5 = new Swiper ('.js--recipe-5', {
   grabCursor: true,
   slidesPerView: 1.3,
   spaceBetween: 24,
-  //roundLengths: true,
+  roundLengths: true,
   navigation: {
     nextEl: ".js--recipe-next-5",
     prevEl: ".js--recipe-prev-5",
@@ -273,8 +368,40 @@ let swiper_recipe_5 = new Swiper ('.js--recipe-5', {
       return '0' + number; // 頭に『0』を付ける
     }
   },
+  breakpoints: {
+    560: {
+      slidesPerView: 1.6,
+      spaceBetween: 29,
+      loop: true,
+    },
+    1024: {
+      slidesPerView: 3.65,
+      spaceBetween: 34,
+      loop: false,
+    },
+    1280: {
+      slidesPerView: 3.65,
+      spaceBetween: 39,
+      loop: false,
+    },
+    1440: {
+      slidesPerView: 3.65,
+      spaceBetween: 48,
+      loop: false,
+    },
+    1680: {
+      slidesPerView: 3.65,
+      spaceBetween: 56,
+      loop: false,
+    },
+    1980: {
+      slidesPerView: 3.85,
+      spaceBetween: 66,
+      loop: false,
+    }
+  },
 });
-//IntersectionObserver のコールバック関数
+// //IntersectionObserver のコールバック関数
 function callback5(entries) {
   entries.forEach(entry => {
     if (entry.intersectionRatio >= 1) {
@@ -300,114 +427,3 @@ const observer5 = new IntersectionObserver(callback5, ioOptions5);
 const target5 = document.getElementById("swiper_recipe_5");
 //オブザーバーに監視対象の領域（スライダー）を指定
 observer5.observe(target5);
-
-
-
-
-
-
-
-
-// .swiper_recipe_2
-// const swiper_recipe_2 = new Swiper('.js--recipe-2', {
-//   loop: true,
-//   effect: 'slide',
-//   autoplay: {
-//     delay: 3000,
-//     //disableOnInteraction: false,
-//   },
-//   speed: 450,
-//   grabCursor: true,
-//   slidesPerView: 1.3,
-//   spaceBetween: 24,
-//   //roundLengths: true,
-//   navigation: {
-//     nextEl: ".js--recipe-next-2",
-//     prevEl: ".js--recipe-prev-2",
-//   },
-//   pagination: {
-//     el: ".js--recipe-pagination-2",
-//     type: "fraction", // ページネーションのtypeを指定
-//     formatFractionCurrent: function (number) {
-//       return '0' + number; // 頭に『0』を付ける
-//     }
-//   }
-// });
-
-// // .swiper_recipe_3
-// const swiper_recipe_3 = new Swiper('.js--recipe-3', {
-//   loop: true,
-//   effect: 'slide',
-//   autoplay: {
-//     delay: 3000,
-//     //disableOnInteraction: false,
-//   },
-//   speed: 450,
-//   grabCursor: true,
-//   slidesPerView: 1.3,
-//   spaceBetween: 24,
-//   //roundLengths: true,
-//   navigation: {
-//     nextEl: ".js--recipe-next-3",
-//     prevEl: ".js--recipe-prev-3",
-//   },
-//   pagination: {
-//     el: ".js--recipe-pagination-3",
-//     type: "fraction", // ページネーションのtypeを指定
-//     formatFractionCurrent: function (number) {
-//       return '0' + number; // 頭に『0』を付ける
-//     }
-//   }
-// });
-
-// // .swiper_recipe_4
-// const swiper_recipe_4 = new Swiper('.js--recipe-4', {
-//   loop: true,
-//   effect: 'slide',
-//   autoplay: {
-//     delay: 3000,
-//     //disableOnInteraction: false,
-//   },
-//   speed: 450,
-//   grabCursor: true,
-//   slidesPerView: 1.3,
-//   spaceBetween: 24,
-//   //roundLengths: true,
-//   navigation: {
-//     nextEl: ".js--recipe-next-4",
-//     prevEl: ".js--recipe-prev-4",
-//   },
-//   pagination: {
-//     el: ".js--recipe-pagination-4",
-//     type: "fraction", // ページネーションのtypeを指定
-//     formatFractionCurrent: function (number) {
-//       return '0' + number; // 頭に『0』を付ける
-//     }
-//   }
-// });
-
-// // .swiper_recipe_5
-// const swiper_recipe_5 = new Swiper('.js--recipe-5', {
-//   loop: true,
-//   effect: 'slide',
-//   autoplay: {
-//     delay: 3000,
-//     //disableOnInteraction: false,
-//   },
-//   speed: 450,
-//   grabCursor: true,
-//   slidesPerView: 1.3,
-//   spaceBetween: 24,
-//   //roundLengths: true,
-//   navigation: {
-//     nextEl: ".js--recipe-next-5",
-//     prevEl: ".js--recipe-prev-5",
-//   },
-//   pagination: {
-//     el: ".js--recipe-pagination-5",
-//     type: "fraction", // ページネーションのtypeを指定
-//     formatFractionCurrent: function (number) {
-//       return '0' + number; // 頭に『0』を付ける
-//     }
-//   }
-// });

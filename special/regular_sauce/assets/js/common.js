@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const aryTabs = Array.prototype.slice.call(tabList);
     // クリックしたタブの配列番号を取得     
     const index = aryTabs.indexOf(this);
-    // クリックしたタブと同じ配列番号のタブコンテンツにshowクラスを付与    
+    // クリックしたタブと同じ配列番号のタブコンテンツにshowクラスを付与
     tabContent[index].classList.add('show');
   };
 });
@@ -161,72 +161,15 @@ document.addEventListener('DOMContentLoaded', function(){
 var EffectH = 140;
 $(window).on('scroll load', function() {
 
-  var scTop = $(this).scrollTop();
-  var scBottom = scTop + $(this).height();
-  var effectPos = scBottom - EffectH;
+  let scTop = $(this).scrollTop();
+  let scBottom = scTop + $(this).height();
+  let effectPos = scBottom - EffectH;
 
-  // sec01のfadein
-  $('.sec01').each( function() {
-    var thisPos = $(this).offset().top;
+  // fadein => s0
+  $('.fadein, .fadeinbottom, .fadeintop, .fadeinleft, .fadeinright').each( function() {
+    let thisPos = $(this).offset().top;
     if ( thisPos < effectPos ) {
-      setTimeout(function(){
-        $('.js-sec01_fadein01').addClass('active');
-      },10);
-      setTimeout(function(){
-        $('.js-sec01_fadein02').addClass('active');
-      },600);
-      setTimeout(function(){
-        $('.js-sec01_fadein03').addClass('active');
-      },1000);
-      setTimeout(function(){
-        $('.js-sec01_fadein04').addClass('active');
-      },1250);
-      setTimeout(function(){
-        $('.js-sec01_fadein05').addClass('active');
-      },1500);
-    }
-  });
-
-  // sec04のfadein
-  $('.sec04').each( function() {
-    var thisPos = $(this).offset().top;
-    if ( thisPos < effectPos ) {
-      setTimeout(function(){
-        $('.js-sec04_fadein01').addClass('active');
-      },600);
-      setTimeout(function(){
-        $('.js-sec04_fadein02').addClass('active');
-      },950);
-      setTimeout(function(){
-        $('.js-sec04_fadein03').addClass('active');
-      },1050);
-      setTimeout(function(){
-        $('.js-sec04_fadein04').addClass('active');
-      },1350);
-    }
-  });
-
-  // sec06のfadein
-  $('.sec06').each( function() {
-    var thisPos = $(this).offset().top;
-    if ( thisPos < effectPos ) {
-      setTimeout(function(){
-        $('.js-sec06_fadein01').addClass('active');
-      },600);
-      setTimeout(function(){
-        $('.js-sec06_fadein02').addClass('active');
-      },950);
-      setTimeout(function(){
-        $('.js-sec06_fadein03').addClass('active');
-      },1250);
-    }
-  });
-
-  // fadein （汎用）
-  $('.js-fadeinbottom').each( function() {
-    var thisPos = $(this).offset().top;
-    if ( thisPos < effectPos ) {
-      $(this).addClass('active')
+      $(this).addClass('showfade')
     }
   });
 

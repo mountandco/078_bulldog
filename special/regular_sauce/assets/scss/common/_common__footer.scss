@@ -9,12 +9,20 @@
   padding-top: calc(212/750*100vw);
   background: colors(bg-light);
   position: relative;
+  @include media(pc) {
+    padding-top: min(156/1440*100vw, 15.6rem);
+  }
   .backtotop {
     display: block;
     width: calc(95/750*100vw);
     position: absolute;
     bottom: calc(126/750*100vw);
     right: calc(30/750*100vw);
+    @include media(pc) {
+      width: min(52/1440*100vw, 5.2rem);
+      bottom: min(11/1440*100vw, 1.1rem);
+      right: min(25/1440*100vw, 2.5rem);
+    }
     img {
       display: block;
       width: 100%;
@@ -23,9 +31,16 @@
   .footerlogo {
     display: block;
     width: calc(143/750*100vw);
+    @include media(pc) {
+      width: min(93/1440*100vw, 9.3rem);
+    }
   }
   small {
     font-size: min(26/750*100vw, 2rem);
     padding: 1.23em 0 1.8em;
+    @include media(pc) {
+      font-size: min(16/750*100vw, 1.6rem);
+      padding: 1.25em 0 1.875em;
+    }
   }
 }

@@ -12,4 +12,10 @@
   @include en;
   letter-spacing: 0.018em;
   font-size: calc(44/750*100vw);
+  @include media(pc) {
+    height: min(42/1440*100vw, 4.2rem);
+    background-size: auto min(42/1440*100vw, 4.2rem);
+    line-height: min(42/1440*100vw, 4.2rem);
+    font-size: min(21/1440*100vw, 2.1rem);
+  }
 }

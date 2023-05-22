@@ -4,4 +4,7 @@
 //=====================================================
 .common__wrap {
   width: 100%;
+  @include media(pc) {
+    position: relative;
+  }
 }

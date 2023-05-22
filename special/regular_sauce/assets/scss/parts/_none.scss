@@ -1,0 +1,17 @@
+@use "../global/_setting" as *;
+
+// .none__sponly
+.none__sponly {
+  display: block !important;
+  @include media(pc) {
+    display: none !important;
+  }
+}
+
+// .none__pconly
+.none__pconly {
+  display: none !important;
+  @include media(pc) {
+    display: block !important;
+  }
+}

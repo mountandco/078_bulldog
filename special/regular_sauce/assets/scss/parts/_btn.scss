@@ -2,7 +2,8 @@
 
 // .btn__normal
 .btn__normal {
-  a {
+  a,
+  .div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,6 +14,10 @@
     position: relative;
     font-size: calc(33/750*100vw);
     overflow: hidden;
+    @include media(pc) {
+      height: min(54/1440*100vw, 5.4rem);
+      font-size: min(18/1440*100vw, 1.8rem);
+    }
     .btntext {
       text-align: center;
       line-height: 1.266;
@@ -38,6 +43,10 @@
       -o-transition: 0.85s ease all;
       transition: 0.85s ease all;
       @include z-index-1;
+      @include media(pc) {
+        width: 2.2vw;
+        height: 2.2vw;
+      }
     }
     &:after {
       content: "";
@@ -52,6 +61,10 @@
       transform: translateY(-50%);
       right: 0.787em;
       @include z-index-2;
+      @include media(pc) {
+        width: min(18.5/1440*100vw, 1.85rem);
+        height: min(18.5/1440*100vw, 1.85rem);
+      }
     }
     // hover
     &:hover {
@@ -64,6 +77,17 @@
   &.fs30--sp {
     a {
       font-size: calc(30/750*100vw);
+    }
+  }
+  &.fs18--pc {
+    a {
+      font-size: min(18/1440*100vw, 1.8rem);
+      &:before {
+        @include media(pc) {
+          width: 3.4vw;
+          height: 3.4vw;
+        }
+      }
     }
   }
 }
