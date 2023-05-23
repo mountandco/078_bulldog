@@ -74,14 +74,29 @@
     }
   }
   // パターン別
+  // .fs30--sp
   &.fs30--sp {
     a {
       font-size: calc(30/750*100vw);
     }
   }
+  // .fs18--pc
   &.fs18--pc {
     a {
-      font-size: min(18/1440*100vw, 1.8rem);
+      @include media(pc) {
+        font-size: min(18/1440*100vw, 1.8rem);
+      }
+      &:before {
+        @include media(pc) {
+          width: 3.4vw;
+          height: 3.4vw;
+        }
+      }
+    }
+  }
+  // .type2
+  &.type2 {
+    a {
       &:before {
         @include media(pc) {
           width: 3.4vw;

@@ -660,11 +660,26 @@
     .black {
       color: colors(black-rich);
     }
+    .brown {
+      color: #8B5000;
+    }
+    .brown2 {
+      color: #BAA05A;
+    }
     .yellow {
       color: #F0A800;
     }
-    .brown {
-      color: #8B5000;
+    .yellow2 {
+      color: #FFC529;
+    }
+    .yellow3 {
+      color: #E6BE15;
+    }
+    .orange {
+      color: #FF6706;
+    }
+    .red {
+      color: #ED0009;
     }
   }
   .btn__normal {
@@ -777,7 +792,7 @@
     width: calc(44/750*100vw);
     height: calc(27/750*100vw);
     position: absolute;
-    top: calc(-27/750*100vw);
+    top: calc((-27/750*100vw) + 1px);
     left: 0;
     right: 0;
     margin: auto;
@@ -787,7 +802,7 @@
     @include media(pc) {
       width: min(29/1440*100vw, 2.9rem);
       height: min(17/1440*100vw, 1.7rem);
-      top: max(-17/1440*100vw, -1.7rem);
+      top: max((-17/1440*100vw) + 1px, -1.7rem + 1px);
     }
   }
   .ttlproduct {
@@ -939,6 +954,12 @@
       justify-content: center;
       gap: 0 min(16/1440*100vw, 1.6rem);
     }
+    // 別パターン
+    &.type2 {
+      @include media(pc) {
+        gap: 0 min(38/1440*100vw, 3.8rem);
+      }
+    }
   }
   .cardlist {
     margin-bottom: calc(74/750*100vw);
@@ -1000,6 +1021,7 @@
         background-image: url(../img/icon-arrowcircle.svg);
         background-repeat: no-repeat;
         background-size: contain;
+        flex-shrink: 0;
         @include media(pc) {
           width: min(19/1440*100vw, 1.9rem);
           height: min(19/1440*100vw, 1.9rem);
@@ -1015,6 +1037,10 @@
           line-height: 1.312;
         }
       }
+      // 別パターン
+      &.left {
+        justify-content: flex-start;
+      }
     }
     // hover
     a {
@@ -1027,6 +1053,21 @@
       }
     }
   }
+  .lasttext {
+    width: calc(548/750*100vw);
+    font-size: calc(30/750*100vw);
+    line-height: 1.866;
+    letter-spacing: -0.06em;
+    margin: 0 auto;
+    margin-bottom: 1.75em;
+    @include media(pc) {
+      width: min(768/1440*100vw, 76.8rem);
+      font-size: min(20/1440*100vw, 2rem);
+      line-height: 1.6;
+      margin-bottom: -1.25em;
+      margin-top: 2.8em;
+    }
+  }
   .btn__normal {
     width: calc(544/750*100vw);
     margin-top: calc(85/750*100vw);
@@ -1036,6 +1077,19 @@
       margin-top: min(57/1440*100vw, 5.7rem);
     }
   }
+  // レイアウトパターン
+  .ttl + .read {
+    margin-top: calc(52/750*100vw);
+    @include media(pc) {
+      margin-top: min(20/1440*100vw, 2rem);
+    }
+  }
+}
+
+// 要素別のレイアウト調整
+.swiperlayout + .topicslayout {
+  margin-top: calc(91/750*100vw);
+  @include media(pc) {}
 }
 
 // .sec04

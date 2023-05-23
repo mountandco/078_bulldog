@@ -357,11 +357,19 @@ div {
 .btn__normal.fs30--sp a {
   font-size: calc(30/750*100vw);
 }
-.btn__normal.fs18--pc a {
-  font-size: min(18 / 1440 * 100vw, 1.8rem);
+@media (min-width: 1024px) {
+  .btn__normal.fs18--pc a {
+    font-size: min(18 / 1440 * 100vw, 1.8rem);
+  }
 }
 @media (min-width: 1024px) {
   .btn__normal.fs18--pc a:before {
+    width: 3.4vw;
+    height: 3.4vw;
+  }
+}
+@media (min-width: 1024px) {
+  .btn__normal.type2 a:before {
     width: 3.4vw;
     height: 3.4vw;
   }
@@ -1592,11 +1600,26 @@ div {
 .cardswiper .ratio2 .black {
   color: var(--black-rich);
 }
+.cardswiper .ratio2 .brown {
+  color: #8B5000;
+}
+.cardswiper .ratio2 .brown2 {
+  color: #BAA05A;
+}
 .cardswiper .ratio2 .yellow {
   color: #F0A800;
 }
-.cardswiper .ratio2 .brown {
-  color: #8B5000;
+.cardswiper .ratio2 .yellow2 {
+  color: #FFC529;
+}
+.cardswiper .ratio2 .yellow3 {
+  color: #E6BE15;
+}
+.cardswiper .ratio2 .orange {
+  color: #FF6706;
+}
+.cardswiper .ratio2 .red {
+  color: #ED0009;
 }
 .cardswiper .btn__normal {
   order: 7;
@@ -1724,7 +1747,7 @@ div {
   width: calc(44/750*100vw);
   height: calc(27/750*100vw);
   position: absolute;
-  top: calc(-27/750*100vw);
+  top: calc((-27/750*100vw) + 1px);
   left: 0;
   right: 0;
   margin: auto;
@@ -1736,7 +1759,7 @@ div {
   .productlayout:before {
     width: min(29 / 1440 * 100vw, 2.9rem);
     height: min(17 / 1440 * 100vw, 1.7rem);
-    top: max(-17 / 1440 * 100vw, -1.7rem);
+    top: max((-17 / 1440 * 100vw) + 1px, -1.7rem + 1px);
   }
 }
 .productlayout .ttlproduct {
@@ -1909,6 +1932,11 @@ div {
     gap: 0 min(16 / 1440 * 100vw, 1.6rem);
   }
 }
+@media (min-width: 1024px) {
+  .topicslayout .card.type2 {
+    gap: 0 min(38 / 1440 * 100vw, 3.8rem);
+  }
+}
 .topicslayout .cardlist {
   margin-bottom: calc(74/750*100vw);
 }
@@ -1981,6 +2009,7 @@ div {
   background-image: url(../img/icon-arrowcircle.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  flex-shrink: 0;
 }
 @media (min-width: 1024px) {
   .topicslayout .cardlist .cardrecipename:after {
@@ -2000,8 +2029,28 @@ div {
     line-height: 1.312;
   }
 }
+.topicslayout .cardlist .cardrecipename.left {
+  justify-content: flex-start;
+}
 .topicslayout .cardlist a:hover .cardimg img {
   transform: Scale(1.1);
+}
+.topicslayout .lasttext {
+  width: calc(548/750*100vw);
+  font-size: calc(30/750*100vw);
+  line-height: 1.866;
+  letter-spacing: -0.06em;
+  margin: 0 auto;
+  margin-bottom: 1.75em;
+}
+@media (min-width: 1024px) {
+  .topicslayout .lasttext {
+    width: min(768 / 1440 * 100vw, 76.8rem);
+    font-size: min(20 / 1440 * 100vw, 2rem);
+    line-height: 1.6;
+    margin-bottom: -1.25em;
+    margin-top: 2.8em;
+  }
 }
 .topicslayout .btn__normal {
   width: calc(544/750*100vw);
@@ -2014,7 +2063,18 @@ div {
     margin-top: min(57 / 1440 * 100vw, 5.7rem);
   }
 }
+.topicslayout .ttl + .read {
+  margin-top: calc(52/750*100vw);
+}
+@media (min-width: 1024px) {
+  .topicslayout .ttl + .read {
+    margin-top: min(20 / 1440 * 100vw, 2rem);
+  }
+}
 
+.swiperlayout + .topicslayout {
+  margin-top: calc(91/750*100vw);
+}
 .sec04 {
   padding-top: calc(92/750*100vw);
   background: var(--bg-light);
