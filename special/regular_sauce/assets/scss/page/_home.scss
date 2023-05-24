@@ -521,8 +521,9 @@
     width: 96%;
     margin-left: 4%;
     @include media(pc) {
-      width: 93%;
-      margin-left: 7%;
+      position: relative;
+      width: min(93% - min(80 / 1440 * 100vw, 8rem), 93% - 8rem);
+      margin-left: min(7% + min(80 / 1440 * 100vw, 8rem), 7% + 8rem);
     }
   }
 }
@@ -724,10 +725,15 @@
   width: 92vw;
   margin-top: calc(-25/750*100vw);
   @include media(pc) {
-    width: min(1240/1440*100vw, 124rem);
-    gap: 0 min(38/1440*100vw, 3.8rem);
-    margin-top: max(-9/1440*100vw, 0.9rem);
+    width: min(51 / 1440 * 100vw, 5.1rem);
+    gap: min(20 / 1440 * 100vw, 2rem) 0;
+    margin-top: 0;
     justify-content: flex-end;
+    position: absolute;
+    top: 50%;
+    left: max(-80 / 1440 * 100vw, -8rem);
+    flex-direction: column;
+    transform: translateY(-50%);
   }
   .swiper-button-next, .swiper-rtl .swiper-button-prev {
     position: relative;
@@ -1089,7 +1095,9 @@
 // 要素別のレイアウト調整
 .swiperlayout + .topicslayout {
   margin-top: calc(91/750*100vw);
-  @include media(pc) {}
+  @include media(pc) {
+    margin-top: min(42 / 1440 * 100vw, 4.2rem);
+  } 
 }
 
 // .sec04

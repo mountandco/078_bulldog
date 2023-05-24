@@ -41,62 +41,62 @@
     }
     &.nth-1 {
       .slide-img {
-        background-image: url(../img/slide01--sp.jpg);
+        background-image: url(./assets/img/slide01--sp.jpg);
         @include media(sp-l) {
-          background-image: url(../img/slide01--sp@2x.jpg);
+          background-image: url(./assets/img/slide01--sp@2x.jpg);
         }
         @include media(pc) {
-          background-image: url(../img/slide01--pc.jpg);
+          background-image: url(./assets/img/slide01--pc.jpg);
           @include media-2x {
-            background-image: url(../img/slide01--pc@2x.jpg);
+            background-image: url(./assets/img/slide01--pc@2x.jpg);
           }
         }
       }
       @include media(pc) {
-        background-image: url(../img/slide01--pc.jpg);
+        background-image: url(./assets/img/slide01--pc.jpg);
         @include media-2x {
-          background-image: url(../img/slide01--pc@2x.jpg);
+          background-image: url(./assets/img/slide01--pc@2x.jpg);
         }
       }
     }
     &.nth-2 {
       .slide-img {
-        background-image: url(../img/slide02--sp.jpg);
+        background-image: url(./assets/img/slide02--sp.jpg);
         @include media(sp-l) {
-          background-image: url(../img/slide02--sp@2x.jpg);
+          background-image: url(./assets/img/slide02--sp@2x.jpg);
         }
         @include media(pc) {
-        background-image: url(../img/slide02--pc.jpg);
+        background-image: url(./assets/img/slide02--pc.jpg);
         @include media-2x {
-          background-image: url(../img/slide02--pc@2x.jpg);
+          background-image: url(./assets/img/slide02--pc@2x.jpg);
         }
       }
       }
     }
     &.nth-3 {
       .slide-img {
-        background-image: url(../img/slide03--sp.jpg);
+        background-image: url(./assets/img/slide03--sp.jpg);
         @include media(sp-l) {
-          background-image: url(../img/slide03--sp@2x.jpg);
+          background-image: url(./assets/img/slide03--sp@2x.jpg);
         }
         @include media(pc) {
-          background-image: url(../img/slide03--pc.jpg);
+          background-image: url(./assets/img/slide03--pc.jpg);
           @include media-2x {
-            background-image: url(../img/slide03--pc@2x.jpg);
+            background-image: url(./assets/img/slide03--pc@2x.jpg);
           }
         }
       }
     }
     &.nth-4 {
       .slide-img {
-        background-image: url(../img/slide04--sp.jpg);
+        background-image: url(./assets/img/slide04--sp.jpg);
         @include media(sp-l) {
-          background-image: url(../img/slide04--sp@2x.jpg);
+          background-image: url(./assets/img/slide04--sp@2x.jpg);
         }
         @include media(pc) {
-          background-image: url(../img/slide04--pc.jpg);
+          background-image: url(./assets/img/slide04--pc.jpg);
           @include media-2x {
-            background-image: url(../img/slide04--pc@2x.jpg);
+            background-image: url(./assets/img/slide04--pc@2x.jpg);
           }
         }
       }

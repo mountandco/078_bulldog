@@ -16,8 +16,8 @@
 
 // foundation/ 基本設定
 //=====================================================
-//@use "foundation/_reset";
-//@use "foundation/_base";
+@use "foundation/_reset";
+@use "foundation/_base";
 
 // dev/ 検証用で制作途中段階の実験ファイル等。productionへのUP時はコメントアウトするように
 //=====================================================
@@ -28,13 +28,13 @@
 //=====================================================
 // ※ .btn__hoge <= class名は {'scssファイル名' + '__' + 'hoge'} とする
 // @use "parts/_badge";
-@use "parts/_ttl";
+//@use "parts/_ttl";
 // @use "parts/_font";
 // @use "parts/_bg";
 // @use "parts/_card";
-@use "parts/_btn";
-@use "parts/_fade";
-@use "parts/_none";
+//@use "parts/_btn";
+//@use "parts/_fade";
+//@use "parts/_none";
 // @use "parts/_layout";
 // @use "parts/_img";
 // @use "parts/_filter";
@@ -45,15 +45,15 @@
 // common/ ヘッダーやフッターやサイドバーなど、web全体に関わるパーツ
 //=====================================================
 // ※ 命名規則は特になし。分かりやすい感じで 例）.headerや.sidebarなど
-//@use "common/_common__wrap";
-//@use "common/_common__header";
-//@use "common/_common__main";
-//@use "common/_common__footer";
+@use "common/_common__wrap";
+@use "common/_common__header";
+@use "common/_common__main";
+@use "common/_common__footer";
 
 
 // page ページ単位の記述
 //=====================================================
 // ※ bodyにclassを付ける。 body.page--hoge <= class名は {'page' + '__' + 'ページディレクトリ名、またはarchiveやsingleなどの共通して使う雛形名。ディレクトリ単位で切り分ける時は（例えば、https://seisei.top/company/profile/） class="page__company--profile" のように '--'で繋げる'}
-//@use "page/_firstview";
-@use "page/_home";
+@use "page/_firstview";
+//@use "page/_home";
 

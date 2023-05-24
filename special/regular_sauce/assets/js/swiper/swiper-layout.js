@@ -43,23 +43,23 @@ const swiper_recipe_1 = new Swiper('.js--recipe-1', {
       spaceBetween: 29,
     },
     1024: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.5,
       spaceBetween: 34,
     },
     1280: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.5,
       spaceBetween: 39,
     },
     1440: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.5,
       spaceBetween: 48,
     },
     1680: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.85,
       spaceBetween: 56,
     },
     1980: {
-      slidesPerView: 3.85,
+      slidesPerView: 4.5,
       spaceBetween: 66,
     }
   },
@@ -122,15 +122,15 @@ const swiper_recipe_2 = new Swiper('.js--recipe-2', {
       spaceBetween: 29,
     },
     1024: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.5,
       spaceBetween: 34,
     },
     1280: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.5,
       spaceBetween: 39,
     },
     1440: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.5,
       spaceBetween: 48,
     },
     1680: {
@@ -203,17 +203,17 @@ const swiper_recipe_3 = new Swiper('.js--recipe-3', {
       loop: true,
     },
     1024: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.5,
       spaceBetween: 34,
       loop: false,
     },
     1280: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.5,
       spaceBetween: 39,
       loop: false,
     },
     1440: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.5,
       spaceBetween: 48,
       loop: false,
     },
@@ -289,17 +289,17 @@ const swiper_recipe_4 = new Swiper('.js--recipe-4', {
       loop: true,
     },
     1024: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.5,
       spaceBetween: 34,
       loop: false,
     },
     1280: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.5,
       spaceBetween: 39,
       loop: false,
     },
     1440: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.5,
       spaceBetween: 48,
       loop: false,
     },
@@ -375,17 +375,17 @@ const swiper_recipe_5 = new Swiper('.js--recipe-5', {
       loop: true,
     },
     1024: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.5,
       spaceBetween: 34,
       loop: false,
     },
     1280: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.5,
       spaceBetween: 39,
       loop: false,
     },
     1440: {
-      slidesPerView: 3.65,
+      slidesPerView: 3.5,
       spaceBetween: 48,
       loop: false,
     },
