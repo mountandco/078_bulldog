@@ -1,0 +1,10 @@
+@use "../global/_setting" as *;
+
+// .common__wrap
+//=====================================================
+.common__wrap {
+  width: 100%;
+  @include media(pc) {
+    position: relative;
+  }
+}

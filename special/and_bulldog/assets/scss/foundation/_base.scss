@@ -1,6 +1,28 @@
 // 全体設定
+// 全体設定
 html {
   font-size: 62.5%;
+  @include media(sp-l) {
+    font-size: 62.5%;
+  }
+  @include media(tb) {
+    font-size: 62.5%;
+  }
+  @include media(pc) {
+    font-size: 62.5%;
+  }
+  @include media(pc-l) {
+    font-size: 62.5%;
+  }
+  @include media(pc-xl) {
+    font-size: 62.5%;
+  }
+  @include media(pc-2xl) {
+    font-size: 77.5%;
+  }
+  @include media(pc-3xl) {
+    font-size: 72.5%;
+  }
 }
 
 body {

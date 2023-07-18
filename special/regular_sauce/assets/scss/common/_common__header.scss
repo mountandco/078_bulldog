@@ -1,0 +1,119 @@
+@use "../global/_setting" as *;
+
+// .common__header
+//=====================================================
+.common__header {
+  background: colors(bg-light);
+  padding-top: calc(19/750*100vw);
+  height: calc(317/750*100vw);
+  @include media(pc) {
+    padding-top: 0;
+    height: calc((var(--vh2, 1vh) * 100));
+    height: 100vh;
+    height: 100dvh;
+    width: min(346/1440*100vw, 34.6rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include z-index-2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .inner-layout {
+    width: calc(678/750*100vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: calc(32/750*100vw);
+    @include media(pc) {
+      width: 100%;
+      margin: 0;
+      flex-direction: column;
+      position: relative;
+      align-items: center;
+      top: max(-40/1440*100vw, -4rem);
+    }
+  }
+  .logo {
+    display: block;
+    width: calc(248/750*100vw);
+    margin: 0 auto;
+    @include media(pc) {
+      top: max(-40/1440*100vw, -4rem);
+      position: relative;
+      width: min(114/1440*100vw, 11.4rem);
+    }
+  }
+  .ttllayout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .small {
+        font-size: calc(37/750*100vw);
+        margin-bottom: 0.432em;
+        @include media(pc) {
+          font-size: min(23/1440*100vw, 2.3rem);
+          margin-bottom: 0.565em;
+          margin-top: 1.434em;
+        }
+      }
+      .large {
+        font-size: calc(60/750*100vw);
+        letter-spacing: -0.06em;
+        margin-bottom: 0.266em;
+        @include media(pc) {
+          font-size: min(37/1440*100vw, 3.7rem);
+          letter-spacing: -0.04em;
+          margin-bottom: 0;
+          margin-bottom: 0.864em;
+        }
+      }
+    }
+    .subttl {
+      font-size: calc(33/750*100vw);
+      @include en;
+      color: #891A41;
+      @include media(pc) {
+        font-size: min(23/1440*100vw, 2.3rem);
+        position: absolute;
+        bottom: -1.652em;
+      }
+    }
+  }
+  .pic {
+    width: calc(196/750*100vw);
+    @include media(pc) {
+      width: min(160/1440*100vw, 16rem);
+    }
+  }
+  .icon-scroll--pc {
+    display: none;
+    @include media(pc) {
+      display: block;
+      width: min(40/1440*100vw, 4rem);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      animation-name: icon-scroll--pc;
+      animation-duration: 1.65s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+}
+@keyframes icon-scroll--pc {
+  0% {
+    transform: translateY(-18px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

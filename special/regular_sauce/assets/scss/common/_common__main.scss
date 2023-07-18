@@ -1,0 +1,15 @@
+@use "../global/_setting" as *;
+
+// .common__main
+//=====================================================
+.common__main {
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: calc(var(--vh2, 1vh) * 100);
+  @include media(pc) {
+    @include z-index-1;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,21 @@
+@use "../global/_setting" as *;
+
+// .ttl__bg
+.ttl__bg {
+  width: 100%;
+  height: calc(81/750*100vw);
+  background-image: url(../img/ttl-bg.svg);
+  background-repeat: repeat-x;
+  background-size: calc(10/750*100vw) calc(81/750*100vw);
+  line-height: calc(81/750*100vw);
+  text-align: center;
+  @include en;
+  letter-spacing: 0.018em;
+  font-size: calc(44/750*100vw);
+  @include media(pc) {
+    height: min(42/1440*100vw, 4.2rem);
+    background-size: auto min(42/1440*100vw, 4.2rem);
+    line-height: min(42/1440*100vw, 4.2rem);
+    font-size: min(21/1440*100vw, 2.1rem);
+  }
+}
